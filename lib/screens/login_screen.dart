@@ -15,6 +15,7 @@ import '../widgets/default_divider.dart';
 import '../widgets/text_pressable.dart';
 import '../utils/input_validations_utils.dart';
 import '../utils/build_dialog.dart';
+import './participant_country_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/Login';
@@ -44,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(AppImages.splashBg),
+            image: AssetImage(AppImages.loginBg),
             fit: BoxFit.cover,
           ),
         ),
@@ -54,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: SafeArea(
               child: DefaultPadding(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     DefaultSizedBox.vertical(35),
                     Column(
@@ -61,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SplashLoginLogo(
                           logoSize: 136,
                           textFontSize: 23,
-                          leftPadding: 10,
+                          leftPadding: 8,
                         ),
                         DefaultSizedBox.vertical(8),
                         _buildLoginInfoText(),
@@ -147,6 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             hintText: AppStrings.password.tr().toUpperCase(),
             controller: _passwordController,
+            obscureText: true,
             validator: InputValidationsUtils.validateEmptyString,
           ),
           DefaultSizedBox.vertical(55),
@@ -155,6 +158,11 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 185.w,
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
+
+              Navigator.pushReplacementNamed(
+                context,
+                ParticipantCountryScreen.routeName,
+              );
             },
           ),
         ],
@@ -204,7 +212,7 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           TextPressable(
             label: 'English',
-            fontSize: 16.sp,
+            fontSize: Styles.smallerTitleFontSize,
             onPressed: () {
               changeLanguage('en');
             },
@@ -212,7 +220,7 @@ class _LoginScreenState extends State<LoginScreen> {
           DefaultDivider.vertical(),
           TextPressable(
             label: '中文',
-            fontSize: 16.sp,
+            fontSize: Styles.smallerTitleFontSize,
             onPressed: () {
               changeLanguage('zh');
             },
@@ -220,7 +228,7 @@ class _LoginScreenState extends State<LoginScreen> {
           DefaultDivider.vertical(),
           TextPressable(
             label: 'Tiếng Việt',
-            fontSize: 16.sp,
+            fontSize: Styles.smallerTitleFontSize,
             onPressed: () {
               changeLanguage('vi');
             },

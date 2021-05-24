@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     await Future.delayed(Duration(seconds: 2));
 
-    Navigator.pushNamed(
+    Navigator.pushReplacementNamed(
       context,
       LoginScreen.routeName,
     );
@@ -74,27 +74,28 @@ class _SplashScreenState extends State<SplashScreen> {
           child: DefaultPadding(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 DefaultSizedBox.vertical(65),
                 Flexible(
                   child: SplashLoginLogo(
-                    leftPadding: 30,
-                    fontLeftPadding: 15,
+                    leftPadding: 10,
                   ),
                 ),
-                if (isLoading) CustomCircularProgressIndicator(strokeWidth: 3,),
-                DefaultSizedBox.vertical(25),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.w),
-                  child: Text(
-                    AppStrings.copyright.tr(),
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: Styles.smallerRegularSize,
-                      color: Styles.primaryDarkColor,
-                      fontWeight: Styles.boldText,
+                if (isLoading)
+                  Center(
+                    child: CustomCircularProgressIndicator(
+                      strokeWidth: 3,
                     ),
+                  ),
+                DefaultSizedBox.vertical(25),
+                Text(
+                  AppStrings.copyright.tr(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: Styles.smallerRegularSize,
+                    color: Styles.primaryDarkColor,
+                    fontWeight: Styles.boldText,
                   ),
                 ),
                 DefaultSizedBox.vertical(20),
