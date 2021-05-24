@@ -17,6 +17,7 @@ import '../utils/input_validations_utils.dart';
 import '../utils/build_dialog.dart';
 import './participant_country_screen.dart';
 import './register_screen.dart';
+import './home_screen_stack.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/Login';
@@ -200,6 +201,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Styles.whiteColor,
                 fontColor: Styles.primaryColor,
                 buttonText: AppStrings.guestLogin,
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, HomeScreenStack.routeName);
+                },
               ),
             ),
           ],

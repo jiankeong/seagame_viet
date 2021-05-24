@@ -35,6 +35,7 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
       clipBehavior: Clip.none,
       children: [
         CircleAvatar(
+          backgroundColor: Colors.transparent,
           backgroundImage: hasError || widget.profileImgUrl == null
               ? AssetImage(AppImages.defaultProfileAvatarRounded)
               : widget.imageType == ImageType.network

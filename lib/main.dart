@@ -10,6 +10,7 @@ import './utils/shared_prefs.dart';
 import './utils/secure_storage.dart';
 import './utils/play_service_checking_utils.dart';
 import './styles.dart';
+import './providers/route_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +25,9 @@ void main() async {
       providers: [
         ChangeNotifierProvider.value(
           value: AuthProvider(),
+        ),
+        ChangeNotifierProvider.value(
+          value: RouteProvider(),
         ),
       ],
       child: EasyLocalization(

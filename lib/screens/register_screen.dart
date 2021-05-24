@@ -72,12 +72,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 DefaultSizedBox.vertical(15),
-                Image.asset(
-                  AppImages.smallLogo,
-                  width: 167.w,
-                  height: 54.h,
-                  fit: BoxFit.contain,
-                ),
+                _buildHeaderSection(),
                 DefaultSizedBox.vertical(35),
                 _buildTitleSection(),
                 DefaultSizedBox.vertical(55),
@@ -87,6 +82,35 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildHeaderSection() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Container(),
+        Padding(
+          padding: EdgeInsets.only(left: 15.w),
+          child: Image.asset(
+            AppImages.smallLogo,
+            width: 167.w,
+            height: 54.h,
+            fit: BoxFit.contain,
+          ),
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Image.asset(
+            AppIcons.cancel,
+            width: 24.h,
+            height: 24.h,
+            fit: BoxFit.cover,
+          ),
+        )
+      ],
     );
   }
 

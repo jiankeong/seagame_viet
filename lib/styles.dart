@@ -16,6 +16,7 @@ class Styles {
   static double titleFontSize = 18.sp;
 
   static const Color grey65 = Color(0xFFA6A6A6);
+  static const Color sonicSilver = Color(0xFF767676);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
   static Color redColor = Colors.red[700]!;
@@ -25,5 +26,9 @@ class Styles {
   static TextStyle errorHintTextStyle = TextStyle(
     fontSize: Styles.regularFontSize,
     color: Styles.grey65,
+  );
+
+  static BorderRadius defaultBorderRadius = BorderRadius.circular(
+    25.h,
   );
 }

@@ -6,19 +6,25 @@ class AppStrings {
   static const String doNotHaveAnAccount = 'do_not_have_an_account';
   static const String email = 'email';
   static const String emailOrPhoneNumber = 'email_or_phone_number';
+  static const String eshop = 'e_shop';
   static const String fullName = 'full_name';
   static const String gender = 'gender';
   static const String getStarted = 'get_started';
   static const String guestLogin = 'guest_login';
+  static const String helpdesk = 'helpdesk';
   static const String hostCountry = 'host_country';
   static const String joinNow = 'join_now';
+  static const String joinUsToday = 'join_us_today';
+  static const String joinUSTodayInfoText = 'join_us_today_info_text';
   static const String login = 'login';
   static const String loginInfoText = 'login_info_text';
+  static const String myTickets = 'my_tickets';
   static const String noRecordsFound = 'no_records_found';
   static const String participatingCountries = 'participating_countries';
   static const String particiaptingCountriesInfoText = 'participating_countries_info_text';
   static const String password = 'password';
   static const String phoneNumber = 'phone_number';
+  static const String profile = 'profile';
   static const String privacyStatement = 'privacy_statement';
   static const String register = 'register';
   static const String search = 'search';
@@ -27,6 +33,7 @@ class AppStrings {
   static const String userRegistrationInfoText = 'user_registration_info_text';
   static const String version = 'version';
   static const String welcome = 'welcome';
+  static const String welcomeGuest = 'welcome_guest';
   static const String yourCountry = 'your_country';
 
   static const String emptyInputError = 'empty_input_error';
