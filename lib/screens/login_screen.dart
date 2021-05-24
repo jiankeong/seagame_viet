@@ -16,6 +16,7 @@ import '../widgets/text_pressable.dart';
 import '../utils/input_validations_utils.dart';
 import '../utils/build_dialog.dart';
 import './participant_country_screen.dart';
+import './register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/Login';
@@ -116,7 +117,6 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Column(
         children: [
           DefaultTextFormField(
-            verticalPadding: 10,
             prefixIcon: Padding(
               padding: EdgeInsets.only(
                 left: 10.w,
@@ -129,9 +129,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            hintText: AppStrings.email.tr().toUpperCase(),
+            hintText: AppStrings.emailOrPhoneNumber.tr().toUpperCase(),
             controller: _usernameController,
-            validator: InputValidationsUtils.validateEmail,
+            validator: InputValidationsUtils.validateEmptyString,
           ),
           DefaultSizedBox.vertical(15),
           DefaultTextFormField(
@@ -188,6 +188,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 color: Styles.primaryDarkColor,
                 buttonText: AppStrings.joinNow,
+                onPressed: () {
+                  Navigator.pushNamed(context, RegisterScreen.routeName);
+                },
               ),
             ),
             DefaultSizedBox.horizontal(10),

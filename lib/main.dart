@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'RobotoCondensed',
           primaryColor: Styles.primaryColor,
           textSelectionTheme: TextSelectionThemeData(
-            cursorColor: Styles.primaryColor,
+            cursorColor: Styles.primaryDarkColor,
           ),
         ),
         debugShowCheckedModeBanner: false,

@@ -15,7 +15,7 @@ class InputValidationsUtils {
   }
 
   static String? validateEmptyString(String? val) {
-    if (val.toString().trim() == "") {
+    if (val.toString().trim() == "" || val == null) {
       return AppStrings.emptyInputError.tr();
     }
 

@@ -13,8 +13,10 @@ class DefaultTextFormField extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final bool isDense;
-  final double verticalPadding;
-  final double horizontalPadding;
+  final double topPadding;
+  final double bottomPadding;
+  final double leftPadding;
+  final double rightPadding;
   final int minLines;
   final int maxLines;
   final TextInputType? textInputType;
@@ -27,6 +29,7 @@ class DefaultTextFormField extends StatelessWidget {
   final double? hinTextLetterSpacing;
   final Function(String)? onChanged;
   final Color? disableFontColor;
+  final String? helperText;
 
   DefaultTextFormField({
     this.controller,
@@ -36,8 +39,10 @@ class DefaultTextFormField extends StatelessWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.isDense = false,
-    this.verticalPadding = 10,
-    this.horizontalPadding = 0,
+    this.topPadding = 12,
+    this.bottomPadding = 10,
+    this.leftPadding = 0,
+    this.rightPadding = 0,
     this.minLines = 1,
     this.maxLines = 1,
     this.textInputType = TextInputType.text,
@@ -50,6 +55,7 @@ class DefaultTextFormField extends StatelessWidget {
     this.hinTextLetterSpacing,
     this.onChanged,
     this.disableFontColor,
+    this.helperText,
   });
 
   @override
@@ -74,6 +80,7 @@ class DefaultTextFormField extends StatelessWidget {
                   },
             decoration: InputDecoration(
               hintText: hintText.toUpperCase(),
+              helperText: helperText,
               hintStyle: TextStyle(
                 color: hintTextColor ?? Styles.grey65,
                 fontSize: 15.sp,
@@ -81,7 +88,7 @@ class DefaultTextFormField extends StatelessWidget {
               focusedBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
                 width: 2.w,
-                color: Styles.primaryColor,
+                color: Styles.primaryDarkColor,
               )),
               focusedErrorBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
@@ -104,14 +111,16 @@ class DefaultTextFormField extends StatelessWidget {
                             )
                           : Icon(
                               Icons.visibility,
-                              color: Styles.grey65,
+                              color: Styles.primaryDarkColor,
                               size: 24.h,
                             ),
                     )
                   : suffixIcon,
-              contentPadding: EdgeInsets.symmetric(
-                horizontal: horizontalPadding,
-                vertical: verticalPadding,
+              contentPadding: EdgeInsets.fromLTRB(
+                leftPadding.w,
+                topPadding.h,
+                rightPadding.w,
+                bottomPadding.h,
               ),
               isDense: isDense,
             ),

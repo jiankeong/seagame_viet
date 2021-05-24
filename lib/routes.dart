@@ -5,4 +5,5 @@ final routeList = {
   HomeScreenStack.routeName: (ctx) => HomeScreenStack(),
   LoginScreen.routeName: (ctx) => LoginScreen(),
   ParticipantCountryScreen.routeName: (ctx) => ParticipantCountryScreen(),
+  RegisterScreen.routeName: (ctx) => RegisterScreen(),
 };
