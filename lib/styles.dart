@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
   static const Color primaryColor = Color(0xFF7E38BB);
+  static const Color primaryDarkColor = Color(0xFF330672);
 
   static const FontWeight lightText = FontWeight.w300;
   static const FontWeight regularText = FontWeight.normal;

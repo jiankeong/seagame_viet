@@ -9,6 +9,7 @@ import './routes.dart' as routes;
 import './utils/shared_prefs.dart';
 import './utils/secure_storage.dart';
 import './utils/play_service_checking_utils.dart';
+import './styles.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,12 +27,14 @@ void main() async {
         ),
       ],
       child: EasyLocalization(
-        useOnlyLangCode: false,
+        useOnlyLangCode: true,
         supportedLocales: [
-          Locale('en', 'UK'),
+          Locale('en'),
+          Locale('zh'),
+          Locale('vi'),
         ],
         path: 'assets/translations',
-        fallbackLocale: Locale('en', 'UK'),
+        fallbackLocale: Locale('en'),
         child: AnnotatedRegion<SystemUiOverlayStyle>(
           value: SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
@@ -66,7 +69,13 @@ class _MyAppState extends State<MyApp> {
       designSize: Size(375, 812),
       builder: () => MaterialApp(
         title: 'Sea Games GMS',
-        theme: ThemeData(),
+        theme: ThemeData(
+          fontFamily: 'RobotoCondensed',
+          primaryColor: Styles.primaryColor,
+          textSelectionTheme: TextSelectionThemeData(
+            cursorColor: Styles.primaryColor,
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
