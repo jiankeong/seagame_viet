@@ -6,9 +6,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import './providers/auth_provider.dart';
 import './routes.dart' as routes;
+import './utils/shared_prefs.dart';
+import './utils/secure_storage.dart';
+import './utils/play_service_checking_utils.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SharedPrefs()
+      .init()
+      .then((value) => PlayServiceCheckingUtils().isHuaweiChecking());
+  SecureStorage().init();
   await EasyLocalization.ensureInitialized();
 
   runApp(
