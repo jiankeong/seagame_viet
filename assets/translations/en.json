@@ -1,6 +1,19 @@
 {
     "copyright": "Copyright 2021 by VIESGOC. All Rights Reserved.",
+    "do_not_have_an_account": "Do Not Have An Account",
+    "email": "Email",
+    "email_or_phone_number": "Email / Phone Number",
+    "guest_login": "Guest Login",
+    "join_now": "Join Now",
+    "login": "Login",
+    "login_info_text": "Kindly enter your credentials to login",
+    "password": "Password",
     "privacy_statement": "Privacy Statement",
     "terms_of_use": "Terms of Use",
-    "version": "Version"
+    "version": "Version",
+    "welcome": "Welcome",
+
+    "empty_input_error": "Please fill in this field",
+    "password_not_same_error": "Please ensure passwords are the same",
+    "invalid_email_format": "Invalid email"
 }

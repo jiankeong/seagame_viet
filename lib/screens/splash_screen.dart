@@ -4,12 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../globals.dart';
 import '../icon_image_path.dart';
-import '../app_strings.dart';
-import '../styles.dart';
 import '../widgets/default_sized_box.dart';
-import '../constants/app_constants.dart';
 import '../widgets/default_padding.dart';
-import '../widgets/text_pressable.dart';
+import '../styles.dart';
+import '../widgets/splash_login_shared/splash_login_logo.dart';
+import '../screens/login_screen.dart';
+import '../app_strings.dart';
+import '../widgets/custom_circular_progress_indicator.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = '/';
@@ -20,6 +21,8 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   bool isInit = true;
+
+  bool isLoading = false;
 
   @override
   void didChangeDependencies() {
@@ -33,7 +36,18 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> initData() async {
+    setState(() {
+      isLoading = true;
+    });
+
     initScreenSize();
+
+    await Future.delayed(Duration(seconds: 2));
+
+    Navigator.pushNamed(
+      context,
+      LoginScreen.routeName,
+    );
   }
 
   void initScreenSize() {
@@ -60,98 +74,35 @@ class _SplashScreenState extends State<SplashScreen> {
           child: DefaultPadding(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 DefaultSizedBox.vertical(65),
                 Flexible(
-                  child: _buildLogo(),
+                  child: SplashLoginLogo(
+                    leftPadding: 30,
+                    fontLeftPadding: 15,
+                  ),
                 ),
-                _buildFooter(),
+                if (isLoading) CustomCircularProgressIndicator(strokeWidth: 3,),
+                DefaultSizedBox.vertical(25),
+                Padding(
+                  padding: EdgeInsets.only(left: 15.w),
+                  child: Text(
+                    AppStrings.copyright.tr(),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: Styles.smallerRegularSize,
+                      color: Styles.primaryDarkColor,
+                      fontWeight: Styles.boldText,
+                    ),
+                  ),
+                ),
+                DefaultSizedBox.vertical(20),
               ],
             ),
           ),
         ),
       ),
-    );
-  }
-
-  Widget _buildLogo() {
-    return Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(
-            left: 15.w,
-          ),
-          child: Image.asset(
-            AppImages.logo,
-            width: 260.h,
-            height: 260.h,
-            fit: BoxFit.cover,
-          ),
-        ),
-        DefaultSizedBox.vertical(25),
-        Text(
-          AppStrings.welcome.tr().toUpperCase(),
-          style: TextStyle(
-            color: Styles.primaryColor,
-            fontSize: 34.sp,
-            fontWeight: Styles.boldText,
-          ),
-        )
-      ],
-    );
-  }
-
-  Widget _buildFooter() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          AppStrings.copyright.tr(),
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: Styles.smallerRegularSize,
-            color: Styles.primaryDarkColor,
-            fontWeight: Styles.boldText,
-          ),
-        ),
-        DefaultSizedBox.vertical(15),
-        IntrinsicHeight(
-          child: Padding(
-            padding: EdgeInsets.only(
-              left: 8.w,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextPressable(
-                  label: AppStrings.termsOfUse.tr(),
-                  onPressed: () {},
-                ),
-                DefaultSizedBox.horizontal(10),
-                VerticalDivider(
-                  thickness: 1.0.w,
-                  color: Styles.primaryDarkColor,
-                ),
-                DefaultSizedBox.horizontal(10),
-                TextPressable(
-                  label: AppStrings.privacyStatement.tr(),
-                  onPressed: () {},
-                ),
-              ],
-            ),
-          ),
-        ),
-        DefaultSizedBox.vertical(8),
-        Text(
-          '${AppStrings.version.tr()} $kAppVersion',
-          style: TextStyle(
-            fontSize: Styles.smallerRegularSize,
-            color: Styles.primaryDarkColor,
-            fontWeight: Styles.boldText,
-          ),
-        ),
-        DefaultSizedBox.vertical(20),
-      ],
     );
   }
 }
