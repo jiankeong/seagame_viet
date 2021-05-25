@@ -25,6 +25,7 @@ class Styles {
   static Color redColor = Colors.red[700]!;
 
   static const Color dividerColor = Color(0xFFB5B1B8);
+  static const Color qrContainerBorderColor = Color(0xFFD9D9D9);
 
   static TextStyle errorHintTextStyle = TextStyle(
     fontSize: Styles.regularFontSize,

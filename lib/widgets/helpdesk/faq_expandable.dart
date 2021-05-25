@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../styles.dart';
 import '../../screens/helpdesk_screen.dart';
+import '../../globals.dart';
 
 class FAQExpandable extends StatelessWidget {
   final FAQ? faq;
@@ -32,7 +33,15 @@ class FAQExpandable extends StatelessWidget {
           header: Padding(
             padding: EdgeInsets.fromLTRB(
               15.w,
-              11.h,
+              Globals().getScreenHeight() < 550
+                  ? 20.h
+                  : Globals().getScreenHeight() < 900
+                      ? Globals().getScreenHeight() < 600
+                          ? 18.h
+                          : 11.h
+                      : Globals().getScreenHeight() < 1100
+                          ? 8.h
+                          : 4.h,
               0.0,
               0.0,
             ),

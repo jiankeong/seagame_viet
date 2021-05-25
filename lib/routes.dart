@@ -8,4 +8,5 @@ final routeList = {
   RegisterScreen.routeName: (ctx) => RegisterScreen(),
   ChangePasswordScreen.routeName: (ctx) => ChangePasswordScreen(),
   HelpdeskScreen.routeName: (ctx) => HelpdeskScreen(),
+  MyTicketsScreen.routeName: (ctx) => MyTicketsScreen(),
 };

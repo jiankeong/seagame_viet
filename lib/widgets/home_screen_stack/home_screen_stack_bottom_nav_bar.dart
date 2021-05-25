@@ -11,6 +11,7 @@ import '../../utils/build_toast.dart';
 import '../../providers/auth_provider.dart';
 import '../../app_strings.dart';
 import '../../screens/helpdesk_screen.dart';
+import '../../screens/my_tickets_screen.dart';
 
 class HomeScreenStackBottomNavBar extends StatelessWidget {
   final List<BottomNavBarItem> bottomNavBarItems;
@@ -72,6 +73,8 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
 
   String moveToScreenName(int index) {
     switch (index) {
+      case 0:
+        return MyTicketsScreen.routeName;
       case 2:
         return HelpdeskScreen.routeName;
       default:

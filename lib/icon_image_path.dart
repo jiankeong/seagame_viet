@@ -56,4 +56,7 @@ class AppImages {
   static const String seagame2021Banner = 'assets/images/seagame_2021_banner.png';
   static const String mascot = 'assets/images/mascot.png';
   static const String helpdeskBanner = 'assets/images/helpdesk_banner.png';
+  static const String ticketHeader = 'assets/images/ticket_header.png';
+  static const String ticketBody = 'assets/images/ticket_body.png';
+  static const String ticket = 'assets/images/ticket.png';
 }

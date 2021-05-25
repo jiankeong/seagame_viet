@@ -54,6 +54,7 @@ class HeaderProfileContainer extends StatelessWidget {
           AppImages.smallLogo,
           width: 167.w,
           height: 54.h,
+          fit: BoxFit.cover,
         ),
         MainNotificationButton(),
       ],
@@ -69,7 +70,7 @@ class HeaderProfileContainer extends StatelessWidget {
           children: [
             ProfileAvatar(
               profileImgUrl: hasLogin ? user!.profileImgUrl : null,
-              radius: 48.w,
+              radius: Globals().getScreenHeight() < 790 ? 48.h : 35.h,
             ),
             DefaultSizedBox.horizontal(10),
             Flexible(

@@ -40,7 +40,7 @@ class StartLiveChatButton extends StatelessWidget {
               AppIcons.liveChat,
               width: 35.w,
               height: 35.h,
-              fit: BoxFit.fill,
+              fit: BoxFit.contain,
             ),
           ),
         ),

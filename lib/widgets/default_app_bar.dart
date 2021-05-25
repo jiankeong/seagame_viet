@@ -41,6 +41,7 @@ class DefaultAppBar extends StatelessWidget {
                     AppImages.smallLogo,
                     width: 167.w,
                     height: 54.h,
+                    fit: BoxFit.cover,
                   ),
                   MainNotificationButton(),
                 ],
