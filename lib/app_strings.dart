@@ -66,6 +66,9 @@ class AppStrings {
   static const String submit = 'submit';
   static const String updateSuccessfully = 'update_successfully';
 
+  static const String contact_us_for_any_further_assistance = 'contact_us_for_any_futher_assistance';
+  static const String startLiveChat = 'start_live_chat';
+
   static const String emptyInputError = 'empty_input_error';
   static const String passwordNotSameError = 'password_not_same_error';
   static const String invalidEmailFormat = 'invalid_email_format';

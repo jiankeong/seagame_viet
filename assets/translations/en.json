@@ -64,6 +64,9 @@
     "confirm_new_password": "Confirm New Password",
     "submit": "Submit",
     "update_successfully": "Update Successfully",
+
+    "start_live_chat": "Start Live Chat",
+    "contact_us_for_any_futher_assistance": "Contact us for any\nFuther Assistance",
     
     "empty_input_error": "Please fill in this field",
     "password_not_same_error": "Please ensure passwords are the same",

@@ -39,6 +39,7 @@ dependencies:
   qr_flutter: ^4.0.0
   flutter_html: ^2.0.0
   country_pickers: ^2.0.0
+  expandable: ^5.0.1
 
 
 dev_dependencies:

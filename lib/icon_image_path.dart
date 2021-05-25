@@ -27,6 +27,7 @@ class AppIcons {
   static const String teams = 'assets/icons/teams.png';
   static const String back = 'assets/icons/back.png';
   static const String notificationOn = 'assets/icons/notification_on.png';
+  static const String liveChat = 'assets/icons/live_chat.png';
 }
 
 class AppImages {
@@ -54,4 +55,5 @@ class AppImages {
   static const String homeProfileContainerBg = 'assets/images/home_profile_container_bg.png';
   static const String seagame2021Banner = 'assets/images/seagame_2021_banner.png';
   static const String mascot = 'assets/images/mascot.png';
+  static const String helpdeskBanner = 'assets/images/helpdesk_banner.png';
 }

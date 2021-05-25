@@ -10,6 +10,7 @@ import '../../screens/login_screen.dart';
 import '../../utils/build_toast.dart';
 import '../../providers/auth_provider.dart';
 import '../../app_strings.dart';
+import '../../screens/helpdesk_screen.dart';
 
 class HomeScreenStackBottomNavBar extends StatelessWidget {
   final List<BottomNavBarItem> bottomNavBarItems;
@@ -29,6 +30,10 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
             if (redirected) return;
 
             routeProvider.updateRoute(index);
+
+            if (index != 3) {
+              Navigator.pushNamed(context, moveToScreenName(index));
+            }
           },
           items: [
             for (int i = 0; i < bottomNavBarItems.length; i++)
@@ -63,5 +68,14 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
     }
 
     return false;
+  }
+
+  String moveToScreenName(int index) {
+    switch (index) {
+      case 2:
+        return HelpdeskScreen.routeName;
+      default:
+        return HelpdeskScreen.routeName;
+    }
   }
 }
