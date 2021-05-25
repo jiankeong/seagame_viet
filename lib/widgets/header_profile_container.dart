@@ -16,6 +16,7 @@ import '../providers/user_provider.dart';
 import '../models/user.dart';
 import '../screens/login_screen.dart';
 import '../utils/user_type_mapper.dart';
+import './main_notification_button.dart';
 
 class HeaderProfileContainer extends StatelessWidget {
   const HeaderProfileContainer({
@@ -54,12 +55,7 @@ class HeaderProfileContainer extends StatelessWidget {
           width: 167.w,
           height: 54.h,
         ),
-        Image.asset(
-          AppIcons.notificationOff,
-          width: 34.h,
-          height: 34.h,
-          fit: BoxFit.cover,
-        ),
+        MainNotificationButton(),
       ],
     );
   }

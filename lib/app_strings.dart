@@ -60,6 +60,12 @@ class AppStrings {
   static const String gallery = 'gallery';
   static const String social = 'social';
 
+  static const String currentPassword = 'current_password';
+  static const String newPasword = 'new_password';
+  static const String confirmNewPassowrd = 'confirm_new_password';
+  static const String submit = 'submit';
+  static const String updateSuccessfully = 'update_successfully';
+
   static const String emptyInputError = 'empty_input_error';
   static const String passwordNotSameError = 'password_not_same_error';
   static const String invalidEmailFormat = 'invalid_email_format';

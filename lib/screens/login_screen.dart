@@ -185,8 +185,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 "date_of_birth": "1982-10-21 00:00:00",
                 "country_flag": {
                   "url":
-                      "https://www.countryflags.com/wp-content/uploads/malaysia-flag-png-large.png"
-                }
+                      "https://www.countryflags.com/wp-content/uploads/malaysia-flag-png-large.png",
+                },
+                "notification_count": 99,
               });
 
               Navigator.pushNamedAndRemoveUntil(

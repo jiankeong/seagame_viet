@@ -6,4 +6,5 @@ final routeList = {
   LoginScreen.routeName: (ctx) => LoginScreen(),
   ParticipantCountryScreen.routeName: (ctx) => ParticipantCountryScreen(),
   RegisterScreen.routeName: (ctx) => RegisterScreen(),
+  ChangePasswordScreen.routeName: (ctx) => ChangePasswordScreen(),
 };

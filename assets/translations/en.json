@@ -58,6 +58,12 @@
     "media": "Media",
     "gallery": "Gallery",
     "social": "Social",
+
+    "current_password": "Current Password",
+    "new_password": "New Password",
+    "confirm_new_password": "Confirm New Password",
+    "submit": "Submit",
+    "update_successfully": "Update Successfully",
     
     "empty_input_error": "Please fill in this field",
     "password_not_same_error": "Please ensure passwords are the same",

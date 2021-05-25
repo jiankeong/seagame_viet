@@ -25,6 +25,8 @@ class AppIcons {
   static const String schedule = 'assets/icons/schedule.png';
   static const String social = 'assets/icons/social.png';
   static const String teams = 'assets/icons/teams.png';
+  static const String back = 'assets/icons/back.png';
+  static const String notificationOn = 'assets/icons/notification_on.png';
 }
 
 class AppImages {

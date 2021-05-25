@@ -15,6 +15,7 @@ import '../providers/user_provider.dart';
 import '../models/user.dart';
 import '../widgets/label_value_vertical_layout.dart';
 import '../widgets/default_button.dart';
+import '../screens/change_password_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -32,41 +33,17 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
             DefaultSizedBox.vertical(20),
-            CustomShadowContainer(
-              roundedCorner: false,
-              leftPadding: kDefaultScreenHorizontalPadding.w + 8.w,
-              rightPadding: kDefaultScreenHorizontalPadding.w + 8.w,
-              topPadding: 24.h,
-              bottomPadding: 25.h,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppStrings.contactDetails.tr(),
-                    style: TextStyle(
-                      fontSize: Styles.titleFontSize,
-                      color: Styles.primaryColor,
-                      fontWeight: Styles.boldText,
-                    ),
-                  ),
-                  DefaultSizedBox.vertical(20),
-                  LabelValueVerticalLayout(
-                    label: AppStrings.phoneNumber.tr().toUpperCase(),
-                    value: user!.mobileNumber!,
-                  ),
-                  DefaultSizedBox.vertical(20),
-                  LabelValueVerticalLayout(
-                    label: AppStrings.email.tr().toUpperCase(),
-                    value: user.email!,
-                  ),
-                ],
-              ),
-            ),
+            _buildContactDetails(user),
             DefaultSizedBox.vertical(30),
             DefaultButton(
               width: 295.w,
               buttonText: AppStrings.changePassword,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  ChangePasswordScreen.routeName,
+                );
+              },
             ),
             DefaultSizedBox.vertical(15),
             DefaultButton(
@@ -128,6 +105,39 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildContactDetails(User? user) {
+    return CustomShadowContainer(
+      roundedCorner: false,
+      leftPadding: kDefaultScreenHorizontalPadding.w + 8.w,
+      rightPadding: kDefaultScreenHorizontalPadding.w + 8.w,
+      topPadding: 24.h,
+      bottomPadding: 25.h,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            AppStrings.contactDetails.tr(),
+            style: TextStyle(
+              fontSize: Styles.titleFontSize,
+              color: Styles.primaryColor,
+              fontWeight: Styles.boldText,
+            ),
+          ),
+          DefaultSizedBox.vertical(20),
+          LabelValueVerticalLayout(
+            label: AppStrings.phoneNumber.tr().toUpperCase(),
+            value: user!.mobileNumber!,
+          ),
+          DefaultSizedBox.vertical(20),
+          LabelValueVerticalLayout(
+            label: AppStrings.email.tr().toUpperCase(),
+            value: user.email!,
           ),
         ],
       ),
