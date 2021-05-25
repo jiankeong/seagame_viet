@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 "country": "Malaysia",
                 "profile_image": {
                   "url":
-                      "https://lh3.googleusercontent.com/proxy/oCc3x0KEJNpmfPdaz2aKcFk1xEF3bD580DltcTll2mLE3nAOyhJrQZrBB0YyrHcw9Fktpzn548IUzsuV_SKv3z8kmKVr_9qgCBsDDEX4_n86"
+                      "https://bwfbadminton.com/wp-content/uploads/2020/05/Lee-Chong-Wei-12-scaled.jpg"
                 },
                 "user_type": 1,
                 "gender": "Male",
