@@ -21,8 +21,6 @@ class MyTicketsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('width: ${Globals().getScreenWidth()}');
-    print('height: ${Globals().getScreenHeight()}');
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(

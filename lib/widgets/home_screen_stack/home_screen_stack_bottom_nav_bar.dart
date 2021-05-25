@@ -12,6 +12,7 @@ import '../../providers/auth_provider.dart';
 import '../../app_strings.dart';
 import '../../screens/helpdesk_screen.dart';
 import '../../screens/my_tickets_screen.dart';
+import '../../screens/e_shop_screen.dart';
 
 class HomeScreenStackBottomNavBar extends StatelessWidget {
   final List<BottomNavBarItem> bottomNavBarItems;
@@ -75,6 +76,8 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
     switch (index) {
       case 0:
         return MyTicketsScreen.routeName;
+      case 1:
+        return EShopScreen.routeName;
       case 2:
         return HelpdeskScreen.routeName;
       default:
