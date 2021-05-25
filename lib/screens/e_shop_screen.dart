@@ -8,7 +8,7 @@ import '../app_strings.dart';
 import '../widgets/default_sized_box.dart';
 import '../utils/general_functions.dart';
 import '../styles.dart';
-import '../globals.dart';
+import './product_detail_screen.dart';
 
 class EShopScreen extends StatelessWidget {
   static const routeName = '/EShop';
@@ -43,8 +43,6 @@ class EShopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(Globals().getScreenWidth());
-    print(Globals().getScreenHeight());
     return Scaffold(
       body: Column(
         children: [
@@ -63,7 +61,9 @@ class EShopScreen extends StatelessWidget {
               Product product = _products[index];
 
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, ProductDetailScreen.routeName);
+                },
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

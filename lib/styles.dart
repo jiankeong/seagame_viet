@@ -20,12 +20,14 @@ class Styles {
   static const Color outerSpace = Color(0xFF464646);
   static const Color nero = Color(0xFF1C1C1C);
   static const Color suvaGrey = Color(0xFF898989);
+  static const Color whiteSmoke = Color(0xFFF8F8F8);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
   static Color redColor = Colors.red[700]!;
 
   static const Color dividerColor = Color(0xFFB5B1B8);
   static const Color qrContainerBorderColor = Color(0xFFD9D9D9);
+  static const Color offerColor = Color(0xFFF55B5B);
 
   static TextStyle errorHintTextStyle = TextStyle(
     fontSize: Styles.regularFontSize,

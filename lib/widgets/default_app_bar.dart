@@ -8,9 +8,11 @@ import './main_notification_button.dart';
 
 class DefaultAppBar extends StatelessWidget {
   final String title;
+  final Widget? trailing;
 
   DefaultAppBar({
     this.title = '',
+    this.trailing,
   });
 
   @override
@@ -79,19 +81,25 @@ class DefaultAppBar extends StatelessWidget {
                         fontSize: 21.sp,
                         fontWeight: Styles.boldText),
                   ),
-                  Image.asset(
-                    AppIcons.back,
-                    width: 25.h,
-                    height: 25.h,
-                    fit: BoxFit.contain,
-                    color: Colors.transparent,
-                  ),
+                  _buildTrailing()!,
                 ],
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget? _buildTrailing() {
+    if (trailing != null) return trailing;
+
+    return Image.asset(
+      AppIcons.back,
+      width: 25.h,
+      height: 25.h,
+      fit: BoxFit.contain,
+      color: Colors.transparent,
     );
   }
 }

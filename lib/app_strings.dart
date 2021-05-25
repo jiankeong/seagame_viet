@@ -16,6 +16,7 @@ class AppStrings {
   static const String guestLogin = 'guest_login';
   static const String helpdesk = 'helpdesk';
   static const String hostCountry = 'host_country';
+  static const String inclusiveOfTax = 'inclusive_of_tax';
   static const String joinNow = 'join_now';
   static const String joinUsToday = 'join_us_today';
   static const String joinUSTodayInfoText = 'join_us_today_info_text';
@@ -30,10 +31,14 @@ class AppStrings {
   static const String personalDetails = 'personal_details';
   static const String phoneNumber = 'phone_number';
   static const String pleaseLoginBeforeProceed = 'please_login_before_proceed';
+  static const String productInfo = 'product_info';
   static const String profile = 'profile';
   static const String privacyStatement = 'privacy_statement';
   static const String public = 'public';
+  static const String purchase = 'purchase';
+  static const String relatedProduct = 'related_product';
   static const String register = 'register';
+  static const String reviews = 'reviews';
   static const String search = 'search';
   static const String termsOfUse = 'terms_of_use';
   static const String userRegistration = 'user_registration';

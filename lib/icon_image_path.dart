@@ -59,4 +59,5 @@ class AppImages {
   static const String ticketHeader = 'assets/images/ticket_header.png';
   static const String ticketBody = 'assets/images/ticket_body.png';
   static const String ticket = 'assets/images/ticket.png';
+   static const String blankImage = 'assets/images/blank_image.png';
 }

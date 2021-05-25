@@ -10,4 +10,5 @@ final routeList = {
   HelpdeskScreen.routeName: (ctx) => HelpdeskScreen(),
   MyTicketsScreen.routeName: (ctx) => MyTicketsScreen(),
   EShopScreen.routeName: (ctx) => EShopScreen(),
+  ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
 };
