@@ -5,4 +5,9 @@ class DateFormatUtils {
   static String ddMMMyyyFormat1(DateTime date) {
     return DateFormat('dd MMM yyy').format(date);
   }
+
+  ///Format into: April 21, 2021
+  static String monthDateYear(DateTime date) {
+    return DateFormat('MMMM dd, yyy').format(date);
+  }
 }

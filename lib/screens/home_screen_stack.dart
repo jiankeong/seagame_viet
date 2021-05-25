@@ -5,9 +5,6 @@ import 'package:provider/provider.dart';
 
 import '../icon_image_path.dart';
 import '../app_strings.dart';
-import './e_shop_screen.dart';
-import './my_tickets_screen.dart';
-import './helpdesk_screen.dart';
 import './profile_screen.dart';
 import '../providers/route_provider.dart';
 import '../widgets/home_screen_stack/home_screen_stack_widgets.dart';
@@ -39,13 +36,6 @@ class HomeScreenStack extends StatelessWidget {
     ),
   ];
 
-  final List<Widget> _screens = [
-    MyTicketsScreen(),
-    EShopScreen(),
-    HelpdeskScreen(),
-    ProfileScreen(),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,27 +45,33 @@ class HomeScreenStack extends StatelessWidget {
           image: AssetImage(AppImages.homeScreenStackBg),
         ),
       ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Consumer<RouteProvider>(
-          builder: (context, routeProvider, child) {
-            if(routeProvider.currentIndex == 999) return HomeScreen();
-
-            return _screens[routeProvider.currentIndex];
-          },
-        ),
-        bottomNavigationBar: HomeScreenStackBottomNavBar(
-          bottomNavBarItems: bottomNavBarItems,
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Padding(
-          padding: EdgeInsets.only(
-            top: 20.h,
-          ),
-          child: HomeScreenStackFAB(),
-        ),
+      child: Consumer<RouteProvider>(
+        builder: (context, routeProvider, child) {
+          return Scaffold(
+            backgroundColor:
+                routeProvider.currentIndex == 4 ? null : Colors.transparent,
+            body: _buildBody(context, routeProvider.currentIndex),
+            bottomNavigationBar: HomeScreenStackBottomNavBar(
+              bottomNavBarItems: bottomNavBarItems,
+            ),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
+            floatingActionButton: Padding(
+              padding: EdgeInsets.only(
+                top: 20.h,
+              ),
+              child: HomeScreenStackFAB(),
+            ),
+          );
+        },
       ),
     );
+  }
+
+  Widget _buildBody(BuildContext context, int currentIndex) {
+    if (currentIndex == 3) return ProfileScreen();
+
+    return HomeScreen();
   }
 }
 

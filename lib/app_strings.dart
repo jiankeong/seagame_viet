@@ -1,6 +1,8 @@
 class AppStrings {
   static const String athleteOrParticipant = 'athlete_or_participant';
+  static const String changePassword = 'change_password';
   static const String confirmPassword = 'confirm_password';
+  static const String contactDetails = 'contact_details';
   static const String copyright = 'copyright';
   static const String countryCode = 'country_code';
   static const String dateOfBirth = 'date_of_birth';
@@ -19,12 +21,15 @@ class AppStrings {
   static const String joinUSTodayInfoText = 'join_us_today_info_text';
   static const String login = 'login';
   static const String loginInfoText = 'login_info_text';
+  static const String logout = 'logout';
   static const String myTickets = 'my_tickets';
   static const String noRecordsFound = 'no_records_found';
   static const String participatingCountries = 'participating_countries';
   static const String particiaptingCountriesInfoText = 'participating_countries_info_text';
   static const String password = 'password';
+  static const String personalDetails = 'personal_details';
   static const String phoneNumber = 'phone_number';
+  static const String pleaseLoginBeforeProceed = 'please_login_before_proceed';
   static const String profile = 'profile';
   static const String privacyStatement = 'privacy_statement';
   static const String public = 'public';

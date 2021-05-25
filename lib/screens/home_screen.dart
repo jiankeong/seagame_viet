@@ -7,6 +7,7 @@ import '../constants/app_constants.dart';
 import '../icon_image_path.dart';
 import '../widgets/default_sized_box.dart';
 import '../styles.dart';
+import '../globals.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/Home';
@@ -15,11 +16,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Column(
-        children: [
-          HeaderProfileContainer(),
-          SingleChildScrollView(
-            child: Column(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HeaderProfileContainer(),
+            Column(
               children: [
                 Container(
                   child: Padding(
@@ -30,50 +31,23 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 DefaultSizedBox.vertical(12),
-                Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 20.w),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              spreadRadius: 0.3,
-                              blurRadius: 5,
-                              offset: Offset(0, 1),
-                              color: Styles.blackColor.withOpacity(0.1),
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(15.h),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15.h),
-                          child: Image.asset(
-                            AppImages.seagame2021Banner,
-                            width: 267.w,
-                            height: 116.h,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      right: -40.0,
-                      top: 20,
-                      child: Image.asset(
-                        AppImages.mascot,
-                        width: 108.w,
-                        height: 125.h,
-                      ),
-                    )
-                  ],
-                ),
+                HomeScreenWelcomeBanner(),
+                _addBottomSpacing(),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
+  }
+
+  Widget _addBottomSpacing() {
+    double spacing = 0;
+
+    if (Globals().getScreenHeight() < 600) {
+      spacing = 45;
+    }
+
+    return DefaultSizedBox.vertical(spacing);
   }
 }

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 import '../../providers/route_provider.dart';
 import '../fab_bottom_app.bar.dart';
 import '../../styles.dart';
 import '../../screens/home_screen_stack.dart';
+import '../../screens/login_screen.dart';
+import '../../utils/build_toast.dart';
+import '../../providers/auth_provider.dart';
+import '../../app_strings.dart';
 
 class HomeScreenStackBottomNavBar extends StatelessWidget {
   final List<BottomNavBarItem> bottomNavBarItems;
@@ -21,6 +24,10 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
       builder: (context, routeProvider, child) {
         return FABBottomAppBar(
           onTabSelected: (int index) {
+            final redirected = notLoginRedirection(context);
+
+            if (redirected) return;
+
             routeProvider.updateRoute(index);
           },
           items: [
@@ -44,5 +51,17 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
         );
       },
     );
+  }
+
+  bool notLoginRedirection(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+
+    if (!authProvider.hasLogin()) {
+      buildToast1(AppStrings.pleaseLoginBeforeProceed);
+      Navigator.pushNamed(context, LoginScreen.routeName);
+      return true;
+    }
+
+    return false;
   }
 }

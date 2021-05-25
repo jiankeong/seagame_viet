@@ -92,6 +92,7 @@ class HeaderProfileContainer extends StatelessWidget {
                   ),
                   DefaultSizedBox.vertical(hasLogin ? 8 : 5),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Flexible(
                         child: !hasLogin
@@ -123,7 +124,6 @@ class HeaderProfileContainer extends StatelessWidget {
         );
       },
       child: Container(
-        width: 168.w,
         height: 56.h,
         padding: EdgeInsets.symmetric(
           horizontal: 20.w,
@@ -148,12 +148,14 @@ class HeaderProfileContainer extends StatelessWidget {
               ),
             ),
             DefaultSizedBox.vertical(3),
-            Text(
-              AppStrings.joinUSTodayInfoText.tr(),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: Styles.fontSize10,
-                color: Styles.whiteColor,
+            Flexible(
+              child: Text(
+                AppStrings.joinUSTodayInfoText.tr(),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: Styles.fontSize10,
+                  color: Styles.whiteColor,
+                ),
               ),
             ),
           ],

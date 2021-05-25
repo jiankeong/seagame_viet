@@ -188,7 +188,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Flexible(
                   flex: 2,
                   child: DefaultTextFormField(
-                    hintText: AppStrings.phoneNumber,
+                    hintText: AppStrings.phoneNumber.tr(),
                     controller: phoneNumberController,
                     validator: InputValidationsUtils.validateEmptyString,
                   ),
