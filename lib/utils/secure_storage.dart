@@ -10,7 +10,7 @@ class SecureStorage {
   SecureStorage._internal();
 
   Future<void> init() async {
-    if(_flutterSecureStorage == null) {
+    if (_flutterSecureStorage == null) {
       _flutterSecureStorage = FlutterSecureStorage();
     }
   }
@@ -23,11 +23,19 @@ class SecureStorage {
     return await _flutterSecureStorage!.write(key: key, value: value);
   }
 
+  Future<void> deleteItem(String key) async {
+    return await _flutterSecureStorage!.delete(key: key);
+  }
+
   Future<String?> readLoginToken() async {
     return await readString(kLoginToken);
   }
 
   Future<void> writeLoginToken(String? value) async {
     return await writeString(kLoginToken, value);
+  }
+
+  Future<void> deleteLoginToken() async {
+    return await deleteItem(kLoginToken);
   }
 }

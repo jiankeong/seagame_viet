@@ -29,4 +29,13 @@ class AuthProvider with ChangeNotifier {
     notifyListeners();
     return true;
   }
+
+  Future<dynamic> logout() async {
+    _token = null;
+
+    SecureStorage().deleteLoginToken();
+
+    notifyListeners();
+    return true;
+  }
 }

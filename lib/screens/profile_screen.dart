@@ -16,6 +16,9 @@ import '../models/user.dart';
 import '../widgets/label_value_vertical_layout.dart';
 import '../widgets/default_button.dart';
 import '../screens/change_password_screen.dart';
+import '../providers/auth_provider.dart';
+import './home_screen_stack.dart';
+import '../providers/route_provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -50,7 +53,17 @@ class ProfileScreen extends StatelessWidget {
               width: 295.w,
               buttonText: AppStrings.logout,
               color: Styles.primaryDarkColor,
-              onPressed: () {},
+              onPressed: () {
+                Provider.of<AuthProvider>(context, listen: false).logout();
+                Provider.of<UserProvider>(context, listen: false).reset();
+                Provider.of<RouteProvider>(context, listen: false).resetRoute();
+
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  HomeScreenStack.routeName,
+                  (route) => false,
+                );
+              },
             ),
           ],
         ),

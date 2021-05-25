@@ -23,4 +23,9 @@ class UserProvider with ChangeNotifier {
     notifyListeners();
     return;
   }
+
+  void reset() {
+    _user = null;
+    notifyListeners();
+  }
 }

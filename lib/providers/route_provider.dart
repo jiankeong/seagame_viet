@@ -13,7 +13,7 @@ class RouteProvider with ChangeNotifier {
   }
 
   void resetRoute() {
-    _currentIndex = 0;
+    _currentIndex = 999;
     notifyListeners();
   }
 }
