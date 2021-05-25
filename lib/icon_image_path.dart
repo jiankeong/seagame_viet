@@ -9,6 +9,22 @@ class AppIcons {
   static const String profile = 'assets/icons/profile.png';
   static const String notificationOff = 'assets/icons/notification_off.png';
   static const String qr = 'assets/icons/qr.png';
+  static const String arCamera = 'assets/icons/ar_camera.png';
+  static const String athletes = 'assets/icons/athletes.png';
+  static const String cityGuides = 'assets/icons/city_guide.png';
+  static const String competition = 'assets/icons/competition.png';
+  static const String gallery = 'assets/icons/gallery.png';
+  static const String games = 'assets/icons/games.png';
+  static const String live = 'assets/icons/live.png';
+  static const String location = 'assets/icons/location.png';
+  static const String medalTally = 'assets/icons/medal_tally.png';
+  static const String media = 'assets/icons/media.png';
+  static const String medical = 'assets/icons/medical.png';
+  static const String news = 'assets/icons/news.png';
+  static const String result = 'assets/icons/result.png';
+  static const String schedule = 'assets/icons/schedule.png';
+  static const String social = 'assets/icons/social.png';
+  static const String teams = 'assets/icons/teams.png';
 }
 
 class AppImages {
@@ -34,4 +50,6 @@ class AppImages {
   static const String vietnam = 'assets/images/vietnam.png';
   static const String homeScreenStackBg = 'assets/images/home_screen_stack_bg.png';
   static const String homeProfileContainerBg = 'assets/images/home_profile_container_bg.png';
+  static const String seagame2021Banner = 'assets/images/seagame_2021_banner.png';
+  static const String mascot = 'assets/images/mascot.png';
 }

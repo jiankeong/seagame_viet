@@ -29,27 +29,38 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
 
   bool hasError = false;
 
+  int scale = 3;
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        CircleAvatar(
-          backgroundColor: Colors.transparent,
-          backgroundImage: hasError || widget.profileImgUrl == null
-              ? AssetImage(AppImages.defaultProfileAvatarRounded)
-              : widget.imageType == ImageType.network
-                  // ignore: unnecessary_cast
-                  ? NetworkImage(widget.profileImgUrl!) as ImageProvider
-                  : widget.imageType == ImageType.asset
-                      ? AssetImage(widget.profileImgUrl!) as ImageProvider
-                      : FileImage(File(widget.profileImgUrl!)),
-          onBackgroundImageError: (_, st) {
-            setState(() {
-              hasError = true;
-            });
-          },
-          radius: widget.radius.h,
+        Container(
+          padding: EdgeInsets.all(scale.h),
+          decoration: BoxDecoration(
+              color: hasError || widget.profileImgUrl == null
+                  ? Colors.transparent
+                  : Styles.primaryDarkColor,
+              shape: BoxShape.circle),
+          child: CircleAvatar(
+            backgroundColor: Colors.transparent,
+            backgroundImage: hasError || widget.profileImgUrl == null
+                ? AssetImage(AppImages.defaultProfileAvatarRounded)
+                : widget.imageType == ImageType.network
+                    // ignore: unnecessary_cast
+                    ? NetworkImage(widget.profileImgUrl!) as ImageProvider
+                    : widget.imageType == ImageType.asset
+                        ? AssetImage(widget.profileImgUrl!) as ImageProvider
+                        : FileImage(File(widget.profileImgUrl!)),
+            onBackgroundImageError: (_, st) {
+              setState(() {
+                hasError = true;
+                scale = 0;
+              });
+            },
+            radius: (widget.radius - scale).h,
+          ),
         ),
         if (widget.canEdit)
           Positioned(

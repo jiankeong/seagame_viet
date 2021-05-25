@@ -27,7 +27,7 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
             for (int i = 0; i < bottomNavBarItems.length; i++)
               FABBottomAppBarItem(
                 text: Text(
-                  bottomNavBarItems[i].label.tr().toUpperCase(),
+                  bottomNavBarItems[i].label.toUpperCase(),
                   style: TextStyle(
                     fontSize: Styles.fontSize10,
                     color: Styles.sonicSilver,

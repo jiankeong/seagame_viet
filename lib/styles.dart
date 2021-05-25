@@ -17,6 +17,8 @@ class Styles {
 
   static const Color grey65 = Color(0xFFA6A6A6);
   static const Color sonicSilver = Color(0xFF767676);
+  static const Color outerSpace = Color(0xFF464646);
+  static const Color nero = Color(0xFF1C1C1C);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
   static Color redColor = Colors.red[700]!;

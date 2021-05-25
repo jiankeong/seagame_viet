@@ -1,4 +1,5 @@
 class AppStrings {
+  static const String athleteOrParticipant = 'athlete_or_participant';
   static const String confirmPassword = 'confirm_password';
   static const String copyright = 'copyright';
   static const String countryCode = 'country_code';
@@ -26,6 +27,7 @@ class AppStrings {
   static const String phoneNumber = 'phone_number';
   static const String profile = 'profile';
   static const String privacyStatement = 'privacy_statement';
+  static const String public = 'public';
   static const String register = 'register';
   static const String search = 'search';
   static const String termsOfUse = 'terms_of_use';
@@ -35,6 +37,23 @@ class AppStrings {
   static const String welcome = 'welcome';
   static const String welcomeGuest = 'welcome_guest';
   static const String yourCountry = 'your_country';
+
+  static const String live = 'live';
+  static const String schedule = 'schedule';
+  static const String games = 'games';
+  static const String competition = 'competition';
+  static const String result = 'result';
+  static const String medalTally = 'medal_tally';
+  static const String athletes = 'athletes';
+  static const String teams = 'teams';
+  static const String medical = 'medical';
+  static const String arCamera = 'ar_camera';
+  static const String location = 'location';
+  static const String cityGuide = 'city_guide';
+  static const String news = 'news';
+  static const String media = 'media';
+  static const String gallery = 'gallery';
+  static const String social = 'social';
 
   static const String emptyInputError = 'empty_input_error';
   static const String passwordNotSameError = 'password_not_same_error';

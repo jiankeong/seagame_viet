@@ -1,4 +1,5 @@
 {
+    "athlete_or_participant": "Athlete / Participant",
     "confirm_password": "Confirm Password",
     "copyright": "Copyright 2021 by VIESGOC. All Rights Reserved.",
     "country_code": "Country Code",
@@ -16,7 +17,7 @@
     "guest_login": "Guest Login",
     "join_now": "Join Now",
     "join_us_today": "Join Us Today",
-    "joinUSTodayInfoText": "Join us to get the best SEA Games experience!",
+    "join_us_today_info_text": "Join us to get the best SEA Games experience!",
     "login": "Login",
     "login_info_text": "Kindly enter your credentials to login",
     "male": "Male",
@@ -35,6 +36,23 @@
     "welcome_guest": "Welcome Guest",
     "your_country": "Your Country",
 
+    "live": "Live",
+    "schedule": "Schedule",
+    "games": "Games",
+    "competition": "Competition",
+    "result": "Result",
+    "medal_tally": "Medal Tally",
+    "athletes": "Athletes",
+    "teams": "Teams",
+    "medical": "Medical",
+    "ar_camera": "AR Camera",
+    "location": "Location",
+    "city_guide": "City Guide",
+    "news": "News",
+    "media": "Media",
+    "gallery": "Gallery",
+    "social": "Social",
+    
     "empty_input_error": "Please fill in this field",
     "password_not_same_error": "Please ensure passwords are the same",
     "invalid_email_format": "Invalid email"

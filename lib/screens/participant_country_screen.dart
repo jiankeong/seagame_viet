@@ -9,6 +9,7 @@ import '../widgets/default_sized_box.dart';
 import '../styles.dart';
 import '../widgets/default_padding.dart';
 import '../widgets/country_flag_container.dart';
+import './home_screen_stack.dart';
 
 class ParticipantCountryScreen extends StatelessWidget {
   static const routeName = '/ParticipantCountry';
@@ -60,7 +61,7 @@ class ParticipantCountryScreen extends StatelessWidget {
                     DefaultSizedBox.vertical(35),
                     _buildInfoText(),
                     DefaultSizedBox.vertical(65),
-                    _buildGetStartedButton(),
+                    _buildGetStartedButton(context),
                     DefaultSizedBox.vertical(35),
                   ],
                 ),
@@ -136,10 +137,17 @@ class ParticipantCountryScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildGetStartedButton() {
+  Widget _buildGetStartedButton(BuildContext context) {
     return DefaultButton(
       buttonText: AppStrings.getStarted,
       width: 213.w,
+      onPressed: () {
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          HomeScreenStack.routeName,
+          (_) => false,
+        );
+      },
     );
   }
 }

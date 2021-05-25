@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:provider/provider.dart';
 
 import '../icon_image_path.dart';
 import '../widgets/default_padding.dart';
@@ -18,6 +19,8 @@ import '../utils/build_dialog.dart';
 import './participant_country_screen.dart';
 import './register_screen.dart';
 import './home_screen_stack.dart';
+import '../providers/auth_provider.dart';
+import '../providers/user_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/Login';
@@ -160,9 +163,36 @@ class _LoginScreenState extends State<LoginScreen> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              Navigator.pushReplacementNamed(
+              final authProvider =
+                  Provider.of<AuthProvider>(context, listen: false);
+              final userProvider =
+                  Provider.of<UserProvider>(context, listen: false);
+
+              authProvider.login();
+              userProvider.parsedUserData({
+                "id": 1,
+                "fullname": "Lee Chong Wei",
+                "account_id": "LORME",
+                "email": "dlcw@gmail.com",
+                "phone": "+6017 888 8888",
+                "country": "Malaysia",
+                "profile_image": {
+                  "url":
+                      "https://lh3.googleusercontent.com/proxy/oCc3x0KEJNpmfPdaz2aKcFk1xEF3bD580DltcTll2mLE3nAOyhJrQZrBB0YyrHcw9Fktpzn548IUzsuV_SKv3z8kmKVr_9qgCBsDDEX4_n86"
+                },
+                "user_type": 1,
+                "gender": "Male",
+                "date_of_birth": "1982-10-21 00:00:00",
+                "country_flag": {
+                  "url":
+                      "https://www.countryflags.com/wp-content/uploads/malaysia-flag-png-large.png"
+                }
+              });
+
+              Navigator.pushNamedAndRemoveUntil(
                 context,
                 ParticipantCountryScreen.routeName,
+                (_) => false,
               );
             },
           ),
@@ -202,7 +232,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontColor: Styles.primaryColor,
                 buttonText: AppStrings.guestLogin,
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, HomeScreenStack.routeName);
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    HomeScreenStack.routeName,
+                    (_) => false,
+                  );
                 },
               ),
             ),
