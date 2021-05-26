@@ -9,11 +9,13 @@ class DefaultCacheNetworkImage extends StatelessWidget {
   final String? imageUrl;
   final double? height;
   final double? width;
+  final BorderRadius? borderRadius;
 
   DefaultCacheNetworkImage({
     this.imageUrl,
     this.height,
     this.width,
+    this.borderRadius,
   });
 
   @override

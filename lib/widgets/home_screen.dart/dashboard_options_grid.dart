@@ -26,7 +26,11 @@ class DashboardOptionsGrid extends StatelessWidget {
     DashboardOption(icon: AppIcons.arCamera, label: AppStrings.arCamera),
     DashboardOption(icon: AppIcons.location, label: AppStrings.location),
     DashboardOption(icon: AppIcons.cityGuides, label: AppStrings.cityGuide),
-    DashboardOption(icon: AppIcons.news, label: AppStrings.news),
+    DashboardOption(
+      icon: AppIcons.news,
+      label: AppStrings.news,
+      routeName: NewsMenuScreen.routeName,
+    ),
     DashboardOption(icon: AppIcons.media, label: AppStrings.media),
     DashboardOption(
       icon: AppIcons.gallery,

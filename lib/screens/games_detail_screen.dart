@@ -19,11 +19,6 @@ class GamesDetailScreen extends StatelessWidget {
     fontSize: Styles.regularFontSize,
   );
 
-  final TextStyle sectionTitleTextStyle = TextStyle(
-    fontWeight: Styles.boldText,
-    fontSize: 21.sp,
-    color: Styles.primaryColor,
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +59,7 @@ class GamesDetailScreen extends StatelessWidget {
                         DefaultSizedBox.vertical(20),
                         Text(
                           AppStrings.overview.tr(),
-                          style: sectionTitleTextStyle,
+                          style: Styles.sectionTitleTextStyle,
                         ),
                         DefaultSizedBox.vertical(20),
                         Text(
@@ -159,7 +154,7 @@ class GamesDetailScreen extends StatelessWidget {
                       children: [
                         Text(
                           AppStrings.essenceOfSport.tr(),
-                          style: sectionTitleTextStyle,
+                          style: Styles.sectionTitleTextStyle,
                         ),
                         DefaultSizedBox.vertical(20),
                         Text(

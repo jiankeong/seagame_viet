@@ -112,4 +112,7 @@ class AppStrings {
   static const String teamCompetition = 'team_competition';
   static const String mixedTeam = 'mixed_team';
   static const String menOrWomen = 'men_or_women';
+
+  static const String highlights = 'highlights';
+  static const String updates = 'updates';
 }

@@ -14,6 +14,7 @@ class CustomShadowContainer extends StatelessWidget {
   final String? backgroundImage;
   final List<BoxShadow>? shadow;
   final double? height;
+  final double? width;
 
   CustomShadowContainer({
     this.child,
@@ -26,6 +27,7 @@ class CustomShadowContainer extends StatelessWidget {
     this.backgroundImage,
     this.shadow,
     this.height,
+    this.width,
   });
 
   @override
@@ -37,7 +39,7 @@ class CustomShadowContainer extends StatelessWidget {
         rightPadding.w,
         bottomPadding.h,
       ),
-      width: double.infinity,
+      width: width ?? double.infinity,
       height: height,
       decoration: BoxDecoration(
         image: backgroundImage != null

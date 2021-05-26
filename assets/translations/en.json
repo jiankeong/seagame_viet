@@ -110,5 +110,8 @@
     "individual_competition": "Individual Competition",
     "team_competition": "Team Competition",
     "mixed_team": "Mixed Team",
-    "men_or_women": "Men/Women"
+    "men_or_women": "Men/Women",
+
+    "hightlights": "highlights",
+    "updates": "updates"
 }

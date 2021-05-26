@@ -38,4 +38,10 @@ class Styles {
   static BorderRadius defaultBorderRadius = BorderRadius.circular(
     25.h,
   );
+
+  static TextStyle sectionTitleTextStyle = TextStyle(
+    fontWeight: Styles.boldText,
+    fontSize: 21.sp,
+    color: Styles.primaryColor,
+  );
 }

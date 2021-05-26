@@ -7,6 +7,7 @@ import './default_sized_box.dart';
 import '../app_strings.dart';
 import '../icon_image_path.dart';
 import '../screens/games_detail_screen.dart';
+import './sport_icon_container.dart';
 
 class DefaultSportGrid extends StatelessWidget {
   final String? moveToScreenRouteName;
@@ -117,17 +118,8 @@ class DefaultSportGrid extends StatelessWidget {
           },
           child: Column(
             children: [
-              Container(
-                padding: EdgeInsets.all(5.h),
-                decoration: BoxDecoration(
-                  color: Styles.primaryColor,
-                  borderRadius: BorderRadius.circular(10.h),
-                ),
-                child: Image.asset(
-                  sport['icon'],
-                  width: 40.h,
-                  height: 40.h,
-                ),
+              SportIconContainer(
+                icon: sport['icon'],
               ),
               DefaultSizedBox.vertical(5),
               Flexible(
