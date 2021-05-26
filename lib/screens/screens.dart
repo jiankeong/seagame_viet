@@ -14,3 +14,4 @@ export 'gallery_menu_screen.dart';
 export 'games_detail_screen.dart';
 export 'gallery_detail_screen.dart';
 export 'news_menu_screen.dart';
+export 'news_detail_screen.dart';

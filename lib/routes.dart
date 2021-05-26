@@ -17,4 +17,5 @@ final routeList = {
   GamesDetailScreen.routeName: (ctx) => GamesDetailScreen(),
   GalleryDetailScreen.routeName: (ctx) => GalleryDetailScreen(),
   NewsMenuScreen.routeName: (ctx) => NewsMenuScreen(),
+  NewsDetailScreen.routeName: (ctx) => NewsDetailScreen(),
 };
