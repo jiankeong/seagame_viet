@@ -9,4 +9,5 @@ export 'my_tickets_screen.dart';
 export 'e_shop_screen.dart';
 export 'product_detail_screen.dart';
 export 'social_screen.dart';
-export 'games_screen.dart';
+export 'games_menu_screen.dart';
+export 'gallery_menu_screen.dart';

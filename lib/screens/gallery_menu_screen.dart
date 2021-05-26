@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+import '../widgets/default_sport_grid.dart';
 import '../widgets/default_app_bar.dart';
 import '../app_strings.dart';
-import '../widgets/default_sport_grid.dart';
 
-class GamesScreen extends StatelessWidget {
-  static const routeName = '/Games';
+class GalleryMenuScreen extends StatelessWidget {
+  static const routeName = '/GalleryMenu';
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ class GamesScreen extends StatelessWidget {
       body: Column(
         children: [
           DefaultAppBar(
-            title: AppStrings.games.tr(),
+            title: AppStrings.gallery.tr(),
           ),
           Expanded(
             child: DefaultSportGrid(),
-          )
+          ),
         ],
       ),
     );
