@@ -48,6 +48,8 @@ class AppIcons {
   static const String tennis = 'assets/icons/tennis.png';
   static const String weightlifting = 'assets/icons/weightlifting.png';
   static const String wrestling = 'assets/icons/wrestling.png';
+  static const String save = 'assets/icons/save.png';
+  static const String share = 'assets/icons/share.png';
 }
 
 class AppImages {

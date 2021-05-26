@@ -112,6 +112,7 @@ class DefaultSportGrid extends StatelessWidget {
           onTap: () {
             Navigator.pushNamed(context, moveToScreenRouteName!, arguments: {
               "id": index,
+              "name": sport['name'],
             });
           },
           child: Column(

@@ -23,3 +23,11 @@ String formatNumToCurrency(price,
 
   return currency;
 }
+
+String formatSingleDigitToDoubleDigit(int value) {
+  if (value.toString().length == 1) {
+    return '0$value';
+  } else {
+    return value.toString();
+  }
+}
