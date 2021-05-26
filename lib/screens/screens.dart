@@ -8,3 +8,4 @@ export 'helpdesk_screen.dart';
 export 'my_tickets_screen.dart';
 export 'e_shop_screen.dart';
 export 'product_detail_screen.dart';
+export 'social_screen.dart';

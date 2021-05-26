@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widgets/header_profile_container.dart';
 import '../widgets/home_screen.dart/home_screen_widgets.dart';
-import '../constants/app_constants.dart';
-import '../icon_image_path.dart';
 import '../widgets/default_sized_box.dart';
-import '../styles.dart';
 import '../globals.dart';
 
 class HomeScreen extends StatelessWidget {

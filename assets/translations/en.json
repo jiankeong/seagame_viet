@@ -64,6 +64,8 @@
     "gallery": "Gallery",
     "social": "Social",
 
+    "no_records_found": "No Records Found",
+
     "current_password": "Current Password",
     "new_password": "New Password",
     "confirm_new_password": "Confirm New Password",

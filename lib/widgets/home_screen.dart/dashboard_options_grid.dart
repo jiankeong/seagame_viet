@@ -6,6 +6,7 @@ import '../../app_strings.dart';
 import '../../icon_image_path.dart';
 import '../default_sized_box.dart';
 import '../../styles.dart';
+import '../../screens/screens.dart';
 
 class DashboardOptionsGrid extends StatelessWidget {
   final List<DashboardOption> _options = [
@@ -24,7 +25,11 @@ class DashboardOptionsGrid extends StatelessWidget {
     DashboardOption(icon: AppIcons.news, label: AppStrings.news),
     DashboardOption(icon: AppIcons.media, label: AppStrings.media),
     DashboardOption(icon: AppIcons.gallery, label: AppStrings.gallery),
-    DashboardOption(icon: AppIcons.social, label: AppStrings.social),
+    DashboardOption(
+      icon: AppIcons.social,
+      label: AppStrings.social,
+      routeName: SocialScreen.routeName,
+    ),
   ];
 
   @override
@@ -40,7 +45,13 @@ class DashboardOptionsGrid extends StatelessWidget {
 
         return InkWell(
           splashColor: Colors.transparent,
-          onTap: () {},
+          onTap: () {
+            if (option.routeName != null)
+              Navigator.pushNamed(
+                context,
+                option.routeName!,
+              );
+          },
           child: Column(
             children: [
               Image.asset(
@@ -67,11 +78,11 @@ class DashboardOptionsGrid extends StatelessWidget {
 class DashboardOption {
   final String? icon;
   final String? label;
-  final Function()? onPressed;
+  final String? routeName;
 
   DashboardOption({
     required this.icon,
     required this.label,
-    this.onPressed,
+    this.routeName,
   });
 }

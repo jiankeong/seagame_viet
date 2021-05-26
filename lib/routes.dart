@@ -11,4 +11,5 @@ final routeList = {
   MyTicketsScreen.routeName: (ctx) => MyTicketsScreen(),
   EShopScreen.routeName: (ctx) => EShopScreen(),
   ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
+  SocialScreen.routeName: (ctx) => SocialScreen(),
 };
