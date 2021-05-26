@@ -18,4 +18,5 @@ final routeList = {
   GalleryDetailScreen.routeName: (ctx) => GalleryDetailScreen(),
   NewsMenuScreen.routeName: (ctx) => NewsMenuScreen(),
   NewsDetailScreen.routeName: (ctx) => NewsDetailScreen(),
+  CityGuideScreen.routeName: (ctx) => CityGuideScreen(),
 };

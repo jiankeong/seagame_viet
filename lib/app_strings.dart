@@ -115,4 +115,10 @@ class AppStrings {
 
   static const String highlights = 'highlights';
   static const String updates = 'updates';
+
+  static const String explore = 'explore';
+  static const String hotel = 'hotel';
+  static const String food = 'food';
+  static const String topSights = 'top_sights';
+  static const String topSightsInfoText = 'top_sights_info_text';
 }

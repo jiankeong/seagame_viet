@@ -30,6 +30,7 @@ class DefaultTextFormField extends StatelessWidget {
   final Function(String)? onChanged;
   final Color? disableFontColor;
   final String? helperText;
+  final bool hideBorder;
 
   DefaultTextFormField({
     this.controller,
@@ -56,6 +57,7 @@ class DefaultTextFormField extends StatelessWidget {
     this.onChanged,
     this.disableFontColor,
     this.helperText,
+    this.hideBorder = false,
   });
 
   @override
@@ -78,6 +80,7 @@ class DefaultTextFormField extends StatelessWidget {
                 : (val) {
                     onChanged!(val);
                   },
+            textAlignVertical: TextAlignVertical.center,
             decoration: InputDecoration(
               hintText: hintText.toUpperCase(),
               helperText: helperText,
@@ -85,16 +88,21 @@ class DefaultTextFormField extends StatelessWidget {
                 color: hintTextColor ?? Styles.grey65,
                 fontSize: 15.sp,
               ),
-              focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                width: 2.w,
-                color: Styles.primaryDarkColor,
-              )),
-              focusedErrorBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                width: 2.w,
-                color: Styles.redColor,
-              )),
+              border: hideBorder ? InputBorder.none : null,
+              focusedBorder: hideBorder
+                  ? InputBorder.none
+                  : UnderlineInputBorder(
+                      borderSide: BorderSide(
+                      width: 2.w,
+                      color: Styles.primaryDarkColor,
+                    )),
+              focusedErrorBorder: hideBorder
+                  ? InputBorder.none
+                  : UnderlineInputBorder(
+                      borderSide: BorderSide(
+                      width: 2.w,
+                      color: Styles.redColor,
+                    )),
               prefixIcon: prefixIcon,
               prefixIconConstraints: BoxConstraints(
                 minWidth: 2.w,

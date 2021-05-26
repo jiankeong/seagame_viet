@@ -15,6 +15,7 @@ class CustomShadowContainer extends StatelessWidget {
   final List<BoxShadow>? shadow;
   final double? height;
   final double? width;
+  final BorderRadius? borderRadius;
 
   CustomShadowContainer({
     this.child,
@@ -28,6 +29,7 @@ class CustomShadowContainer extends StatelessWidget {
     this.shadow,
     this.height,
     this.width,
+    this.borderRadius,
   });
 
   @override
@@ -51,7 +53,11 @@ class CustomShadowContainer extends StatelessWidget {
               )
             : null,
         color: backgroundColor,
-        borderRadius: roundedCorner ? Styles.defaultBorderRadius : null,
+        borderRadius: borderRadius != null
+            ? borderRadius
+            : roundedCorner
+                ? Styles.defaultBorderRadius
+                : null,
         boxShadow: shadow ??
             [
               BoxShadow(

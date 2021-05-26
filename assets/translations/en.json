@@ -113,5 +113,11 @@
     "men_or_women": "Men/Women",
 
     "highlights": "Highlights",
-    "updates": "Updates"
+    "updates": "Updates",
+
+    "explore": "Explore",
+    "hotel": "Hotel",
+    "food": "Food",
+    "top_sights": "Top Sights",
+    "top_sights_info_text": "Based on traveller visits and local insights"
 }
