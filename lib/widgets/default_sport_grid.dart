@@ -6,20 +6,23 @@ import '../styles.dart';
 import './default_sized_box.dart';
 import '../app_strings.dart';
 import '../icon_image_path.dart';
+import '../screens/games_detail_screen.dart';
 
 class DefaultSportGrid extends StatelessWidget {
   final String? moveToScreenRouteName;
 
-  DefaultSportGrid({this.moveToScreenRouteName});
+  DefaultSportGrid({
+    this.moveToScreenRouteName = GamesDetailScreen.routeName,
+  });
 
   final List<Map<String, dynamic>> _sportList = [
     {
-      "name": AppStrings.aquatics,
-      "icon": AppIcons.aquatics,
-    },
-    {
       "name": AppStrings.archery,
       "icon": AppIcons.archery,
+    },
+    {
+      "name": AppStrings.aquatics,
+      "icon": AppIcons.aquatics,
     },
     {
       "name": AppStrings.atheletics,
@@ -105,32 +108,39 @@ class DefaultSportGrid extends StatelessWidget {
       itemBuilder: (context, index) {
         Map<String, dynamic> sport = _sportList[index];
 
-        return Column(
-          children: [
-            Container(
-              padding: EdgeInsets.all(5.h),
-              decoration: BoxDecoration(
-                color: Styles.primaryColor,
-                borderRadius: BorderRadius.circular(10.h),
+        return InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, moveToScreenRouteName!, arguments: {
+              "id": index,
+            });
+          },
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.all(5.h),
+                decoration: BoxDecoration(
+                  color: Styles.primaryColor,
+                  borderRadius: BorderRadius.circular(10.h),
+                ),
+                child: Image.asset(
+                  sport['icon'],
+                  width: 40.h,
+                  height: 40.h,
+                ),
               ),
-              child: Image.asset(
-                sport['icon'],
-                width: 40.h,
-                height: 40.h,
-              ),
-            ),
-            DefaultSizedBox.vertical(5),
-            Flexible(
-              child: FittedBox(
-                child: Text(
-                  sport['name'].toString().tr(),
-                  style: TextStyle(
-                    fontSize: Styles.smallerRegularSize,
+              DefaultSizedBox.vertical(5),
+              Flexible(
+                child: FittedBox(
+                  child: Text(
+                    sport['name'].toString().tr(),
+                    style: TextStyle(
+                      fontSize: Styles.smallerRegularSize,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         );
       },
       itemCount: _sportList.length,

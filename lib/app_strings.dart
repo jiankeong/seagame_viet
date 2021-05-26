@@ -10,6 +10,8 @@ class AppStrings {
   static const String email = 'email';
   static const String emailOrPhoneNumber = 'email_or_phone_number';
   static const String eshop = 'e_shop';
+  static const String essenceOfSport = 'essence_of_sport';
+  static const String eventProgramme = 'event_programme';
   static const String fullName = 'full_name';
   static const String gender = 'gender';
   static const String getStarted = 'get_started';
@@ -25,6 +27,7 @@ class AppStrings {
   static const String logout = 'logout';
   static const String myTickets = 'my_tickets';
   static const String noRecordsFound = 'no_records_found';
+  static const String overview = 'overview';
   static const String participatingCountries = 'participating_countries';
   static const String particiaptingCountriesInfoText =
       'participating_countries_info_text';
@@ -45,6 +48,7 @@ class AppStrings {
   static const String userRegistration = 'user_registration';
   static const String userRegistrationInfoText = 'user_registration_info_text';
   static const String version = 'version';
+  static const String viewSchedule = 'view_schedule';
   static const String welcome = 'welcome';
   static const String welcomeGuest = 'welcome_guest';
   static const String yourCountry = 'your_country';
@@ -100,4 +104,12 @@ class AppStrings {
   static const String emptyInputError = 'empty_input_error';
   static const String passwordNotSameError = 'password_not_same_error';
   static const String invalidEmailFormat = 'invalid_email_format';
+
+  static const String archeryDetail1 = 'archery_detail_1';
+  static const String archeryDetail2 = 'archery_detail_2';
+  static const String archeryDetail3 = 'archery_detail_3';
+  static const String individualCompetition = 'individual_competition';
+  static const String teamCompetition = 'team_competition';
+  static const String mixedTeam = 'mixed_team';
+  static const String menOrWomen = 'men_or_women';
 }

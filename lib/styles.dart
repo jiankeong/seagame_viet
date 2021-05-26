@@ -28,6 +28,7 @@ class Styles {
   static const Color dividerColor = Color(0xFFB5B1B8);
   static const Color qrContainerBorderColor = Color(0xFFD9D9D9);
   static const Color offerColor = Color(0xFFF55B5B);
+  static const Color creditToColor = Color(0xFFB2B2B2);
 
   static TextStyle errorHintTextStyle = TextStyle(
     fontSize: Styles.regularFontSize,

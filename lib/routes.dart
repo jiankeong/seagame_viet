@@ -14,4 +14,5 @@ final routeList = {
   SocialScreen.routeName: (ctx) => SocialScreen(),
   GamesScreen.routeName: (ctx) => GamesScreen(),
   GalleryMenuScreen.routeName: (ctx) => GalleryMenuScreen(),
+  GamesDetailScreen.routeName: (ctx) => GamesDetailScreen(),
 };

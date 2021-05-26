@@ -6,7 +6,6 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../widgets/default_app_bar.dart';
 import '../app_strings.dart';
-import '../widgets/default_button.dart';
 import '../constants/app_constants.dart';
 import '../styles.dart';
 import '../widgets/default_carousel.dart';
@@ -17,6 +16,7 @@ import '../widgets/default_padding.dart';
 import '../utils/general_functions.dart';
 import '../widgets/default_divider.dart';
 import '../widgets/custom_shadow_container.dart';
+import '../widgets/oval_button.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   static const routeName = '/ProductDetail';
@@ -35,7 +35,7 @@ class ProductDetailScreen extends StatelessWidget {
 
   List<String> relatedProductImage = [
     'https://a1.bbkz.net/forum/attachment.php?attachmentid=3051915&thumb=1&d=1580378846',
-        'https://thermosmalaysia.com/wp-content/uploads/2018/10/JNL-503PPL.png',
+    'https://thermosmalaysia.com/wp-content/uploads/2018/10/JNL-503PPL.png',
   ];
 
   @override
@@ -257,21 +257,9 @@ class ProductDetailScreen extends StatelessWidget {
             ]),
             child: Row(
               children: [
-                Container(
+                OvalButton(
+                  buttonText: AppStrings.purchase.tr(),
                   width: 115.w,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 8.w, horizontal: 15.h),
-                  decoration: BoxDecoration(
-                      color: Styles.primaryColor,
-                      borderRadius: BorderRadius.circular(25.h)),
-                  child: Text(
-                    AppStrings.purchase.tr(),
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Styles.whiteColor,
-                      fontSize: Styles.regularFontSize,
-                    ),
-                  ),
                 )
               ],
             ),
