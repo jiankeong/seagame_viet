@@ -12,7 +12,11 @@ class DashboardOptionsGrid extends StatelessWidget {
   final List<DashboardOption> _options = [
     DashboardOption(icon: AppIcons.live, label: AppStrings.live),
     DashboardOption(icon: AppIcons.schedule, label: AppStrings.schedule),
-    DashboardOption(icon: AppIcons.games, label: AppStrings.games),
+    DashboardOption(
+      icon: AppIcons.games,
+      label: AppStrings.games,
+      routeName: GamesScreen.routeName,
+    ),
     DashboardOption(icon: AppIcons.competition, label: AppStrings.competition),
     DashboardOption(icon: AppIcons.result, label: AppStrings.result),
     DashboardOption(icon: AppIcons.medalTally, label: AppStrings.medalTally),

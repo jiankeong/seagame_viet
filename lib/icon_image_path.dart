@@ -28,6 +28,26 @@ class AppIcons {
   static const String back = 'assets/icons/back.png';
   static const String notificationOn = 'assets/icons/notification_on.png';
   static const String liveChat = 'assets/icons/live_chat.png';
+  static const String aquatics = 'assets/icons/aquatics.png';
+  static const String archery = 'assets/icons/archery.png';
+  static const String atheletics = 'assets/icons/atheletics.png';
+  static const String basketball = 'assets/icons/basketball.png';
+  static const String beachVolleyBall= 'assets/icons/beach_volleyball.png';
+  static const String boxing = 'assets/icons/boxing.png';
+  static const String canoeKayak = 'assets/icons/canoe_kayak.png';
+  static const String cycling = 'assets/icons/cycling.png';
+  static const String dancesport = 'assets/icons/dancesport.png';
+  static const String diving = 'assets/icons/diving.png';
+  static const String fencing = 'assets/icons/fencing.png';
+  static const String football = 'assets/icons/football.png';
+  static const String golf = 'assets/icons/golf.png';
+  static const String gymnastics = 'assets/icons/gymnastics.png';
+  static const String handball = 'assets/icons/handball.png';
+  static const String judo = 'assets/icons/judo.png';
+  static const String shooting = 'assets/icons/shooting.png';
+  static const String tennis = 'assets/icons/tennis.png';
+  static const String weightlifting = 'assets/icons/weightlifting.png';
+  static const String wrestling = 'assets/icons/wrestling.png';
 }
 
 class AppImages {

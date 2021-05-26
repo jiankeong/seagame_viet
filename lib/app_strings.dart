@@ -26,7 +26,8 @@ class AppStrings {
   static const String myTickets = 'my_tickets';
   static const String noRecordsFound = 'no_records_found';
   static const String participatingCountries = 'participating_countries';
-  static const String particiaptingCountriesInfoText = 'participating_countries_info_text';
+  static const String particiaptingCountriesInfoText =
+      'participating_countries_info_text';
   static const String password = 'password';
   static const String personalDetails = 'personal_details';
   static const String phoneNumber = 'phone_number';
@@ -65,13 +66,35 @@ class AppStrings {
   static const String gallery = 'gallery';
   static const String social = 'social';
 
+  static const String aquatics = 'aquatics';
+  static const String archery = 'archery';
+  static const String atheletics = 'atheletics';
+  static const String basketball = 'basketball';
+  static const String beachVolleyBall = 'beach_volley_ball';
+  static const String boxing = 'boxing';
+  static const String canoeKayak = 'canoe_kayak';
+  static const String cycling = 'cycling';
+  static const String dancesport = 'dancesport';
+  static const String diving = 'diving';
+  static const String fencing = 'fencing';
+  static const String football = 'football';
+  static const String golf = 'golf';
+  static const String gymnastics = 'gymnastics';
+  static const String handball = 'handball';
+  static const String judo = 'judo';
+  static const String shooting = 'shooting';
+  static const String tennis = 'tennis';
+  static const String weightlifting = 'weightlifting';
+  static const String wrestling = 'wrestling';
+
   static const String currentPassword = 'current_password';
   static const String newPasword = 'new_password';
   static const String confirmNewPassowrd = 'confirm_new_password';
   static const String submit = 'submit';
   static const String updateSuccessfully = 'update_successfully';
 
-  static const String contact_us_for_any_further_assistance = 'contact_us_for_any_futher_assistance';
+  static const String contact_us_for_any_further_assistance =
+      'contact_us_for_any_futher_assistance';
   static const String startLiveChat = 'start_live_chat';
 
   static const String emptyInputError = 'empty_input_error';
