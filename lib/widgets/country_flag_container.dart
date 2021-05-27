@@ -15,9 +15,10 @@ class CountryFlagContainer extends StatelessWidget {
     return Container(
       width: 89.w,
       height: 62.h,
+      margin: EdgeInsets.all(3.h),
       decoration: BoxDecoration(
         image:
-            DecorationImage(fit: BoxFit.cover, image: AssetImage(countryFlag)),
+            DecorationImage(fit: BoxFit.contain, image: AssetImage(countryFlag)),
       ),
     );
   }

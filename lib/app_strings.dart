@@ -121,4 +121,19 @@ class AppStrings {
   static const String food = 'food';
   static const String topSights = 'top_sights';
   static const String topSightsInfoText = 'top_sights_info_text';
+
+  static const String myTeams = 'my_teams';
+  static const String searchTeams = 'search_teams';
+
+  static const String bruneiFull = 'brunei_full';
+  static const String cambodia = 'cambodia';
+  static const String indonesia = 'indonesia';
+  static const String laosFull = 'laos_full';
+  static const String malaysia = 'malaysia';
+  static const String myanmar = 'myanmar';
+  static const String philippines = 'philippines';
+  static const String singapore = 'singapore';
+  static const String thailand = 'thailand';
+  static const String timorLeste = 'timor_leste';
+  static const String vietnam = 'vietnam';
 }

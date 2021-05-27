@@ -119,5 +119,19 @@
     "hotel": "Hotel",
     "food": "Food",
     "top_sights": "Top Sights",
-    "top_sights_info_text": "Based on traveller visits and local insights"
+    "top_sights_info_text": "Based on traveller visits and local insights",
+
+    "my_teams": "My Teams",
+    "search_teams": "Search Teams",
+    "brunei_full": "Brunei Darussalam",
+    "cambodia": "Cambodia",
+    "indonesia": "Indonesia",
+    "laos_full": "Lao People’s Democratic Republic",
+    "malaysia": "Malaysia",
+    "myanmar": "Myanmar",
+    "philippines": "Philippines",
+    "singapore": "Singapore",
+    "thailand": "Thailand",
+    "timor_leste": "Timor Leste",
+    "vietnam": "Vietnam"
 }

@@ -31,6 +31,8 @@ class DefaultTextFormField extends StatelessWidget {
   final Color? disableFontColor;
   final String? helperText;
   final bool hideBorder;
+  final TextAlign textAlign;
+  final TextStyle? hintStyle;
 
   DefaultTextFormField({
     this.controller,
@@ -58,6 +60,8 @@ class DefaultTextFormField extends StatelessWidget {
     this.disableFontColor,
     this.helperText,
     this.hideBorder = false,
+    this.textAlign = TextAlign.start,
+    this.hintStyle,
   });
 
   @override
@@ -71,6 +75,7 @@ class DefaultTextFormField extends StatelessWidget {
             autovalidateMode: AutovalidateMode.onUserInteraction,
             keyboardType: textInputType,
             inputFormatters: textInputFormatter ?? [],
+            textAlign: textAlign,
             style: TextStyle(
               color: textColor,
               fontSize: 15.sp,
@@ -84,10 +89,12 @@ class DefaultTextFormField extends StatelessWidget {
             decoration: InputDecoration(
               hintText: hintText.toUpperCase(),
               helperText: helperText,
-              hintStyle: TextStyle(
-                color: hintTextColor ?? Styles.grey65,
-                fontSize: 15.sp,
-              ),
+              hintStyle: hintStyle != null
+                  ? hintStyle
+                  : TextStyle(
+                      color: hintTextColor ?? Styles.grey65,
+                      fontSize: 15.sp,
+                    ),
               border: hideBorder ? InputBorder.none : null,
               focusedBorder: hideBorder
                   ? InputBorder.none

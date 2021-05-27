@@ -21,7 +21,11 @@ class DashboardOptionsGrid extends StatelessWidget {
     DashboardOption(icon: AppIcons.result, label: AppStrings.result),
     DashboardOption(icon: AppIcons.medalTally, label: AppStrings.medalTally),
     DashboardOption(icon: AppIcons.athletes, label: AppStrings.athletes),
-    DashboardOption(icon: AppIcons.teams, label: AppStrings.teams),
+    DashboardOption(
+      icon: AppIcons.teams,
+      label: AppStrings.teams,
+      routeName: TeamMenuScreen.routeName,
+    ),
     DashboardOption(icon: AppIcons.medical, label: AppStrings.medical),
     DashboardOption(icon: AppIcons.arCamera, label: AppStrings.arCamera),
     DashboardOption(icon: AppIcons.location, label: AppStrings.location),
