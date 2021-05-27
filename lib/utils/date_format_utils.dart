@@ -14,4 +14,17 @@ class DateFormatUtils {
   static String ddMMMEEE(DateTime date) {
     return DateFormat('dd MMM (EEE)').format(date);
   }
+
+  ///Format into time
+  static String hmFormat(DateTime date) {
+    return DateFormat.Hm().format(date);
+  }
+
+  static String combineStartDateAndEndDate(DateTime startDate, DateTime endDate) {
+    String dateAndDay = ddMMMEEE(startDate);
+    String startTime = hmFormat(startDate);
+    String endTime = hmFormat(endDate);
+
+    return '$dateAndDay | $startTime - $endTime';
+  }
 }

@@ -50,6 +50,7 @@ class AppIcons {
   static const String wrestling = 'assets/icons/wrestling.png';
   static const String save = 'assets/icons/save.png';
   static const String share = 'assets/icons/share.png';
+  static const String filter = 'assets/icons/filter.png';
 }
 
 class AppImages {

@@ -145,4 +145,10 @@ class AppStrings {
   static const String no = 'no';
   static const String name = 'name';
   static const String pos = 'pos';
+
+  static const String endOfList = "end_of_list";
+  static const String loading = 'loading';
+  static const String loadFailed = "load_failed";
+  static const String releaseToLoadMore = 'release_to_load_more';
+  static const String noMoreData = '"no_more_data"';
 }
