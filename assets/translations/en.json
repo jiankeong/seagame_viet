@@ -54,7 +54,7 @@
     "schedule": "Schedule",
     "games": "Games",
     "competition": "Competition",
-    "result": "Result",
+    "results": "Results",
     "medal_tally": "Medal Tally",
     "athletes": "Athletes",
     "teams": "Teams",
@@ -148,5 +148,8 @@
 
     "filter": "Filter",
     "choose_sport": "Choose Sport",
-    "choose_discipline": "Choose Discipline"
+    "choose_discipline": "Choose Discipline",
+
+    "match_gallery": "Match Gallery",
+    "set": "Set"
 }

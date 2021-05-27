@@ -20,7 +20,7 @@ class DashboardOptionsGrid extends StatelessWidget {
     DashboardOption(icon: AppIcons.competition, label: AppStrings.competition),
     DashboardOption(
       icon: AppIcons.result,
-      label: AppStrings.result,
+      label: AppStrings.results,
       routeName: ResultListScreen.routeName,
     ),
     DashboardOption(icon: AppIcons.medalTally, label: AppStrings.medalTally),

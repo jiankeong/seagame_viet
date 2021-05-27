@@ -25,4 +25,12 @@ class ResultService {
 
     return _data;
   }
+
+  static Future<Map<String, dynamic>?> getMatchResult() async {
+    await Future.delayed(Duration(seconds: 1));
+
+    Map<String, dynamic> _data = {};
+
+    return _data;
+  }
 }

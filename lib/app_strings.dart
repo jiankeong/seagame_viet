@@ -57,7 +57,7 @@ class AppStrings {
   static const String schedule = 'schedule';
   static const String games = 'games';
   static const String competition = 'competition';
-  static const String result = 'result';
+  static const String results = 'results';
   static const String medalTally = 'medal_tally';
   static const String athletes = 'athletes';
   static const String teams = 'teams';
@@ -155,4 +155,7 @@ class AppStrings {
   static const String filter = 'filter';
   static const String chooseSport = 'choose_sport';
   static const String chooseDiscipline = 'choose_discipline';
+
+  static const String matchSet = 'set';
+  static const String matchGallery = 'match_gallery';
 }

@@ -18,6 +18,7 @@ import '../models/game_match.dart';
 import '../widgets/default_sized_box.dart';
 import '../utils/build_bottom_sheet.dart';
 import '../widgets/results_list/filter_bottom_sheet_layout.dart';
+import './result_detail_screen.dart';
 
 class ResultListScreen extends StatefulWidget {
   static const routeName = '/ResultList';
@@ -148,7 +149,7 @@ class _ResultListScreenState extends State<ResultListScreen> {
 
   Widget _buildAppBar() {
     return DefaultAppBar(
-      title: AppStrings.result.tr(),
+      title: AppStrings.results.tr(),
       trailing: _buildFilterButton(),
     );
   }
@@ -218,7 +219,12 @@ class _ResultListScreenState extends State<ResultListScreen> {
         return Column(
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, ResultDetailScreen.routeName,
+                    arguments: {
+                      "id": match!.id,
+                    });
+              },
               child: MatchContainer(
                 match: match,
               ),

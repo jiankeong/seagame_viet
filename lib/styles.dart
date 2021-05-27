@@ -44,4 +44,9 @@ class Styles {
     fontSize: 21.sp,
     color: Styles.primaryColor,
   );
+
+  static TextStyle resultTableLabelTextStyle = TextStyle(
+    fontSize: 12.sp,
+    color: Styles.suvaGrey,
+  );
 }
