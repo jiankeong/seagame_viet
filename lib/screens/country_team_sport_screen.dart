@@ -46,7 +46,7 @@ class _CountryTeamSportScreenState extends State<CountryTeamSportScreen> {
           },
           {
             "tabTitle": AppStrings.news.tr(),
-            "tabScreen": Container(),
+            "tabScreen": CountryTeamSportNews(),
           },
           {
             "tabTitle": AppStrings.schedule.tr(),
