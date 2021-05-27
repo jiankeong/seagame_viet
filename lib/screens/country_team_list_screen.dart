@@ -10,6 +10,7 @@ import '../widgets/default_padding.dart';
 import '../styles.dart';
 import '../widgets/default_sport_grid.dart';
 import '../icon_image_path.dart';
+import './country_team_sport_screen.dart';
 
 class CountryTeamListScreen extends StatefulWidget {
   static const routeName = '/CountryTeamList';
@@ -98,6 +99,8 @@ class _CountryTeamListScreenState extends State<CountryTeamListScreen> {
           Expanded(
             child: DefaultSportGrid(
               sportList: sportList,
+              moveToScreenRouteName: CountryTeamSportScreen.routeName,
+              country: country,
             ),
           ),
         ],

@@ -21,4 +21,5 @@ final routeList = {
   CityGuideScreen.routeName: (ctx) => CityGuideScreen(),
   TeamMenuScreen.routeName: (ctx) => TeamMenuScreen(),
   CountryTeamListScreen.routeName: (ctx) => CountryTeamListScreen(),
+  CountryTeamSportScreen.routeName: (ctx) => CountryTeamSportScreen(),
 };

@@ -88,4 +88,5 @@ class AppImages {
   static const String eventProgrammeBanner =
       'assets/images/event_programme_banner.png';
       static const String teamExploreBanner = 'assets/images/team_explore_banner.png';
+  static const String goldMedal = 'assets/images/gold_medal.png';
 }

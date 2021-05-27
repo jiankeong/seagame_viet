@@ -136,4 +136,13 @@ class AppStrings {
   static const String thailand = 'thailand';
   static const String timorLeste = 'timor_leste';
   static const String vietnam = 'vietnam';
+
+  static const String lineup = 'lineup';
+  static const String confederation = 'confederation';
+  static const String squadSize = 'squad_size';
+  static const String ranking = 'ranking';
+  static const String averageAge = 'average_age';
+  static const String no = 'no';
+  static const String name = 'name';
+  static const String pos = 'pos';
 }

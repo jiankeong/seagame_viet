@@ -12,10 +12,12 @@ import './sport_icon_container.dart';
 class DefaultSportGrid extends StatefulWidget {
   final String? moveToScreenRouteName;
   final List<Map<String, dynamic>>? sportList;
+  final Map<String, dynamic>? country;
 
   DefaultSportGrid({
     this.moveToScreenRouteName = GamesDetailScreen.routeName,
     this.sportList,
+    this.country,
   });
 
   @override
@@ -130,6 +132,7 @@ class _DefaultSportGridState extends State<DefaultSportGrid> {
             Navigator.pushNamed(context, widget.moveToScreenRouteName!, arguments: {
               "id": index,
               "name": sport['name'],
+              "country": widget.country,
             });
           },
           child: Column(
