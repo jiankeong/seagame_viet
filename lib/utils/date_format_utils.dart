@@ -10,4 +10,8 @@ class DateFormatUtils {
   static String monthDateYear(DateTime date) {
     return DateFormat('MMMM dd, yyy').format(date);
   }
+
+  static String ddMMMEEE(DateTime date) {
+    return DateFormat('dd MMM (EEE)').format(date);
+  }
 }
