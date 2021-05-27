@@ -19,3 +19,4 @@ export 'city_guide.dart';
 export 'team_menu_screen.dart';
 export 'country_team_list_screen.dart';
 export 'country_team_sport_screen.dart';
+export 'media_screen.dart';

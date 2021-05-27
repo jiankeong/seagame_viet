@@ -22,4 +22,5 @@ final routeList = {
   TeamMenuScreen.routeName: (ctx) => TeamMenuScreen(),
   CountryTeamListScreen.routeName: (ctx) => CountryTeamListScreen(),
   CountryTeamSportScreen.routeName: (ctx) => CountryTeamSportScreen(),
+  MediaScreen.routeName: (ctx) => MediaScreen(),
 };

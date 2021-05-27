@@ -42,6 +42,7 @@ class DashboardOptionsGrid extends StatelessWidget {
     DashboardOption(
       icon: AppIcons.media,
       label: AppStrings.media,
+      routeName: MediaScreen.routeName,
     ),
     DashboardOption(
       icon: AppIcons.gallery,
