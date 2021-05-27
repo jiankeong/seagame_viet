@@ -8,6 +8,7 @@ import '../app_strings.dart';
 import '../icon_image_path.dart';
 import '../screens/games_detail_screen.dart';
 import './sport_icon_container.dart';
+import '../constants/app_constants.dart';
 
 class DefaultSportGrid extends StatefulWidget {
   final String? moveToScreenRouteName;
@@ -25,88 +26,7 @@ class DefaultSportGrid extends StatefulWidget {
 }
 
 class _DefaultSportGridState extends State<DefaultSportGrid> {
-  List<Map<String, dynamic>> _sportList = [
-    {
-      "name": AppStrings.archery,
-      "icon": AppIcons.archery,
-    },
-    {
-      "name": AppStrings.aquatics,
-      "icon": AppIcons.aquatics,
-    },
-    {
-      "name": AppStrings.atheletics,
-      "icon": AppIcons.atheletics,
-    },
-    {
-      "name": AppStrings.basketball,
-      "icon": AppIcons.basketball,
-    },
-    {
-      "name": AppStrings.beachVolleyBall,
-      "icon": AppIcons.beachVolleyBall,
-    },
-    {
-      "name": AppStrings.boxing,
-      "icon": AppIcons.boxing,
-    },
-    {
-      "name": AppStrings.canoeKayak,
-      "icon": AppIcons.canoeKayak,
-    },
-    {
-      "name": AppStrings.cycling,
-      "icon": AppIcons.cycling,
-    },
-    {
-      "name": AppStrings.dancesport,
-      "icon": AppIcons.dancesport,
-    },
-    {
-      "name": AppStrings.diving,
-      "icon": AppIcons.diving,
-    },
-    {
-      "name": AppStrings.fencing,
-      "icon": AppIcons.fencing,
-    },
-    {
-      "name": AppStrings.football,
-      "icon": AppIcons.football,
-    },
-    {
-      "name": AppStrings.golf,
-      "icon": AppIcons.golf,
-    },
-    {
-      "name": AppStrings.gymnastics,
-      "icon": AppIcons.gymnastics,
-    },
-    {
-      "name": AppStrings.handball,
-      "icon": AppIcons.handball,
-    },
-    {
-      "name": AppStrings.judo,
-      "icon": AppIcons.judo,
-    },
-    {
-      "name": AppStrings.shooting,
-      "icon": AppIcons.shooting,
-    },
-    {
-      "name": AppStrings.tennis,
-      "icon": AppIcons.tennis,
-    },
-    {
-      "name": AppStrings.weightlifting,
-      "icon": AppIcons.weightlifting,
-    },
-    {
-      "name": AppStrings.wrestling,
-      "icon": AppIcons.wrestling,
-    },
-  ];
+  List<Map<String, dynamic>> _sportList = kSportList;
 
   @override
   void initState() {

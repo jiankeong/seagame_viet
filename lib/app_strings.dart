@@ -151,4 +151,8 @@ class AppStrings {
   static const String loadFailed = "load_failed";
   static const String releaseToLoadMore = 'release_to_load_more';
   static const String noMoreData = '"no_more_data"';
+
+  static const String filter = 'filter';
+  static const String chooseSport = 'choose_sport';
+  static const String chooseDiscipline = 'choose_discipline';
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
-import 'package:sea_games_gms/widgets/default_sized_box.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -16,6 +15,9 @@ import '../services/results_service.dart';
 import '../widgets/custom_circular_progress_indicator.dart';
 import '../widgets/match_container.dart';
 import '../models/game_match.dart';
+import '../widgets/default_sized_box.dart';
+import '../utils/build_bottom_sheet.dart';
+import '../widgets/results_list/filter_bottom_sheet_layout.dart';
 
 class ResultListScreen extends StatefulWidget {
   static const routeName = '/ResultList';
@@ -135,25 +137,7 @@ class _ResultListScreenState extends State<ResultListScreen> {
                     ? Center(
                         child: CustomCircularProgressIndicator(),
                       )
-                    : ListView.builder(
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) {
-                          GameMatch? match = _matches[index];
-
-                          return Column(
-                            children: [
-                              InkWell(
-                                onTap: () {},
-                                child: MatchContainer(
-                                  match: match,
-                                ),
-                              ),
-                              DefaultSizedBox.vertical(15),
-                            ],
-                          );
-                        },
-                        itemCount: _matches.length,
-                      ),
+                    : _buildMatchList(),
               ),
             ),
           ),
@@ -165,7 +149,23 @@ class _ResultListScreenState extends State<ResultListScreen> {
   Widget _buildAppBar() {
     return DefaultAppBar(
       title: AppStrings.result.tr(),
-      trailing: Container(
+      trailing: _buildFilterButton(),
+    );
+  }
+
+  Widget _buildFilterButton() {
+    return InkWell(
+      onTap: () async {
+        final res = await buildBottomSheet(
+          context,
+          FilterBottomSheetLayout(),
+          heightScale: 0.45,
+        );
+
+        if (res == null || (res['sport'] == null && res['discipline'] == null))
+          return;
+      },
+      child: Container(
         padding: EdgeInsets.all(5.h),
         decoration: BoxDecoration(
           color: Styles.primaryDarkColor,
@@ -198,7 +198,6 @@ class _ResultListScreenState extends State<ResultListScreen> {
           fontSize: Styles.smallerRegularSize,
         ),
         onDateChange: (DateTime date) {
-          
           setState(() {
             _selectedValue = date;
             isLoading = true;
@@ -207,6 +206,28 @@ class _ResultListScreenState extends State<ResultListScreen> {
           getMatches(isRefresh: true);
         },
       ),
+    );
+  }
+
+  Widget _buildMatchList() {
+    return ListView.builder(
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        GameMatch? match = _matches[index];
+
+        return Column(
+          children: [
+            InkWell(
+              onTap: () {},
+              child: MatchContainer(
+                match: match,
+              ),
+            ),
+            DefaultSizedBox.vertical(15),
+          ],
+        );
+      },
+      itemCount: _matches.length,
     );
   }
 }

@@ -94,9 +94,11 @@
     "update_successfully": "Update Successfully",
     "start_live_chat": "Start Live Chat",
     "contact_us_for_any_futher_assistance": "Contact us for any\nFuther Assistance",
+    
     "empty_input_error": "Please fill in this field",
     "password_not_same_error": "Please ensure passwords are the same",
     "invalid_email_format": "Invalid email",
+    
     "archery_detail_1": "The object of archery is simple: to shoot arrows as close to the centre of a target as possible. Olympic Archery targets are 122cm in diameter with a series of ten concentric scoring rings, separated into five colours. The inner colour, the gold, scores ten or nine points. (The ‘ten’ measures just 12.2cm in diameter — about the size of an apple). Archers shoot at the target from a distance of 70m — which is the wingspan of two medium-range planes sat side-by-side.",
     "archery_detail_2": "Archery dates back over 10,000 years, when bows and arrows were first used for hunting and warfare, before it developed as a competitive activity in medieval England. There are several variants, including target archery, where competitors shoot at stationary targets on a flat range; and field archery, which involves shooting at targets of varying and often unmarked distance, typically in woodland and rough terrain. Only target archery is an Olympic sport, practised in more than 140 countries around the world. Archery made its Olympic debut at Paris 1900 and also featured in 1908 and 1920. But the rules were inconsistent and entirely dependent on the host country, making it difficult for the athletes. After a 52-year gap, the modernised sport was reintroduced at Munich 1972 and has remained on the Olympic programme ever since. At Tokyo 2020, athletes will compete in men’s and women’s individual events, men’s and women’s team events and a mixed team event. The mixed team event is a new addition to the Olympic programme.",
     "archery_detail_3": "The archery competition starts with a ranking round on the day of the Opening Ceremony. All 64 men and 64 women shoot 72 arrows and are then ranked from first to 64th based on their total scores. They then compete in pairs based on their rankings, with the first-ranked archer facing off against the 64th-ranked archer, the second-ranked against the 63rd-ranked, and so on. These individual elimination matches see the loser leave the competition and the winner advance to the next phase, until two athletes remain to contest the gold-medal match. The two semi-final losers compete for bronze. Individual matches are decided using a set system. Each set consists of three arrows. The athlete with the highest score in the set — the total of their three arrows — receives two set points. If the athletes are tied, each receives one set point. The first athlete to six set points wins the match. If there is a tie after five sets (with a scoreline of 5-5), each athlete shoots a single arrow. The athlete whose arrow lands closest to the middle of the target wins the match — unless both athletes shoot a 10, whereby a second arrow is shot. Team and mixed team matches are also decided using the set system, but each team set consists of six arrows and each mixed team set consists of four arrows rather than three. The first team or mixed team to five set points wins the match. If there is a tie after four sets (with a scoreline of 4-4), each athlete in each team shoots a single arrow, alternately. The team or mixed team that has the highest score wins the match. If the team or mixed team is still tied, then the team or mixed team whose arrow is closest to the middle wins the match. These formats create a series of win-or-lose situations, which are as much mental as physical. Before releasing each arrow, archers must calm their heart rate, increase their concentration and overcome their nerves. The physical and emotional tension inspires some archers to perform at their best while others struggle in the face of the unforgiving pressure.",
@@ -104,15 +106,19 @@
     "team_competition": "Team Competition",
     "mixed_team": "Mixed Team",
     "men_or_women": "Men/Women",
+    
     "highlights": "Highlights",
     "updates": "Updates",
+    
     "explore": "Explore",
     "hotel": "Hotel",
     "food": "Food",
+
     "top_sights": "Top Sights",
     "top_sights_info_text": "Based on traveller visits and local insights",
     "my_teams": "My Teams",
     "search_teams": "Search Teams",
+    
     "brunei_full": "Brunei Darussalam",
     "cambodia": "Cambodia",
     "indonesia": "Indonesia",
@@ -124,6 +130,7 @@
     "thailand": "Thailand",
     "timor_leste": "Timor Leste",
     "vietnam": "Vietnam",
+    
     "lineup": "Lineup",
     "confederation": "Confederation",
     "squad_size": "Squad Size",
@@ -131,5 +138,15 @@
     "average_age": "Average Age",
     "no": "No",
     "name": "Name",
-    "pos": "Pos"
+    "pos": "Pos",
+
+    "end_of_list": "End of List",
+    "loading": "Loading",
+    "load_failed": "Load Failed",
+    "release_to_load_more": "Release to Load More",
+    "no_more_data": "No More Data",
+
+    "filter": "Filter",
+    "choose_sport": "Choose Sport",
+    "choose_discipline": "Choose Discipline"
 }
