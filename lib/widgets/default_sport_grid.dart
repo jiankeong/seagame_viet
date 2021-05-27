@@ -9,14 +9,21 @@ import '../icon_image_path.dart';
 import '../screens/games_detail_screen.dart';
 import './sport_icon_container.dart';
 
-class DefaultSportGrid extends StatelessWidget {
+class DefaultSportGrid extends StatefulWidget {
   final String? moveToScreenRouteName;
+  final List<Map<String, dynamic>>? sportList;
 
   DefaultSportGrid({
     this.moveToScreenRouteName = GamesDetailScreen.routeName,
+    this.sportList,
   });
 
-  final List<Map<String, dynamic>> _sportList = [
+  @override
+  _DefaultSportGridState createState() => _DefaultSportGridState();
+}
+
+class _DefaultSportGridState extends State<DefaultSportGrid> {
+  List<Map<String, dynamic>> _sportList = [
     {
       "name": AppStrings.archery,
       "icon": AppIcons.archery,
@@ -100,6 +107,15 @@ class DefaultSportGrid extends StatelessWidget {
   ];
 
   @override
+  void initState() {
+    super.initState();
+
+    if(widget.sportList != null) {
+      _sportList = widget.sportList!;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
@@ -111,7 +127,7 @@ class DefaultSportGrid extends StatelessWidget {
 
         return InkWell(
           onTap: () {
-            Navigator.pushNamed(context, moveToScreenRouteName!, arguments: {
+            Navigator.pushNamed(context, widget.moveToScreenRouteName!, arguments: {
               "id": index,
               "name": sport['name'],
             });
