@@ -10,7 +10,11 @@ import '../../screens/screens.dart';
 
 class DashboardOptionsGrid extends StatelessWidget {
   final List<DashboardOption> _options = [
-    DashboardOption(icon: AppIcons.live, label: AppStrings.live),
+    DashboardOption(
+      icon: AppIcons.live,
+      label: AppStrings.live,
+      routeName: LiveMenuScreen.routeName,
+    ),
     DashboardOption(icon: AppIcons.schedule, label: AppStrings.schedule),
     DashboardOption(
       icon: AppIcons.games,

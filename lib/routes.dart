@@ -25,4 +25,5 @@ final routeList = {
   MediaScreen.routeName: (ctx) => MediaScreen(),
   ResultListScreen.routeName: (ctx) => ResultListScreen(),
   ResultDetailScreen.routeName: (ctx) => ResultDetailScreen(),
+  LiveMenuScreen.routeName: (ctx) => LiveMenuScreen(),
 };

@@ -8,12 +8,12 @@ import 'package:easy_localization/easy_localization.dart';
 import '../../globals.dart';
 import '../default_cache_network_image.dart';
 import '../custom_shadow_container.dart';
-import '../default_text_form_field.dart';
 import '../../styles.dart';
 import '../../app_strings.dart';
 import '../../constants/app_constants.dart';
 import '../default_padding.dart';
 import '../default_sized_box.dart';
+import '../search_container.dart';
 
 class ExploreScreen extends StatelessWidget {
   final List<Map<String, dynamic>> _sights = [
@@ -60,23 +60,8 @@ class ExploreScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 20.w),
-                child: CustomShadowContainer(
-                  leftPadding: 20,
-                  rightPadding: 5,
-                  topPadding: 0,
-                  bottomPadding: 0,
-                  borderRadius: BorderRadius.circular(5.h),
-                  child: DefaultTextFormField(
-                    topPadding: 0,
-                    bottomPadding: 0,
-                    hideBorder: true,
-                    hintText: "Hanoi",
-                    suffixIcon: Icon(
-                      Icons.search,
-                      size: 24.h,
-                      color: Styles.primaryColor,
-                    ),
-                  ),
+                child: SearchContainer(
+                  hintText: "Hanoi",
                 ),
               ),
               Positioned(
