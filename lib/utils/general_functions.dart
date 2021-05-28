@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Future<dynamic> blankFunction() async {
   return true;
@@ -29,5 +30,22 @@ String formatSingleDigitToDoubleDigit(int value) {
     return '0$value';
   } else {
     return value.toString();
+  }
+}
+
+launchURL({
+  String latitude = '21.0205',
+  String longitude = '105.7631',
+}) async {
+  final String googleMapslocationUrl =
+      "https://www.google.com/maps/search/?api=1&query=$latitude,$longitude";
+
+  final String encodedURl = Uri.encodeFull(googleMapslocationUrl);
+
+  if (await canLaunch(encodedURl)) {
+    await launch(encodedURl);
+  } else {
+    print('Could not launch $encodedURl');
+    throw 'Could not launch $encodedURl';
   }
 }

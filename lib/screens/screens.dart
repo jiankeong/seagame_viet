@@ -23,3 +23,4 @@ export 'media_screen.dart';
 export 'result_list_screen.dart';
 export 'result_detail_screen.dart';
 export 'live_menu_screen.dart';
+export 'live_details_screen.dart';

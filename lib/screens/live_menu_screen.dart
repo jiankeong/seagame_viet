@@ -8,6 +8,7 @@ import '../constants/app_constants.dart';
 import '../models/game_match.dart';
 import '../widgets/match_container.dart';
 import '../widgets/default_sized_box.dart';
+import './live_details_screen.dart';
 
 class LiveMenuScreen extends StatelessWidget {
   static const routeName = '/LiveMenu';
@@ -54,8 +55,16 @@ class LiveMenuScreen extends StatelessWidget {
 
               return Column(
                 children: [
-                  MatchContainer(
-                    match: match,
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        LiveDetailsScreen.routeName,
+                      );
+                    },
+                    child: MatchContainer(
+                      match: match,
+                    ),
                   ),
                   DefaultSizedBox.vertical(15),
                 ],

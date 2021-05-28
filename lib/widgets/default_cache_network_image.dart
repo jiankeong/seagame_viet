@@ -10,12 +10,14 @@ class DefaultCacheNetworkImage extends StatelessWidget {
   final double? height;
   final double? width;
   final BorderRadius? borderRadius;
+  final BoxFit boxFit;
 
   DefaultCacheNetworkImage({
     this.imageUrl,
     this.height,
     this.width,
     this.borderRadius,
+    this.boxFit = BoxFit.cover,
   });
 
   @override
@@ -24,7 +26,7 @@ class DefaultCacheNetworkImage extends StatelessWidget {
       imageUrl: imageUrl!,
       height: height,
       width: width,
-      fit: BoxFit.cover,
+      fit: boxFit,
       placeholder: (context, url) => Container(
         transform: Matrix4.translationValues(0, 0, 0),
         child: Container(
@@ -36,7 +38,7 @@ class DefaultCacheNetworkImage extends StatelessWidget {
         AppImages.blankImage,
         height: height,
         width: width,
-        fit: BoxFit.cover,
+        fit: boxFit,
       ),
     );
   }

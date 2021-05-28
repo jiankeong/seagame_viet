@@ -158,4 +158,6 @@ class AppStrings {
 
   static const String matchSet = 'set';
   static const String matchGallery = 'match_gallery';
+
+  static const String liveNow = 'live_now';
 }
