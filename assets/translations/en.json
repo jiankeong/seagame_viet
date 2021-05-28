@@ -172,5 +172,7 @@
     "gold": "Gold",
     "silver": "Silver",
     "bronze": "Bronze",
-    "total": "Total"
+    "total": "Total",
+
+    "closest_medical_help": "Closest Medical Help"
 }

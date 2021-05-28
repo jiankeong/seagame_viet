@@ -177,4 +177,6 @@ class AppStrings {
   static const String silver = 'silver';
   static const String bronze = 'bronze';
   static const String total = 'total';
+
+  static const String closestMedicalHelp = 'closest_medical_help';
 }

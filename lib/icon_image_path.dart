@@ -51,6 +51,7 @@ class AppIcons {
   static const String save = 'assets/icons/save.png';
   static const String share = 'assets/icons/share.png';
   static const String filter = 'assets/icons/filter.png';
+  static const String forward = 'assets/icons/forward.png';
 }
 
 class AppImages {
@@ -94,4 +95,6 @@ class AppImages {
   static const String bronzeMedal = 'assets/images/bronze_medal.png';
   static const String liveBanner = 'assets/images/live_banner.png';
   static const String medalTallyBanner = 'assets/images/medal_tally_banner.png';
+  static const String medicalBg = 'assets/images/medical_bg.png';
+  static const String locationBg = 'assets/images/location_bg.png';
 }

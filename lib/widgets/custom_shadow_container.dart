@@ -16,6 +16,7 @@ class CustomShadowContainer extends StatelessWidget {
   final double? height;
   final double? width;
   final BorderRadius? borderRadius;
+  final BoxConstraints? constraints;
 
   CustomShadowContainer({
     this.child,
@@ -30,6 +31,7 @@ class CustomShadowContainer extends StatelessWidget {
     this.height,
     this.width,
     this.borderRadius,
+    this.constraints,
   });
 
   @override
@@ -41,6 +43,7 @@ class CustomShadowContainer extends StatelessWidget {
         rightPadding.w,
         bottomPadding.h,
       ),
+      constraints: constraints,
       width: width ?? double.infinity,
       height: height,
       decoration: BoxDecoration(
