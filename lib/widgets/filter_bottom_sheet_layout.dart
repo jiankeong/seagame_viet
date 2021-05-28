@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-import '../../app_strings.dart';
-import '../../icon_image_path.dart';
-import '../default_drop_down.dart';
-import '../default_button.dart';
-import '../default_sized_box.dart';
-import '../default_divider.dart';
-import '../../styles.dart';
-import '../../constants/app_constants.dart';
+import '../app_strings.dart';
+import '../icon_image_path.dart';
+import 'default_drop_down.dart';
+import 'default_button.dart';
+import 'default_sized_box.dart';
+import 'default_divider.dart';
+import '../styles.dart';
+import '../constants/app_constants.dart';
 
 class FilterBottomSheetLayout extends StatefulWidget {
 
@@ -39,7 +39,7 @@ class _FilterBottomSheetLayoutState extends State<FilterBottomSheetLayout> {
                   color: Colors.transparent,
                 ),
                 Text(
-                  AppStrings.filter,
+                  AppStrings.filter.tr(),
                   style: TextStyle(
                     fontSize: Styles.titleFontSize,
                     fontWeight: Styles.boldText,

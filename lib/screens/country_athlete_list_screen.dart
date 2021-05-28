@@ -8,6 +8,8 @@ import '../app_strings.dart';
 import '../widgets/filter_button.dart';
 import '../icon_image_path.dart';
 import '../widgets/athlete/athlete_list.dart';
+import '../utils/build_bottom_sheet.dart';
+import '../widgets/filter_bottom_sheet_layout.dart';
 
 class CountryAthleteListScreen extends StatefulWidget {
   static const routeName = '/CountryAthleteList';
@@ -85,7 +87,7 @@ class _CountryAthleteListScreenState extends State<CountryAthleteListScreen> {
         body: Column(children: [
           DefaultAppBar(
             title: AppStrings.athletes.tr(),
-            trailing: FilterButton(),
+            trailing: _buildFilterButton(),
           ),
           SearchContainerWithBanner(
             hintText: AppStrings.searchAthlete,
@@ -101,6 +103,21 @@ class _CountryAthleteListScreenState extends State<CountryAthleteListScreen> {
           ),
         ]),
       ),
+    );
+  }
+
+  Widget _buildFilterButton() {
+    return FilterButton(
+      onPressed: () async {
+        final res = await buildBottomSheet(
+          context,
+          FilterBottomSheetLayout(),
+          heightScale: 0.45,
+        );
+
+        if (res == null || (res['sport'] == null && res['discipline'] == null))
+          return;
+      },
     );
   }
 }
