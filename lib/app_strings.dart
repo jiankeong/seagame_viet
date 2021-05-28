@@ -169,4 +169,12 @@ class AppStrings {
   static const String height = 'height';
   static const String weight = 'weight';
   static const String achievements = 'achievements';
+
+  static const String selectCountry = 'select_country';
+  static const String selectCountryInfoText = 'select_country_info_text';
+  static const String country = 'country';
+  static const String gold = 'gold';
+  static const String silver = 'silver';
+  static const String bronze = 'bronze';
+  static const String total = 'total';
 }

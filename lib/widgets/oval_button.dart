@@ -12,6 +12,7 @@ class OvalButton extends StatelessWidget {
   final double verticalPadding;
   final double horizontalPadding;
   final Color? fontColor;
+  final Function()? onPressed;
 
   OvalButton({
     this.buttonText = '',
@@ -22,24 +23,28 @@ class OvalButton extends StatelessWidget {
     this.verticalPadding = 8,
     this.horizontalPadding = 15,
     this.fontColor,
+    this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: height,
-      padding: EdgeInsets.symmetric(
-          vertical: verticalPadding.w, horizontal: horizontalPadding.h),
-      decoration: BoxDecoration(
-          color: color ?? Styles.primaryColor,
-          borderRadius: BorderRadius.circular(25.h)),
-      child: Text(
-        buttonText!,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: fontColor ?? Styles.whiteColor,
-          fontSize: fontSize ?? Styles.regularFontSize,
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        width: width,
+        height: height,
+        padding: EdgeInsets.symmetric(
+            vertical: verticalPadding.w, horizontal: horizontalPadding.h),
+        decoration: BoxDecoration(
+            color: color ?? Styles.primaryColor,
+            borderRadius: BorderRadius.circular(25.h)),
+        child: Text(
+          buttonText!,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: fontColor ?? Styles.whiteColor,
+            fontSize: fontSize ?? Styles.regularFontSize,
+          ),
         ),
       ),
     );

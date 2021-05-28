@@ -164,5 +164,13 @@
 
     "height": "Height",
     "weight": "Weight",
-    "achievements": "Achievements"
+    "achievements": "Achievements",
+
+    "select_country": "Select Country",
+    "select_country_info_text": "Select a Country to Pin at Board",
+    "country": "Country",
+    "gold": "Gold",
+    "silver": "Silver",
+    "bronze": "Bronze",
+    "total": "Total"
 }

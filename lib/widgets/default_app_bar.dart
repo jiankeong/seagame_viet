@@ -9,10 +9,12 @@ import './main_notification_button.dart';
 class DefaultAppBar extends StatelessWidget {
   final String title;
   final Widget? trailing;
+  final double titleLeftPadding;
 
   DefaultAppBar({
     this.title = '',
     this.trailing,
+    this.titleLeftPadding = 0,
   });
 
   @override
@@ -74,12 +76,17 @@ class DefaultAppBar extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  Text(
-                    title,
-                    style: TextStyle(
-                        color: Styles.whiteColor,
-                        fontSize: 21.sp,
-                        fontWeight: Styles.boldText),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: titleLeftPadding,
+                    ),
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                          color: Styles.whiteColor,
+                          fontSize: 21.sp,
+                          fontWeight: Styles.boldText),
+                    ),
                   ),
                   _buildTrailing()!,
                 ],

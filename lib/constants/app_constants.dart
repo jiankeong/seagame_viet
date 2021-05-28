@@ -1,7 +1,6 @@
 import '../app_strings.dart';
 import '../icon_image_path.dart';
 
-
 const String kAppVersion = '1.0';
 
 const double kDefaultScreenHorizontalPadding = 35;
@@ -88,5 +87,63 @@ const List<Map<String, dynamic>> kSportList = [
   {
     "name": AppStrings.wrestling,
     "icon": AppIcons.wrestling,
+  },
+];
+
+const List<Map<String, dynamic>> kCountryList = [
+  {
+    "id": 1,
+    "flag": AppImages.brunei,
+    "name": AppStrings.bruneiFull,
+  },
+  {
+    "id": 2,
+    "flag": AppImages.cambodia,
+    "name": AppStrings.cambodia,
+  },
+  {
+    "id": 3,
+    "flag": AppImages.indonesia,
+    "name": AppStrings.indonesia,
+  },
+  {
+    "id": 4,
+    "flag": AppImages.laos,
+    "name": AppStrings.laosFull,
+  },
+  {
+    "id": 5,
+    "flag": AppImages.malaysia,
+    "name": AppStrings.malaysia,
+  },
+  {
+    "id": 6,
+    "flag": AppImages.myanmar,
+    "name": AppStrings.myanmar,
+  },
+  {
+    "id": 7,
+    "flag": AppImages.philippines,
+    "name": AppStrings.philippines,
+  },
+  {
+    "id": 8,
+    "flag": AppImages.singapore,
+    "name": AppStrings.singapore,
+  },
+  {
+    "id": 9,
+    "flag": AppImages.thailand,
+    "name": AppStrings.thailand,
+  },
+  {
+    "id": 10,
+    "flag": AppImages.timorLeste,
+    "name": AppStrings.timorLeste,
+  },
+  {
+    "id": 11,
+    "flag": AppImages.vietnam,
+    "name": AppStrings.vietnam,
   },
 ];

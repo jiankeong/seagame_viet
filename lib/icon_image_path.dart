@@ -93,4 +93,5 @@ class AppImages {
   static const String silverMedal = 'assets/images/silver_medal.png';
   static const String bronzeMedal = 'assets/images/bronze_medal.png';
   static const String liveBanner = 'assets/images/live_banner.png';
+  static const String medalTallyBanner = 'assets/images/medal_tally_banner.png';
 }

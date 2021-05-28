@@ -27,7 +27,11 @@ class DashboardOptionsGrid extends StatelessWidget {
       label: AppStrings.results,
       routeName: ResultListScreen.routeName,
     ),
-    DashboardOption(icon: AppIcons.medalTally, label: AppStrings.medalTally),
+    DashboardOption(
+      icon: AppIcons.medalTally,
+      label: AppStrings.medalTally,
+      routeName: MedalTallyScreen.routeName,
+    ),
     DashboardOption(
       icon: AppIcons.athletes,
       label: AppStrings.athletes,

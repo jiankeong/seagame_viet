@@ -30,4 +30,5 @@ final routeList = {
   AthleteListScreen.routeName: (ctx) => AthleteListScreen(),
   CountryAthleteListScreen.routeName: (ctx) => CountryAthleteListScreen(),
   AthleteInfoScreen.routeName: (ctx) => AthleteInfoScreen(),
+  MedalTallyScreen.routeName: (ctx) => MedalTallyScreen(),
 };
