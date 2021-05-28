@@ -181,4 +181,8 @@ class AppStrings {
   static const String closestMedicalHelp = 'closest_medical_help';
 
   static const String upcomingMatchNearYou = 'upcoming_match_near_you';
+  
+  static const String nextGame = 'next_game';
+  static const String lastGame = 'last_game';
+  static const String previousMatch = 'previous_match';
 }

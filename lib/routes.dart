@@ -33,4 +33,5 @@ final routeList = {
   MedalTallyScreen.routeName: (ctx) => MedalTallyScreen(),
   MedicalScreen.routeName: (ctx) => MedicalScreen(),
   LocationScreen.routeName: (ctx) => LocationScreen(),
+  CompetitionScreen.routeName: (ctx) => CompetitionScreen(),
 };

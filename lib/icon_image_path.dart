@@ -97,4 +97,7 @@ class AppImages {
   static const String medalTallyBanner = 'assets/images/medal_tally_banner.png';
   static const String medicalBg = 'assets/images/medical_bg.png';
   static const String locationBg = 'assets/images/location_bg.png';
+  static const String competitionBg = 'assets/images/competition_bg.png';
+  static const String competitionContainerBg = 'assets/images/competition_container_bg.png';
+  static const String competitionContainerInactiveBg = 'assets/images/competition_container_inactive_bg.png';
 }

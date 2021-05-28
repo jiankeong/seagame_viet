@@ -14,6 +14,7 @@ import '../utils/date_format_utils.dart';
 import '../widgets/default_padding.dart';
 import '../widgets/country_flag_container.dart';
 import '../utils/general_functions.dart';
+import '../widgets/weather_indicator.dart';
 
 class LiveDetailsScreen extends StatelessWidget {
   static const routeName = 'LiveDetails';
@@ -153,23 +154,7 @@ class LiveDetailsScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 15.w),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.light_mode_outlined,
-                            size: 24.h,
-                            color: Styles.whiteColor,
-                          ),
-                          DefaultSizedBox.vertical(5),
-                          Text(
-                            '30º / 25º',
-                            style: TextStyle(
-                                fontSize: Styles.smallerRegularSize,
-                                color: Styles.whiteColor),
-                          ),
-                        ],
-                      ),
+                      child: WeatherIndicator(),
                     ),
                   ],
                 ),

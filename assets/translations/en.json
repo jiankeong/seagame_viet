@@ -176,5 +176,9 @@
 
     "closest_medical_help": "Closest Medical Help",
 
-    "upcoming_match_near_you": "Upcoming Match Near You"
+    "upcoming_match_near_you": "Upcoming Match Near You",
+
+    "next_game": "Next Game",
+    "last_game": "Last Game",
+    "previous_match": "Previous Match"
 }
