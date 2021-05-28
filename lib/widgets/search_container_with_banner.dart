@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-import '../../icon_image_path.dart';
-import '../default_padding.dart';
-import '../custom_shadow_container.dart';
-import '../../styles.dart';
-import '../default_text_form_field.dart';
-import '../../app_strings.dart';
+import '../icon_image_path.dart';
+import 'default_padding.dart';
+import 'custom_shadow_container.dart';
+import '../styles.dart';
+import 'default_text_form_field.dart';
+import '../app_strings.dart';
 
-class TeamSearchContainer extends StatelessWidget {
-  const TeamSearchContainer({
-    Key? key,
-  }) : super(key: key);
+class SearchContainerWithBanner extends StatelessWidget {
+  final String hintText;
+
+  SearchContainerWithBanner({
+    this.hintText = AppStrings.searchTeams,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class TeamSearchContainer extends StatelessWidget {
             topPadding: 0,
             bottomPadding: 0,
             hideBorder: true,
-            hintText: AppStrings.searchTeams.tr(),
+            hintText: hintText.tr(),
             textAlign: TextAlign.center,
             hintStyle: TextStyle(
               color: Styles.primaryColor,

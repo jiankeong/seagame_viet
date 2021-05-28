@@ -7,7 +7,6 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../widgets/default_app_bar.dart';
 import '../app_strings.dart';
 import '../styles.dart';
-import '../icon_image_path.dart';
 import '../widgets/custom_future_builder.dart';
 import '../widgets/default_smart_refresher.dart';
 import '../utils/general_functions.dart';
@@ -19,6 +18,7 @@ import '../widgets/default_sized_box.dart';
 import '../utils/build_bottom_sheet.dart';
 import '../widgets/results_list/filter_bottom_sheet_layout.dart';
 import './result_detail_screen.dart';
+import '../widgets/filter_button.dart';
 
 class ResultListScreen extends StatefulWidget {
   static const routeName = '/ResultList';
@@ -155,8 +155,8 @@ class _ResultListScreenState extends State<ResultListScreen> {
   }
 
   Widget _buildFilterButton() {
-    return InkWell(
-      onTap: () async {
+    return FilterButton(
+      onPressed: () async {
         final res = await buildBottomSheet(
           context,
           FilterBottomSheetLayout(),
@@ -166,18 +166,6 @@ class _ResultListScreenState extends State<ResultListScreen> {
         if (res == null || (res['sport'] == null && res['discipline'] == null))
           return;
       },
-      child: Container(
-        padding: EdgeInsets.all(5.h),
-        decoration: BoxDecoration(
-          color: Styles.primaryDarkColor,
-          borderRadius: BorderRadius.circular(5.h),
-        ),
-        child: Image.asset(
-          AppIcons.filter,
-          width: 24.w,
-          height: 21.h,
-        ),
-      ),
     );
   }
 

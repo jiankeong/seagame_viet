@@ -160,4 +160,7 @@ class AppStrings {
   static const String matchGallery = 'match_gallery';
 
   static const String liveNow = 'live_now';
+
+  static const String searchAthlete = 'search_athlete';
+  static const String myList = 'my_list';
 }

@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sea_games_gms/widgets/default_sized_box.dart';
 
 import '../widgets/default_app_bar.dart';
-import '../widgets/teams/team_search_container.dart';
+import '../widgets/search_container_with_banner.dart';
 import '../app_strings.dart';
-import '../widgets/default_padding.dart';
-import '../styles.dart';
 import '../widgets/default_sport_grid.dart';
 import '../icon_image_path.dart';
 import './country_team_sport_screen.dart';
+import '../widgets/country_name_flag_container.dart';
 
 class CountryTeamListScreen extends StatefulWidget {
   static const routeName = '/CountryTeamList';
@@ -67,34 +64,10 @@ class _CountryTeamListScreenState extends State<CountryTeamListScreen> {
           DefaultAppBar(
             title: AppStrings.teams.tr(),
           ),
-          TeamSearchContainer(),
-          Container(
-            color: Styles.primaryDarkColor,
-            padding: EdgeInsets.symmetric(
-              vertical: 10.h,
-            ),
-            child: DefaultPadding(
-              child: Row(
-                children: [
-                  Image.asset(
-                    country!['flag'],
-                    width: 43.w,
-                    height: 29.h,
-                    fit: BoxFit.contain,
-                  ),
-                  DefaultSizedBox.horizontal(15),
-                  Flexible(
-                    child: Text(
-                      country!['name'].toString().tr(),
-                      style: TextStyle(
-                        color: Styles.whiteColor,
-                        fontWeight: Styles.boldText,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          SearchContainerWithBanner(),
+          CountryNameFlagContainer(
+            countryFlag: country!['flag'],
+            countryName: country!['name'],
           ),
           Expanded(
             child: DefaultSportGrid(

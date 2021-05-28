@@ -6,19 +6,19 @@ import '../app_strings.dart';
 import '../widgets/default_tab.dart';
 import '../widgets/default_tab_bar.dart';
 import '../styles.dart';
-import '../widgets/teams/teams_widgets.dart';
+import '../widgets/athlete/athlete_widgets.dart';
 
-class TeamMenuScreen extends StatelessWidget {
-  static const routeName = '/TeamMenu';
+class AthleteListScreen extends StatelessWidget {
+  static const routeName = '/AthleteList';
 
   final List<Map<String, dynamic>> _tabScreen = [
     {
       "tabTitle": AppStrings.explore.tr(),
-      "tabScreen": TeamExploreScreen(),
+      "tabScreen": AthleteExploreScreen(),
     },
     {
-      "tabTitle": AppStrings.myTeams.tr(),
-      "tabScreen": MyTeamsScreen(),
+      "tabTitle": AppStrings.myList.tr(),
+      "tabScreen": MyAthleteListScreen(),
     },
   ];
 
@@ -28,7 +28,7 @@ class TeamMenuScreen extends StatelessWidget {
       body: Column(
         children: [
           DefaultAppBar(
-            title: AppStrings.teams.tr(),
+            title: AppStrings.athletes.tr(),
           ),
           Expanded(
               child: DefaultTabController(

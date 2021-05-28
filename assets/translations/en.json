@@ -154,5 +154,8 @@
     "set": "Set",
 
     "search": "Search",
-    "live_now": "Live Now"
+    "live_now": "Live Now",
+
+    "my_list": "My List",
+    "search_athlete": "Search Athlete"
 }

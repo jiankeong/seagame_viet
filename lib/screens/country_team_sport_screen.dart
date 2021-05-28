@@ -41,7 +41,7 @@ class _CountryTeamSportScreenState extends State<CountryTeamSportScreen> {
           {
             "tabTitle": AppStrings.lineup.tr(),
             "tabScreen": LineupScreen(
-              country: country!,
+              country: country,
             ),
           },
           {

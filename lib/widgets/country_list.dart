@@ -77,7 +77,7 @@ class CountryList extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       padding: EdgeInsets.all(0),
-      physics: NeverScrollableScrollPhysics(),
+      // physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         Map<String, dynamic> country = _countryList[index];
 
