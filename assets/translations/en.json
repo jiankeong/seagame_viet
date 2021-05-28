@@ -174,5 +174,7 @@
     "bronze": "Bronze",
     "total": "Total",
 
-    "closest_medical_help": "Closest Medical Help"
+    "closest_medical_help": "Closest Medical Help",
+
+    "upcoming_match_near_you": "Upcoming Match Near You"
 }

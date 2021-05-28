@@ -179,4 +179,6 @@ class AppStrings {
   static const String total = 'total';
 
   static const String closestMedicalHelp = 'closest_medical_help';
+
+  static const String upcomingMatchNearYou = 'upcoming_match_near_you';
 }

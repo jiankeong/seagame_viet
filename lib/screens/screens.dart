@@ -29,3 +29,4 @@ export 'country_athlete_list_screen.dart';
 export 'athlete_info_screen.dart';
 export 'medal_tally_screen.dart';
 export 'medical_screen.dart';
+export 'location_screen.dart';
