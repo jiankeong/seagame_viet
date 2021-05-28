@@ -6,8 +6,9 @@ import '../default_padding.dart';
 import '../custom_shadow_container.dart';
 import '../default_sized_box.dart';
 import '../default_divider.dart';
+import '../../screens/athlete_info_screen.dart';
 
-class AthleteByName extends StatelessWidget {
+class AthleteByName extends StatefulWidget {
   final Map<String, dynamic> categories;
   final List<Map<String, dynamic>> athletes;
 
@@ -17,6 +18,11 @@ class AthleteByName extends StatelessWidget {
         athletes = athletes == null ? [] : athletes;
 
   @override
+  _AthleteByNameState createState() => _AthleteByNameState();
+}
+
+class _AthleteByNameState extends State<AthleteByName> {
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,7 +31,7 @@ class AthleteByName extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 15.h),
           child: DefaultPadding(
             child: Text(
-              categories['starting_character'],
+              widget.categories['starting_character'],
             ),
           ),
         ),
@@ -37,7 +43,7 @@ class AthleteByName extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                for (int i = 0; i < athletes.length; i++)
+                for (int i = 0; i < widget.athletes.length; i++)
                   _buildPlayerInfoContainer(i),
               ],
             ),
@@ -52,7 +58,7 @@ class AthleteByName extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _buildPlayerInfo(i),
-        if (i < athletes.length - 1)
+        if (i < widget.athletes.length - 1)
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -65,27 +71,35 @@ class AthleteByName extends StatelessWidget {
   }
 
   Widget _buildPlayerInfo(int i) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 15.h),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildNameAndSport(i),
-              DefaultSizedBox.horizontal(15),
-              _buildMedal(i),
-            ],
-          ),
-          DefaultSizedBox.vertical(15),
-          Text(
-            athletes[i]['event'].join(", ").toString().toUpperCase(),
-            style: TextStyle(
-              fontSize: Styles.smallerRegularSize,
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          AthleteInfoScreen.routeName,
+        );
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 15.h),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildNameAndSport(i),
+                DefaultSizedBox.horizontal(15),
+                _buildMedal(i),
+              ],
             ),
-          ),
-        ],
+            DefaultSizedBox.vertical(15),
+            Text(
+              widget.athletes[i]['event'].join(", ").toString().toUpperCase(),
+              style: TextStyle(
+                fontSize: Styles.smallerRegularSize,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -95,7 +109,7 @@ class AthleteByName extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          athletes[i]['name'].toString().toUpperCase(),
+          widget.athletes[i]['name'].toString().toUpperCase(),
           style: TextStyle(
             fontSize: Styles.smallerTitleFontSize,
             color: Styles.primaryColor,
@@ -103,7 +117,7 @@ class AthleteByName extends StatelessWidget {
           ),
         ),
         DefaultSizedBox.vertical(10),
-        Text(athletes[i]['sport'].toString().toUpperCase(),
+        Text(widget.athletes[i]['sport'].toString().toUpperCase(),
             style: TextStyle(
               fontSize: Styles.smallerTitleFontSize,
               color: Styles.primaryDarkColor,
@@ -115,15 +129,15 @@ class AthleteByName extends StatelessWidget {
   Widget _buildMedal(int i) {
     return Row(
       children: [
-        for (int j = 0; j < athletes[i]['medals'].length; j++)
+        for (int j = 0; j < widget.athletes[i]['medals'].length; j++)
           Row(
             children: [
               Image.asset(
-                athletes[i]['medals'][j],
+                widget.athletes[i]['medals'][j],
                 width: 30.h,
                 height: 30.h,
               ),
-              if (j < athletes[i]['medals'].length - 1)
+              if (j < widget.athletes[i]['medals'].length - 1)
                 DefaultSizedBox.horizontal(8),
             ],
           ),

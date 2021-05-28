@@ -157,5 +157,12 @@
     "live_now": "Live Now",
 
     "my_list": "My List",
-    "search_athlete": "Search Athlete"
+    "search_athlete": "Search Athlete",
+
+    "biography": "Biography",
+    "moments": "Moments",
+
+    "height": "Height",
+    "weight": "Weight",
+    "achievements": "Achievements"
 }

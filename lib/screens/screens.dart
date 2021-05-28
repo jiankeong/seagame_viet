@@ -26,3 +26,4 @@ export 'live_menu_screen.dart';
 export 'live_details_screen.dart';
 export 'athlete_list_screen.dart';
 export 'country_athlete_list_screen.dart';
+export 'athlete_info_screen.dart';

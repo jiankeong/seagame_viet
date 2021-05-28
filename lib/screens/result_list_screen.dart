@@ -16,7 +16,7 @@ import '../widgets/match_container.dart';
 import '../models/game_match.dart';
 import '../widgets/default_sized_box.dart';
 import '../utils/build_bottom_sheet.dart';
-import '../widgets/results_list/filter_bottom_sheet_layout.dart';
+import '../widgets/filter_bottom_sheet_layout.dart';
 import './result_detail_screen.dart';
 import '../widgets/filter_button.dart';
 

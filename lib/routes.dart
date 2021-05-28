@@ -29,4 +29,5 @@ final routeList = {
   LiveDetailsScreen.routeName: (ctx) => LiveDetailsScreen(),
   AthleteListScreen.routeName: (ctx) => AthleteListScreen(),
   CountryAthleteListScreen.routeName: (ctx) => CountryAthleteListScreen(),
+  AthleteInfoScreen.routeName: (ctx) => AthleteInfoScreen(),
 };

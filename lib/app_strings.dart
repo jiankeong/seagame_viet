@@ -163,4 +163,10 @@ class AppStrings {
 
   static const String searchAthlete = 'search_athlete';
   static const String myList = 'my_list';
+
+  static const String biography = 'biography';
+  static const String moments = 'moments';
+  static const String height = 'height';
+  static const String weight = 'weight';
+  static const String achievements = 'achievements';
 }

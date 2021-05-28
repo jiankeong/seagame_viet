@@ -11,6 +11,7 @@ import '../default_padding.dart';
 import '../../app_strings.dart';
 import '../default_sized_box.dart';
 import '../default_divider.dart';
+import '../info_vertical_layout.dart';
 
 class LineupScreen extends StatelessWidget {
   final Map<String, dynamic>? country;
@@ -120,15 +121,15 @@ class LineupScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              TeamInfoVerticalLayout(
+              InfoVerticalLayout(
                 title: AppStrings.squadSize.tr().toUpperCase(),
-                value: 12,
+                value: '12',
               ),
-              TeamInfoVerticalLayout(
+              InfoVerticalLayout(
                 title: AppStrings.ranking.tr().toUpperCase(),
-                value: 121,
+                value: '121',
               ),
-              TeamInfoVerticalLayout(
+              InfoVerticalLayout(
                 title: AppStrings.averageAge.tr().toUpperCase(),
                 value: null,
               ),
@@ -237,36 +238,6 @@ class RankingLabelText extends StatelessWidget {
         color: Styles.suvaGrey,
         fontSize: Styles.regularFontSize,
       ),
-    );
-  }
-}
-
-class TeamInfoVerticalLayout extends StatelessWidget {
-  final String? title;
-  final int? value;
-
-  TeamInfoVerticalLayout({this.title = '', this.value = 0});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          title!,
-          style: TextStyle(
-            fontSize: Styles.regularFontSize,
-            color: Styles.suvaGrey,
-          ),
-        ),
-        DefaultSizedBox.vertical(10),
-        Text(
-          value == null ? '-' : '$value',
-          style: TextStyle(
-            fontSize: Styles.titleFontSize,
-            fontWeight: Styles.boldText,
-          ),
-        ),
-      ],
     );
   }
 }
