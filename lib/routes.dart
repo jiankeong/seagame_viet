@@ -35,4 +35,5 @@ final routeList = {
   LocationScreen.routeName: (ctx) => LocationScreen(),
   CompetitionScreen.routeName: (ctx) => CompetitionScreen(),
   OpeningAndClosingCeromoniesScreen.routeName: (ctx) => OpeningAndClosingCeromoniesScreen(),
+  SportScheduleListScreen.routeName: (ctx) => SportScheduleListScreen(),
 };

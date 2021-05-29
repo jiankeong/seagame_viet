@@ -32,3 +32,4 @@ export 'medical_screen.dart';
 export 'location_screen.dart';
 export 'competition_screen.dart';
 export 'opening_and_closing_ceromonies_screen.dart';
+export 'sport_schedule_list_screen.dart';
