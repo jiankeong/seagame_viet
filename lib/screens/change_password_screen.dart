@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widgets/default_app_bar.dart';
 import '../app_strings.dart';

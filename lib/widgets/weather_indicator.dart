@@ -7,10 +7,18 @@ import './default_sized_box.dart';
 class WeatherIndicator extends StatelessWidget {
   final double iconSize;
   final double? fontSize;
+  final bool isNight;
+  final Color iconColor;
+  final Color fontColor;
+  final String value;
 
   WeatherIndicator({
     this.iconSize = 24,
     this.fontSize,
+    this.isNight = false,
+    this.iconColor = Styles.whiteColor,
+    this.fontColor = Styles.whiteColor,
+    this.value = '30º / 25º',
   });
 
   @override
@@ -19,16 +27,17 @@ class WeatherIndicator extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Icon(
-          Icons.light_mode_outlined,
+          isNight ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
           size: iconSize.h,
-          color: Styles.whiteColor,
+          color: iconColor,
         ),
         DefaultSizedBox.vertical(5),
         Text(
-          '30º / 25º',
+          value,
           style: TextStyle(
-              fontSize: fontSize ?? Styles.smallerRegularSize,
-              color: Styles.whiteColor),
+            fontSize: fontSize ?? Styles.smallerRegularSize,
+            color: fontColor,
+          ),
         ),
       ],
     );

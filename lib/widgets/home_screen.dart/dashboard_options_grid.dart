@@ -18,7 +18,11 @@ class DashboardOptionsGrid extends StatelessWidget {
       label: AppStrings.live,
       routeName: LiveMenuScreen.routeName,
     ),
-    DashboardOption(icon: AppIcons.schedule, label: AppStrings.schedule),
+    DashboardOption(
+      icon: AppIcons.schedule,
+      label: AppStrings.schedule,
+      routeName: OpeningAndClosingCeromoniesScreen.routeName,
+    ),
     DashboardOption(
       icon: AppIcons.games,
       label: AppStrings.games,

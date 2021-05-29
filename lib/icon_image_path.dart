@@ -100,4 +100,5 @@ class AppImages {
   static const String competitionBg = 'assets/images/competition_bg.png';
   static const String competitionContainerBg = 'assets/images/competition_container_bg.png';
   static const String competitionContainerInactiveBg = 'assets/images/competition_container_inactive_bg.png';
+  static const String openingAndClosingCeromonies = 'assets/images/opening_and_closing_ceromonies.png';
 }

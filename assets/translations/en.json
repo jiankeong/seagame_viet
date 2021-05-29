@@ -180,5 +180,11 @@
 
     "next_game": "Next Game",
     "last_game": "Last Game",
-    "previous_match": "Previous Match"
+    "previous_match": "Previous Match",
+
+    "opening_and_closing_ceromonies": "Opening And Closing Ceromonies",
+    "ceromonies_time_info": "All times in Indochina Time Time (ICT)",
+    "opening_ceromony": "Opening Ceromony",
+    "closing_ceromony": "Closing Ceromony"
+
 }

@@ -33,7 +33,7 @@ class ProductDetailScreen extends StatelessWidget {
         "15cm ring bronze coated, same design with the prize award to the participant",
   );
 
-  List<String> relatedProductImage = [
+  final List<String> relatedProductImage = [
     'https://a1.bbkz.net/forum/attachment.php?attachmentid=3051915&thumb=1&d=1580378846',
     'https://thermosmalaysia.com/wp-content/uploads/2018/10/JNL-503PPL.png',
   ];

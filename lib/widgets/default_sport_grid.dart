@@ -4,8 +4,6 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../styles.dart';
 import './default_sized_box.dart';
-import '../app_strings.dart';
-import '../icon_image_path.dart';
 import '../screens/games_detail_screen.dart';
 import './sport_icon_container.dart';
 import '../constants/app_constants.dart';
