@@ -8,13 +8,10 @@ import '../widgets/default_cache_network_image.dart';
 import '../globals.dart';
 import '../styles.dart';
 import '../widgets/default_sized_box.dart';
-import '../widgets/custom_shadow_container.dart';
 import '../icon_image_path.dart';
-import '../utils/date_format_utils.dart';
 import '../widgets/default_padding.dart';
 import '../widgets/country_flag_container.dart';
-import '../utils/general_functions.dart';
-import '../widgets/weather_indicator.dart';
+import '../widgets/sport_sponsor_banner.dart';
 
 class LiveDetailsScreen extends StatelessWidget {
   static const routeName = 'LiveDetails';
@@ -33,7 +30,7 @@ class LiveDetailsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _buildLivePicture(),
-                  _buildBanner(),
+                  SportSponsorBanner(),
                   DefaultSizedBox.vertical(25),
                   _buildVersusContainer(),
                 ],
@@ -83,86 +80,6 @@ class LiveDetailsScreen extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildBanner() {
-    return CustomShadowContainer(
-      roundedCorner: false,
-      backgroundImage: AppImages.liveBanner,
-      height: 75.h,
-      child: Row(
-        children: [
-          Expanded(
-            flex: 3,
-            child: DefaultCacheNetworkImage(
-              imageUrl: 'https://logonoid.com/images/yonex-logo.png',
-              width: 58.w,
-              height: 14.h,
-              boxFit: BoxFit.contain,
-            ),
-          ),
-          DefaultSizedBox.horizontal(25),
-          Expanded(
-            flex: 9,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Flexible(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Badminton',
-                            style: TextStyle(
-                                color: Styles.whiteColor,
-                                fontWeight: Styles.boldText,
-                                fontSize: Styles.smallerTitleFontSize),
-                          ),
-                          DefaultSizedBox.vertical(3),
-                          Text(
-                            DateFormatUtils.combineStartDateAndEndDate(
-                              DateTime.parse('2021-12-03 20:00:00'),
-                              DateTime.parse('2021-12-03 23:00:00'),
-                            ),
-                            style: TextStyle(
-                              fontSize: Styles.smallerRegularSize,
-                              color: Styles.whiteColor,
-                              fontWeight: Styles.boldText,
-                            ),
-                          ),
-                          DefaultSizedBox.vertical(3),
-                          InkWell(
-                            onTap: () {
-                              launchURL();
-                            },
-                            child: Text(
-                              'Mỹ Đình National Stadium',
-                              style: TextStyle(
-                                fontSize: Styles.smallerRegularSize,
-                                color: Styles.whiteColor,
-                                fontWeight: Styles.boldText,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 15.w),
-                      child: WeatherIndicator(),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
     );
   }
 

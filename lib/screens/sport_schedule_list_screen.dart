@@ -10,6 +10,7 @@ import '../styles.dart';
 import '../widgets/default_sized_box.dart';
 import '../utils/date_format_utils.dart';
 import '../widgets/default_padding.dart';
+import './sport_schedule_detail_screen.dart';
 
 class SportScheduleListScreen extends StatefulWidget {
   static const routeName = '/SportScheduleList';
@@ -34,11 +35,11 @@ class _SportScheduleListScreenState extends State<SportScheduleListScreen> {
       maxTemp: 27,
       events: [
         'Men’s 3000m Steeplechase Round 1',
-        'Men’s High Jump Qualifying Round',
-        'Men’s Discus Throw Qualifying Round',
-        'Women’s 800m Round 1',
-        'Men’s 400m Hurdles Round 1',
-        'Women’s 100m Round 1',
+        // 'Men’s High Jump Qualifying Round',
+        // 'Men’s Discus Throw Qualifying Round',
+        // 'Women’s 800m Round 1',
+        // 'Men’s 400m Hurdles Round 1',
+        // 'Women’s 100m Round 1',
       ],
     ),
   ];
@@ -73,88 +74,97 @@ class _SportScheduleListScreenState extends State<SportScheduleListScreen> {
 
                 return Column(
                   children: [
-                    CustomShadowContainer(
-                      topPadding: 25,
-                      bottomPadding: 25,
-                      roundedCorner: false,
-                      child: DefaultPadding(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        DateFormatUtils
-                                            .combineStartDateAndEndDate(
-                                          sportSchedule.startTime!,
-                                          sportSchedule.endTime!,
-                                        ),
-                                        style: TextStyle(
-                                            fontSize:
-                                                Styles.smallerTitleFontSize,
-                                            fontWeight: Styles.boldText,
-                                            color: Styles.primaryDarkColor),
-                                      ),
-                                      DefaultSizedBox.vertical(5),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            sportSchedule.location!,
-                                            style: TextStyle(
-                                                fontSize:
-                                                    Styles.smallerTitleFontSize,
-                                                fontWeight: Styles.boldText,
-                                                color: Styles.primaryDarkColor),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          SportScheduleDetailScreen.routeName,
+                        );
+                      },
+                      child: CustomShadowContainer(
+                        topPadding: 25,
+                        bottomPadding: 25,
+                        roundedCorner: false,
+                        child: DefaultPadding(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          DateFormatUtils
+                                              .combineStartDateAndEndDate(
+                                            sportSchedule.startTime!,
+                                            sportSchedule.endTime!,
                                           ),
-                                          DefaultSizedBox.horizontal(5),
-                                          Icon(
-                                            Icons.place,
-                                            size: 12.h,
+                                          style: TextStyle(
+                                              fontSize:
+                                                  Styles.smallerTitleFontSize,
+                                              fontWeight: Styles.boldText,
+                                              color: Styles.primaryDarkColor),
+                                        ),
+                                        DefaultSizedBox.vertical(5),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              sportSchedule.location!,
+                                              style: TextStyle(
+                                                  fontSize: Styles
+                                                      .smallerTitleFontSize,
+                                                  fontWeight: Styles.boldText,
+                                                  color:
+                                                      Styles.primaryDarkColor),
+                                            ),
+                                            DefaultSizedBox.horizontal(5),
+                                            Icon(
+                                              Icons.place,
+                                              size: 12.h,
+                                              color: Styles.primaryColor,
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    DefaultSizedBox.horizontal(10),
+                                    WeatherIndicator(
+                                      isNight: sportSchedule.isNight!,
+                                      value:
+                                          '${sportSchedule.minTemp}º / ${sportSchedule.maxTemp}º',
+                                      fontColor: Styles.primaryDarkColor,
+                                      iconColor: Styles.primaryColor,
+                                      fontSize: Styles.regularFontSize,
+                                      iconSize: 24.h,
+                                    ),
+                                  ]),
+                              DefaultSizedBox.vertical(15),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  for (String event in sportSchedule.events!)
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          '\u2022 $event',
+                                          style: TextStyle(
+                                            fontSize: Styles.regularFontSize,
                                             color: Styles.primaryColor,
                                           ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  DefaultSizedBox.horizontal(10),
-                                  WeatherIndicator(
-                                    isNight: sportSchedule.isNight!,
-                                    value:
-                                        '${sportSchedule.minTemp}º / ${sportSchedule.maxTemp}º',
-                                    fontColor: Styles.primaryDarkColor,
-                                    iconColor: Styles.primaryColor,
-                                    fontSize: Styles.regularFontSize,
-                                    iconSize: 24.h,
-                                  ),
-                                ]),
-                            DefaultSizedBox.vertical(15),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                for (String event in sportSchedule.events!)
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        '\u2022 $event',
-                                        style: TextStyle(
-                                          fontSize: Styles.regularFontSize,
-                                          color: Styles.primaryColor,
                                         ),
-                                      ),
-                                      DefaultSizedBox.vertical(5),
-                                    ],
-                                  ),
-                              ],
-                            ),
-                          ],
+                                        DefaultSizedBox.vertical(5),
+                                      ],
+                                    ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

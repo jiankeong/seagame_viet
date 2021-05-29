@@ -118,7 +118,7 @@ class _CeromonyContainerState extends State<CeromonyContainer> {
                         DefaultSizedBox.vertical(25),
                         DefaultButton(
                           width: 213.w,
-                          buttonText: AppStrings.setReminder.tr(),
+                          buttonText: AppStrings.setReminder,
                         ),
                       ],
                     )),

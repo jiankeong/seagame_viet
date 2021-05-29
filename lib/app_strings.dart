@@ -191,4 +191,6 @@ class AppStrings {
   static const String openCeromony = 'opening_ceromony';
   static const String closingCeromony = 'closing_ceromony';
   static const String setReminder = 'set_reminder';
+  
+  static const String lane = 'lane';
 }
