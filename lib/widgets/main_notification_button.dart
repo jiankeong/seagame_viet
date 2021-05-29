@@ -8,13 +8,27 @@ import '../styles.dart';
 import './default_sized_box.dart';
 import '../providers/user_provider.dart';
 import '../models/user.dart';
+import '../utils/build_toast.dart';
+import '../app_strings.dart';
+import '../screens/login_screen.dart';
+import '../screens/notification_screen.dart';
 
 class MainNotificationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: Colors.transparent,
-      onTap: () async {},
+      onTap: () async {
+        final authProvider = Provider.of<AuthProvider>(context, listen: false);
+
+        if(!authProvider.hasLogin()) {
+          buildToast1(AppStrings.pleaseLoginBeforeProceed);
+          Navigator.pushNamed(context, LoginScreen.routeName);
+          return;
+        }
+
+        Navigator.pushNamed(context, NotificationScreen.routeName);
+      },
       child: Consumer<AuthProvider>(
         builder: (context, authProvider, child) {
           if (!authProvider.hasLogin()) return _buildNotificationBell(false, 0);

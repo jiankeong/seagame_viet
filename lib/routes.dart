@@ -37,4 +37,5 @@ final routeList = {
   OpeningAndClosingCeromoniesScreen.routeName: (ctx) => OpeningAndClosingCeromoniesScreen(),
   SportScheduleListScreen.routeName: (ctx) => SportScheduleListScreen(),
   SportScheduleDetailScreen.routeName: (ctx) => SportScheduleDetailScreen(),
+  NotificationScreen.routeName: (ctx) => NotificationScreen(),
 };

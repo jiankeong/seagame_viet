@@ -27,4 +27,8 @@ class DateFormatUtils {
 
     return '$dateAndDay | $startTime - $endTime';
   }
+
+  static String dateWithTime(DateTime date) {
+    return DateFormat('dd MMM yyy | hh:mm').format(date);
+  }
 }

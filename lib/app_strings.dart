@@ -193,4 +193,6 @@ class AppStrings {
   static const String setReminder = 'set_reminder';
   
   static const String lane = 'lane';
+
+  static const String notification = 'notification';
 }
