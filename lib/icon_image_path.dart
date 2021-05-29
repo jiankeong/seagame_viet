@@ -52,6 +52,7 @@ class AppIcons {
   static const String share = 'assets/icons/share.png';
   static const String filter = 'assets/icons/filter.png';
   static const String forward = 'assets/icons/forward.png';
+  static const String scheduleMedal = 'assets/icons/schedule_medal.png';
 }
 
 class AppImages {

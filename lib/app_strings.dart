@@ -195,4 +195,6 @@ class AppStrings {
   static const String lane = 'lane';
 
   static const String notification = 'notification';
+
+  static const String sports = 'sports';
 }

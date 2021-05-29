@@ -38,4 +38,5 @@ final routeList = {
   SportScheduleListScreen.routeName: (ctx) => SportScheduleListScreen(),
   SportScheduleDetailScreen.routeName: (ctx) => SportScheduleDetailScreen(),
   NotificationScreen.routeName: (ctx) => NotificationScreen(),
+  ScheduleScreen.routeName: (ctx) => ScheduleScreen(),
 };

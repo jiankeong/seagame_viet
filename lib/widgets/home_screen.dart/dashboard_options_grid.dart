@@ -21,7 +21,7 @@ class DashboardOptionsGrid extends StatelessWidget {
     DashboardOption(
       icon: AppIcons.schedule,
       label: AppStrings.schedule,
-      routeName: SportScheduleListScreen.routeName,
+      routeName: ScheduleScreen.routeName,
     ),
     DashboardOption(
       icon: AppIcons.games,
