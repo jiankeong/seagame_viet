@@ -5,13 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../widgets/default_app_bar.dart';
 import '../app_strings.dart';
 import '../styles.dart';
-import '../widgets/custom_shadow_container.dart';
 import '../icon_image_path.dart';
 import '../globals.dart';
 import '../widgets/default_padding.dart';
-import '../widgets/weather_indicator.dart';
-import '../utils/date_format_utils.dart';
 import '../widgets/default_sized_box.dart';
+import '../widgets/ceromony/ceromony_widgets.dart';
 
 class OpeningAndClosingCeromoniesScreen extends StatelessWidget {
   static const routeName = '/OpeningAndClosingCeromonies';
@@ -62,91 +60,6 @@ class OpeningAndClosingCeromoniesScreen extends StatelessWidget {
             ),
           )
         ],
-      ),
-    );
-  }
-}
-
-class CeromonyContainer extends StatelessWidget {
-  final bool isClosing;
-  final DateTime? startTime;
-  final DateTime? endTime;
-  final String location;
-  final bool isNight;
-  final bool hasPassed;
-  final String weatherValue;
-
-  CeromonyContainer({
-    this.isClosing = false,
-    this.startTime,
-    this.endTime,
-    this.location = 'Mỹ Đình National Stadium',
-    this.isNight = true,
-    this.hasPassed = false,
-    this.weatherValue = '25º / 23º',
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomShadowContainer(
-      roundedCorner: false,
-      topPadding: 25,
-      bottomPadding: 25,
-      child: DefaultPadding(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      DateFormatUtils.combineStartDateAndEndDate(
-                        startTime ?? DateTime.parse('2021-11-21 20:00:00'),
-                        endTime ?? DateTime.parse('2021-11-21 23:00:00'),
-                      ),
-                      style: TextStyle(
-                          color: hasPassed
-                              ? Styles.suvaGrey
-                              : Styles.primaryDarkColor,
-                          fontWeight: Styles.boldText,
-                          fontSize: Styles.smallerTitleFontSize),
-                    ),
-                    DefaultSizedBox.vertical(8),
-                    Text(
-                      location,
-                      style: TextStyle(
-                          color: hasPassed
-                              ? Styles.suvaGrey
-                              : Styles.primaryDarkColor,
-                          fontWeight: Styles.boldText,
-                          fontSize: Styles.smallerTitleFontSize),
-                    ),
-                  ],
-                ),
-                DefaultSizedBox.horizontal(10),
-                WeatherIndicator(
-                  isNight: true,
-                  value: weatherValue,
-                  iconColor:
-                      hasPassed ? Styles.suvaGrey : Styles.primaryDarkColor,
-                  fontColor: hasPassed ? Styles.suvaGrey : Styles.primaryColor,
-                ),
-              ],
-            ),
-            DefaultSizedBox.vertical(15),
-            Text(
-              (isClosing ? AppStrings.closingCeromony : AppStrings.openCeromony)
-                  .tr(),
-              style: TextStyle(
-                fontSize: Styles.regularFontSize,
-                color: hasPassed ? Styles.suvaGrey : Styles.primaryColor,
-              ),
-            )
-          ],
-        ),
       ),
     );
   }
