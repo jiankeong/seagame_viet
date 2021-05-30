@@ -197,4 +197,6 @@ class AppStrings {
   static const String notification = 'notification';
 
   static const String sports = 'sports';
+
+  static const String registerSuccessfully = 'register_successfully';
 }

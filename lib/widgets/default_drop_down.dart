@@ -8,7 +8,10 @@ class DefaultDropdown extends StatelessWidget {
   final String? value;
   final Function(Object?)? onChanged;
   final String? hintText;
-  final double? horizontalPadding;
+  final double leftPadding;
+  final double rightPadding;
+  final double topPadding;
+  final double bottomPadding;
   final bool isDense;
   final bool enabled;
   final bool isExpanded;
@@ -20,7 +23,10 @@ class DefaultDropdown extends StatelessWidget {
     this.value,
     this.onChanged,
     this.hintText,
-    this.horizontalPadding,
+    this.leftPadding = 0,
+    this.rightPadding = 0,
+    this.topPadding = 0,
+    this.bottomPadding = 0,
     this.isDense = true,
     this.enabled = true,
     this.isExpanded = true,
@@ -35,6 +41,7 @@ class DefaultDropdown extends StatelessWidget {
             isExpanded: isExpanded,
             isDense: isDense,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            itemHeight: 74.h,
             style: TextStyle(
               fontSize: Styles.smallerTitleFontSize,
               color: Styles.blackColor,
@@ -51,15 +58,21 @@ class DefaultDropdown extends StatelessWidget {
                     ),
                   ),
             decoration: InputDecoration(
-              enabledBorder: hideBorder
-                  ? InputBorder.none
-                  : UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1.0.w,
-                        color: Styles.grey65,
+              errorStyle: TextStyle(fontSize: Styles.smallerRegularSize,),
+                enabledBorder: hideBorder
+                    ? InputBorder.none
+                    : UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 1.0.w,
+                          color: Styles.grey65,
+                        ),
                       ),
-                    ),
-            ),
+                contentPadding: EdgeInsets.fromLTRB(
+                  leftPadding.w,
+                  topPadding.h,
+                  rightPadding.w,
+                  bottomPadding.h
+                )),
             value: value,
             items: items ?? [],
             onChanged: onChanged == null ? (val) {} : onChanged,

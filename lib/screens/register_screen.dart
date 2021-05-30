@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:country_pickers/country.dart';
+import 'package:sea_games_gms/utils/build_toast.dart';
 
 import '../styles.dart';
 import '../widgets/default_sized_box.dart';
@@ -16,6 +17,7 @@ import '../widgets/default_button.dart';
 import '../widgets/default_drop_down.dart';
 import '../constants/app_constants.dart';
 import '../widgets/error_hint_text.dart';
+import '../globals.dart';
 
 class RegisterScreen extends StatefulWidget {
   static const routeName = '/RegisterScreen';
@@ -151,6 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   isYourCountryError = false;
                 });
               },
+              gapHeight: Globals().getScreenHeight() < 550 ? 25 : 12,
               value: selectedYourCountry,
               hasError: isYourCountryError,
             ),
@@ -160,6 +163,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               hintText: AppStrings.fullName.tr(),
               controller: fullNameController,
               validator: InputValidationsUtils.validateEmptyString,
+              bottomPadding: Globals().getScreenHeight() < 550 ? 28 : 12,
             ),
             DefaultSizedBox.vertical(15),
             Row(
@@ -167,10 +171,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
               children: [
                 Flexible(
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: EdgeInsets.only(top: 13.h),
                       child: CountryPicker.phoneCode(
+                        gapHeight: Globals().getScreenHeight() < 550 ? 28 : 10,
                         onValueChanged: (Country country) {
                           setState(() {
                             selectedCountryCode = '+${country.phoneCode}';
@@ -188,6 +194,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Flexible(
                   flex: 2,
                   child: DefaultTextFormField(
+                    isDense: true,
+                    topPadding: 17,
+                    bottomPadding: Globals().getScreenHeight() < 550 ? 28 : 12,
                     hintText: AppStrings.phoneNumber.tr(),
                     controller: phoneNumberController,
                     validator: InputValidationsUtils.validateEmptyString,
@@ -199,9 +208,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
             DefaultTextFormField(
               hintText: AppStrings.email.tr(),
               controller: emailController,
+              bottomPadding: Globals().getScreenHeight() < 550 ? 28 : 12,
               validator: InputValidationsUtils.validateEmail,
             ),
-            DefaultSizedBox.vertical(15),
+            DefaultSizedBox.vertical(inputVerticalSpacing),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -209,44 +219,60 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 16.h),
-                        child: DefaultDatePicker(
-                          onDateSelected: (DateTime? date) {
-                            dateOfBirth = date;
-                            setState(() {
-                              isDateOfBirthError = false;
-                            });
-                          },
-                          value: dateOfBirth,
-                          hasError: isDateOfBirthError,
-                        ),
+                      DefaultDatePicker(
+                        gapHeight: Globals().getScreenHeight() < 550 ? 28 : 12,
+                        rightPadding: Globals().getScreenHeight() < 550 ? 18 : 11,
+                        onDateSelected: (DateTime? date) {
+                          dateOfBirth = date;
+                          setState(() {
+                            isDateOfBirthError = false;
+                          });
+                        },
+                        value: dateOfBirth,
+                        hasError: isDateOfBirthError,
                       ),
                       if (isDateOfBirthError) ErrorHintText(),
                     ],
                   ),
                 ),
-                DefaultSizedBox.horizontal(15),
-                Flexible(
-                  child: DefaultDropdown(
-                    hintText: AppStrings.gender.tr(),
-                    items: kGender
-                        .map<DropdownMenuItem<String>>((e) => DropdownMenuItem(
-                              child: Text('${e.tr()}'),
-                              value: e,
-                            ))
-                        .toList(),
-                    onChanged: (val) {
-                      setState(() {
-                        gender = val as String;
-                      });
-                    },
-                    validator: InputValidationsUtils.validateEmptyString,
-                  ),
-                ),
+                // DefaultSizedBox.horizontal(15),
+                // Flexible(
+                //   child: DefaultDropdown(
+                //     hintText: AppStrings.gender.tr(),
+                //     items: kGender
+                //         .map<DropdownMenuItem<String>>((e) => DropdownMenuItem(
+                //               child: Text('${e.tr()}'),
+                //               value: e,
+                //             ))
+                //         .toList(),
+                //     onChanged: (val) {
+                //       setState(() {
+                //         gender = val as String;
+                //       });
+                //     },
+                //     validator: InputValidationsUtils.validateEmptyString,
+                //   ),
+                // ),
               ],
             ),
-            DefaultSizedBox.vertical(inputVerticalSpacing),
+            DefaultSizedBox.vertical(Globals().getScreenHeight() < 550 ? 0 : 8),
+            DefaultDropdown(
+              hintText: AppStrings.gender.tr(),
+              rightPadding: Globals().getScreenHeight() < 550 ? 13 : 10,
+              items: kGender
+                  .map<DropdownMenuItem<String>>((e) => DropdownMenuItem(
+                        child: Text('${e.tr()}'),
+                        value: e,
+                      ))
+                  .toList(),
+              onChanged: (val) {
+                setState(() {
+                  gender = val as String;
+                });
+              },
+              validator: InputValidationsUtils.validateEmptyString,
+            ),
+            DefaultSizedBox.vertical(10),
             DefaultTextFormField(
               hintText: AppStrings.password.tr(),
               controller: passwordController,
@@ -287,6 +313,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   bool checking2 = otherFieldsHasError();
 
                   if (!checking1 || checking2) return;
+
+                  buildToast1(AppStrings.register);
+
+                  Navigator.pop(context);
                 },
               ),
             ),

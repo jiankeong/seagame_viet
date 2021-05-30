@@ -22,6 +22,8 @@ import './home_screen_stack.dart';
 import '../providers/auth_provider.dart';
 import '../providers/user_provider.dart';
 
+import '../globals.dart';
+
 class LoginScreen extends StatefulWidget {
   static const routeName = '/Login';
 
@@ -43,6 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(Globals().getScreenHeight());
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
@@ -133,6 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 fit: BoxFit.contain,
               ),
             ),
+            textAlignVertical: Globals().getScreenHeight() < 550 ? TextAlignVertical.top : TextAlignVertical.center,
             hintText: AppStrings.emailOrPhoneNumber.tr().toUpperCase(),
             controller: _usernameController,
             validator: InputValidationsUtils.validateEmptyString,
@@ -151,6 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 fit: BoxFit.contain,
               ),
             ),
+            textAlignVertical: Globals().getScreenHeight() < 550 ? TextAlignVertical.top : TextAlignVertical.center,
             hintText: AppStrings.password.tr().toUpperCase(),
             controller: _passwordController,
             obscureText: true,
@@ -187,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   "url":
                       "https://www.countryflags.com/wp-content/uploads/malaysia-flag-png-large.png",
                 },
-                "notification_count": 99,
+                "notification_count": 3,
               });
 
               Navigator.pushNamedAndRemoveUntil(

@@ -28,10 +28,11 @@ class DefaultAppBar extends StatelessWidget {
           color: Styles.blackColor.withOpacity(0.5),
         )
       ]),
-      child: SafeArea(
-        child: Column(
-          children: [
-            Container(
+      child: Column(
+        children: [
+          SafeArea(
+            bottom: false,
+            child: Container(
               padding: EdgeInsets.fromLTRB(
                 kDefaultScreenHorizontalPadding.w,
                 12.h,
@@ -51,49 +52,49 @@ class DefaultAppBar extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: Styles.primaryColor,
-              ),
-              padding: EdgeInsets.fromLTRB(
-                kDefaultScreenHorizontalPadding.w,
-                12.h,
-                (kDefaultScreenHorizontalPadding - 10).w,
-                12.h,
-              ),
-              width: double.infinity,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Image.asset(
-                      AppIcons.back,
-                      width: 25.h,
-                      height: 25.h,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: titleLeftPadding,
-                    ),
-                    child: Text(
-                      title,
-                      style: TextStyle(
-                          color: Styles.whiteColor,
-                          fontSize: 21.sp,
-                          fontWeight: Styles.boldText),
-                    ),
-                  ),
-                  _buildTrailing()!,
-                ],
-              ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Styles.primaryColor,
             ),
-          ],
-        ),
+            padding: EdgeInsets.fromLTRB(
+              kDefaultScreenHorizontalPadding.w,
+              12.h,
+              (kDefaultScreenHorizontalPadding - 10).w,
+              12.h,
+            ),
+            width: double.infinity,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Image.asset(
+                    AppIcons.back,
+                    width: 25.h,
+                    height: 25.h,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: titleLeftPadding,
+                  ),
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                        color: Styles.whiteColor,
+                        fontSize: 21.sp,
+                        fontWeight: Styles.boldText),
+                  ),
+                ),
+                _buildTrailing()!,
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

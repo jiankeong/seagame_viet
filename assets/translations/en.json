@@ -190,5 +190,7 @@
 
     "lane": "Lane",
     
-    "notification": "Notification"
+    "notification": "Notification",
+
+    "register_successfully": "Register Successfully"
 }

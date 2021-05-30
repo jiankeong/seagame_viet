@@ -17,6 +17,7 @@ import '../models/user.dart';
 import '../screens/login_screen.dart';
 import '../utils/user_type_mapper.dart';
 import './main_notification_button.dart';
+import '../screens/my_tickets_screen.dart';
 
 class HeaderProfileContainer extends StatelessWidget {
   const HeaderProfileContainer({
@@ -33,14 +34,12 @@ class HeaderProfileContainer extends StatelessWidget {
         rightPadding: 25.w,
         topPadding: 8.h,
         bottomPadding: 8.h,
-        child: SafeArea(
-          child: Column(
-            children: [
-              _buildLogoNotificationSection(),
-              DefaultSizedBox.vertical(15),
-              _buildInfoSection(context, authProvider.hasLogin()),
-            ],
-          ),
+        child: Column(
+          children: [
+            SafeArea(bottom: false, child: _buildLogoNotificationSection(),),
+            DefaultSizedBox.vertical(15),
+            _buildInfoSection(context, authProvider.hasLogin()),
+          ],
         ),
       );
     });
@@ -184,7 +183,9 @@ class HeaderProfileContainer extends StatelessWidget {
         context,
         LoginScreen.routeName,
       );
-    } else {}
+    } else {
+      Navigator.pushNamed(context, MyTicketsScreen.routeName);
+    }
   }
 
   Widget _buildUserInfoContainer(User? user) {
@@ -193,29 +194,31 @@ class HeaderProfileContainer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              CachedNetworkImage(
-                imageUrl: user!.countryFlagUrl!,
-                errorWidget: (_, __, ___) => Container(),
-                width: 39.w,
-                height: 23.h,
-                fit: BoxFit.fill,
-              ),
-              DefaultSizedBox.horizontal(10),
-              Flexible(
-                child: FittedBox(
-                  child: Text(
-                    user.country!.toUpperCase(),
-                    style: TextStyle(
-                      fontSize: Styles.titleFontSize,
-                      color: Styles.outerSpace,
+          Flexible(
+                      child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                CachedNetworkImage(
+                  imageUrl: user!.countryFlagUrl!,
+                  errorWidget: (_, __, ___) => Container(),
+                  width: 39.w,
+                  height: 23.h,
+                  fit: BoxFit.fill,
+                ),
+                DefaultSizedBox.horizontal(10),
+                Flexible(
+                  child: FittedBox(
+                    child: Text(
+                      user.country!.toUpperCase(),
+                      style: TextStyle(
+                        fontSize: Styles.titleFontSize,
+                        color: Styles.outerSpace,
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           DefaultSizedBox.vertical(10),
           FittedBox(

@@ -14,17 +14,20 @@ class CountryPicker extends StatelessWidget {
   final Function(Country) onValueChanged;
   final bool isPhoneCode;
   final bool hasError;
+  final double gapHeight;
 
   CountryPicker({
     this.value,
     required this.onValueChanged,
     this.hasError = false,
+    this.gapHeight = 25,
   }) : isPhoneCode = false;
 
   CountryPicker.phoneCode({
     this.value,
     required this.onValueChanged,
     this.hasError = false,
+    this.gapHeight = 25
   }) : isPhoneCode = true;
 
   @override
@@ -73,7 +76,7 @@ class CountryPicker extends StatelessWidget {
               )
             ],
           ),
-          DefaultSizedBox.vertical(12),
+          DefaultSizedBox.vertical(gapHeight),
           DefaultDivider(
             thickness: 1.2.w,
             color: hasError ? Styles.redColor : null,

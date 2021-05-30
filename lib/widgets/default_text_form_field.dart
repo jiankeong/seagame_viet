@@ -33,6 +33,7 @@ class DefaultTextFormField extends StatelessWidget {
   final bool hideBorder;
   final TextAlign textAlign;
   final TextStyle? hintStyle;
+  final TextAlignVertical? textAlignVertical;
 
   DefaultTextFormField({
     this.controller,
@@ -62,6 +63,7 @@ class DefaultTextFormField extends StatelessWidget {
     this.hideBorder = false,
     this.textAlign = TextAlign.start,
     this.hintStyle,
+    this.textAlignVertical,
   });
 
   @override
@@ -85,10 +87,11 @@ class DefaultTextFormField extends StatelessWidget {
                 : (val) {
                     onChanged!(val);
                   },
-            textAlignVertical: TextAlignVertical.center,
+            textAlignVertical: textAlignVertical ?? TextAlignVertical.center,
             decoration: InputDecoration(
               hintText: hintText.toUpperCase(),
               helperText: helperText,
+              errorStyle: TextStyle(fontSize: Styles.smallerRegularSize,),
               hintStyle: hintStyle != null
                   ? hintStyle
                   : TextStyle(
@@ -115,6 +118,7 @@ class DefaultTextFormField extends StatelessWidget {
                 minWidth: 2.w,
                 minHeight: 2.h,
               ),
+
               suffixIcon: shouldShowVisiblity
                   ? GestureDetector(
                       onTap: onVisibilityTap == null ? () {} : onVisibilityTap,
