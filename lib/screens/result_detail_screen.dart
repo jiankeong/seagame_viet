@@ -158,6 +158,7 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
       child: DefaultPadding(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          
           children: [
             Text(
               AppStrings.results.tr(),
@@ -179,16 +180,18 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
               ),
             ),
             DefaultSizedBox.vertical(20),
-            Wrap(
-              direction: Axis.horizontal,
-              children: [
-                for (String img in imgUrl)
-                  DefaultCacheNetworkImage(
-                    imageUrl: img,
-                    width: Globals().getScreenWidth() * 0.4,
-                    height: Globals().getScreenWidth() * 0.4,
-                  ),
-              ],
+            Center(
+              child: Wrap(
+                direction: Axis.horizontal,
+                children: [
+                  for (String img in imgUrl)
+                    DefaultCacheNetworkImage(
+                      imageUrl: img,
+                      width: Globals().getScreenWidth() * 0.4,
+                      height: Globals().getScreenWidth() * 0.4,
+                    ),
+                ],
+              ),
             ),
             DefaultSizedBox.vertical(25),
           ],

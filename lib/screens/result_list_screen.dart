@@ -175,6 +175,7 @@ class _ResultListScreenState extends State<ResultListScreen> {
         startingDate,
         daysCount: 14,
         controller: _controller,
+        height: 80.h,
         initialSelectedDate: _selectedValue,
         selectionColor: Styles.primaryColor,
         dayTextStyle: TextStyle(
