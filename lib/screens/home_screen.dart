@@ -38,12 +38,12 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _addBottomSpacing() {
-    double spacing = 0;
+    double spacing = 45;
     
     double screenHeight = Globals().getScreenHeight();
 
-    if (screenHeight < 750 || (screenHeight > 800)) {
-      spacing = 45;
+    if (screenHeight == 800) {
+      spacing = 0;
     } 
 
     return DefaultSizedBox.vertical(spacing);
