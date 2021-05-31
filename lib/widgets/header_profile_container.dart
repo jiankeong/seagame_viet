@@ -28,7 +28,7 @@ class HeaderProfileContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AuthProvider>(builder: (context, authProvider, child) {
       return CustomShadowContainer(
-        height: Globals().getScreenHeight() * 0.27,
+        height: Globals().getScreenHeight() * 0.275,
         backgroundImage: AppImages.homeProfileContainerBg,
         leftPadding: 25.w,
         rightPadding: 25.w,
@@ -120,7 +120,7 @@ class HeaderProfileContainer extends StatelessWidget {
         );
       },
       child: Container(
-        height: 56.h,
+        height: 57.h,
         padding: EdgeInsets.symmetric(
           horizontal: 20.w,
           vertical: 5.h,
@@ -149,7 +149,7 @@ class HeaderProfileContainer extends StatelessWidget {
                 AppStrings.joinUSTodayInfoText.tr(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: Styles.fontSize10,
+                  fontSize: context.locale == Locale('zh') ? 7.8.sp : Styles.fontSize10,
                   color: Styles.whiteColor,
                 ),
               ),
