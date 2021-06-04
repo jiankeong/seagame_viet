@@ -192,5 +192,7 @@
     
     "notification": "Notification",
 
-    "register_successfully": "Register Successfully"
+    "register_successfully": "Register Successfully",
+
+    "time": "Time"
 }

@@ -9,6 +9,10 @@ import '../country_flag_container.dart';
 import '../../icon_image_path.dart';
 
 class ScoreResultContainer extends StatelessWidget {
+  final Map<String, dynamic>? matchResult;
+
+  ScoreResultContainer({this.matchResult});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,7 +36,7 @@ class ScoreResultContainer extends StatelessWidget {
                       style: Styles.resultTableLabelTextStyle,
                     ),
                   ),
-                  for (int i = 0; i < 5; i++)
+                  for (int i = 0; i < matchResult!['total_sets']; i++)
                     Expanded(
                       child: Text(
                         '0${i + 1}',
@@ -50,20 +54,28 @@ class ScoreResultContainer extends StatelessWidget {
           color: Styles.blackColor,
         ),
         DefaultSizedBox.vertical(12),
-        ResultRow(
-          countryFlag: AppImages.malaysia,
-          countryCode: 'MAS',
-          wonSet: 3,
-          scores: [21, 21, 19, 21, null],
-          playersName: ['C.W. Lee'],
-        ),
-        DefaultSizedBox.vertical(5),
-        ResultRow(
-          countryFlag: AppImages.indonesia,
-          countryCode: 'INA',
-          wonSet: 1,
-          scores: [17, 18, 21, 19, null],
-          playersName: ['M.C. Gideon'],
+        ListView.builder(
+          padding: EdgeInsets.all(0),
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemBuilder: (context, index) {
+            Map<String, dynamic> result = matchResult!['results'][index];
+
+            return Column(
+              children: [
+                ResultRow(
+                  countryFlag: result['country_flag'],
+                  countryCode: result['country_code'],
+                  wonSet: result['won_set'],
+                  scores: result['scores'],
+                  playersName: result['players_name'],
+                ),
+                if (index < matchResult!['results'].length - 1)
+                  DefaultSizedBox.vertical(5),
+              ],
+            );
+          },
+          itemCount: matchResult!['results'].length,
         ),
         DefaultSizedBox.vertical(12),
         DefaultDivider(

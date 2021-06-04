@@ -199,4 +199,6 @@ class AppStrings {
   static const String sports = 'sports';
 
   static const String registerSuccessfully = 'register_successfully';
+
+  static const String time = 'time';
 }

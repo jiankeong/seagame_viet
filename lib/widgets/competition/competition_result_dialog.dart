@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../default_sized_box.dart';
 import '../../styles.dart';
-import '../result_detail.dart/score_result_container.dart';
+import '../result_containers/result_containers.dart';
 import '../../app_strings.dart';
 import '../../globals.dart';
 import '../../icon_image_path.dart';

@@ -45,7 +45,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(Globals().getScreenHeight());
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
@@ -124,6 +123,8 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Column(
         children: [
           DefaultTextFormField(
+            topPadding: Globals().getScreenHeight() < 550 ? 12 : 0,
+            bottomPadding: Globals().getScreenHeight() < 550 ? 8 : 14,
             prefixIcon: Padding(
               padding: EdgeInsets.only(
                 left: 10.w,
@@ -136,13 +137,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            textAlignVertical: Globals().getScreenHeight() < 550 ? TextAlignVertical.top : TextAlignVertical.center,
+            textAlignVertical: Globals().getScreenHeight() < 550
+                ? TextAlignVertical.top
+                : TextAlignVertical.center,
             hintText: AppStrings.emailOrPhoneNumber.tr().toUpperCase(),
             controller: _usernameController,
             validator: InputValidationsUtils.validateEmptyString,
           ),
           DefaultSizedBox.vertical(15),
           DefaultTextFormField(
+            topPadding: Globals().getScreenHeight() < 550 ? 12 : 0,
+            bottomPadding: Globals().getScreenHeight() < 550 ? 8 : 14,
             prefixIcon: Padding(
               padding: EdgeInsets.only(
                 left: 10.w,
@@ -155,7 +160,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            textAlignVertical: Globals().getScreenHeight() < 550 ? TextAlignVertical.top : TextAlignVertical.center,
+            textAlignVertical: Globals().getScreenHeight() < 550
+                ? TextAlignVertical.top
+                : TextAlignVertical.center,
             hintText: AppStrings.password.tr().toUpperCase(),
             controller: _passwordController,
             obscureText: true,

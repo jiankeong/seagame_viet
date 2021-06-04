@@ -13,9 +13,10 @@ import '../services/results_service.dart';
 import '../widgets/default_smart_refresher.dart';
 import '../utils/date_format_utils.dart';
 import '../widgets/default_sized_box.dart';
-import '../widgets/result_detail.dart/result_detail_widgets.dart';
+import '../widgets/result_containers/result_containers.dart';
 import '../widgets/default_cache_network_image.dart';
 import '../globals.dart';
+import '../widgets/no_records_found_text.dart';
 
 class ResultDetailScreen extends StatefulWidget {
   static const routeName = '/ResultDetail';
@@ -77,12 +78,14 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
               onRefresh: () {
                 _getMatchResult();
               },
-              child: ListView(
-                children: [
-                  _buildMatchInfoContainer(),
-                  _buildResultsContainer(),
-                ],
-              ),
+              child: matchResult == null
+                  ? Center(child: NoRecordFoundText(),)
+                  : ListView(
+                      children: [
+                        _buildMatchInfoContainer(),
+                        _buildResultsContainer(),
+                      ],
+                    ),
             ),
           ))
         ],
@@ -91,6 +94,7 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
   }
 
   Widget _buildMatchInfoContainer() {
+
     return Container(
       padding: EdgeInsets.symmetric(
         vertical: 30.h,
@@ -102,8 +106,8 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
           children: [
             Text(
               '${DateFormatUtils.combineStartDateAndEndDate(
-                DateTime.parse('2021-12-02 18:00:00'),
-                DateTime.parse('2021-12-02 23:00:00'),
+                DateTime.parse(matchResult!['start_time']),
+                DateTime.parse(matchResult!['end_time']),
               )}',
               style: smallInfoTextStyle,
             ),
@@ -111,7 +115,7 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
             Row(
               children: [
                 Text(
-                  'Mỹ Đình National Stadium',
+                  matchResult!['location'],
                   style: smallInfoTextStyle,
                 ),
                 DefaultSizedBox.horizontal(5),
@@ -124,7 +128,7 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
             ),
             DefaultSizedBox.vertical(20),
             Text(
-              'Badminton',
+              matchResult!['sport'],
               style: TextStyle(
                 fontSize: Styles.smallerTitleFontSize,
                 color: Styles.primaryDarkColor,
@@ -133,7 +137,7 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
             ),
             DefaultSizedBox.vertical(5),
             Text(
-              'MEN’S SINGLES QUARTERFINALS',
+              matchResult!['event'],
               style: TextStyle(
                 color: Styles.primaryColor,
                 fontSize: Styles.regularFontSize,
@@ -146,19 +150,13 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
   }
 
   Widget _buildResultsContainer() {
-    List<String> imgUrl = [
-      'https://www.globaltimes.cn/Portals/0/attachment/2020/2020-05-20/b35faab5-d681-428b-8868-8532cdbacc3b.jpeg',
-      'https://i.ytimg.com/vi/5_YmSE1Vs4w/maxresdefault.jpg',
-      'https://static.bangkokpost.com/media/content/20200519/c1_3636952.jpg',
-      'https://d3avoj45mekucs.cloudfront.net/rojakdaily/media/iylia/news/ldlcw1.jpg'
-    ];
+    List<String> imgUrl = matchResult!['galleries'];
 
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25.h),
       child: DefaultPadding(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          
           children: [
             Text(
               AppStrings.results.tr(),
@@ -169,7 +167,10 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
               ),
             ),
             DefaultSizedBox.vertical(15),
-            ScoreResultContainer(),
+            ScoreResultContainer(
+              matchResult: matchResult,
+            ),
+            // TimingResultContainer(),
             DefaultSizedBox.vertical(30),
             Text(
               AppStrings.matchGallery.tr(),
