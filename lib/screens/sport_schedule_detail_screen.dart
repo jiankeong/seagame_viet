@@ -28,72 +28,91 @@ class _SportScheduleDetailScreenState extends State<SportScheduleDetailScreen> {
 
   bool isInit = true;
 
-  List<Map<String, dynamic>> _players = [
-    {
-      "lane": "-",
-      "country_flag": AppImages.indonesia,
-      "country_code": "INA",
-      "name": "M.Z. Lalu",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.brunei,
-      "country_code": "BRU",
-      "name": "C.C. Ali",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.cambodia,
-      "country_code": "CAM",
-      "name": "B.C. Bin",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.laos,
-      "country_code": "LAO",
-      "name": "Y.I. Lee",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.malaysia,
-      "country_code": "MAS",
-      "name": "C.W. Lee",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.myanmar,
-      "country_code": "MYA",
-      "name": "K.L. Sin",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.thailand,
-      "country_code": "THA",
-      "name": "Q.Q. Ten",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-    {
-      "lane": "-",
-      "country_flag": AppImages.singapore,
-      "country_code": "INA",
-      "name": "A. Lee",
-      "sb": "2:16:27",
-      "pb": "2:16:27",
-    },
-  ];
+  Map<String, dynamic> _scheduleDetails = {
+    "id": 1,
+    "banner":
+        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVhZHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+    "sponsor_logo":
+        "https://lh3.googleusercontent.com/proxy/xjq-hD8lzLATirZLvp9XZTJWFYSyUYN-V-U011BJZQjRSCAGVPnJlBI7s0CcsrKzqFepnkXvvPyI7QF4Kam-1ojHexQekWUWp8hOnLy7_sKblrwOl0HV1okJz8Rx",
+    "sport": "Atheletics",
+    "start_time": "2021-12-01 09:00:00",
+    "end_time": "2021-12-01 12:30:00",
+    "location": "Mỹ Đình National Stadium",
+    "is_night": false,
+    "min_temp": 27,
+    "max_temp": 29,
+    "events": [
+      {
+        "name": "Men’s 3000m Steeplechase Round 1",
+        "players": [
+          {
+            "lane": "-",
+            "country_flag": AppImages.indonesia,
+            "country_code": "INA",
+            "name": "M.Z. Lalu",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.brunei,
+            "country_code": "BRU",
+            "name": "C.C. Ali",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.cambodia,
+            "country_code": "CAM",
+            "name": "B.C. Bin",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.laos,
+            "country_code": "LAO",
+            "name": "Y.I. Lee",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.malaysia,
+            "country_code": "MAS",
+            "name": "C.W. Lee",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.myanmar,
+            "country_code": "MYA",
+            "name": "K.L. Sin",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.thailand,
+            "country_code": "THA",
+            "name": "Q.Q. Ten",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+          {
+            "lane": "-",
+            "country_flag": AppImages.singapore,
+            "country_code": "INA",
+            "name": "A. Lee",
+            "sb": "2:16:27",
+            "pb": "2:16:27",
+          },
+        ]
+      }
+    ]
+  };
 
   @override
   void didChangeDependencies() {
@@ -122,146 +141,174 @@ class _SportScheduleDetailScreenState extends State<SportScheduleDetailScreen> {
               padding: EdgeInsets.all(0),
               children: [
                 DefaultCacheNetworkImage(
-                  imageUrl:
-                      'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVhZHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80',
+                  imageUrl: _scheduleDetails['banner'],
                   width: double.infinity,
                   height: Globals().getScreenHeight() * 0.3,
                 ),
                 SportSponsorBanner(
-                  sport: 'Atheletics',
+                  sport: _scheduleDetails['sport'],
+                  sponsorImgUrl: _scheduleDetails['sponsor_logo'],
                 ),
-                CustomShadowContainer(
-                  roundedCorner: false,
-                  topPadding: 20.h,
-                  bottomPadding: 20.h,
-                  child: DefaultPadding(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                ListView.builder(
+                  padding: EdgeInsets.all(0),
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    Map<String, dynamic> event =
+                        _scheduleDetails['events'][index];
+
+                    return Column(
                       children: [
-                        Text(
-                          'Men’s 3000m Steeplechase Round 1'.toUpperCase(),
-                          style: TextStyle(
-                              color: Styles.primaryColor,
-                              fontSize: Styles.regularFontSize),
-                        ),
-                        DefaultSizedBox.vertical(15),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Center(
-                                child: SportScheduleDetailTableTitle(
-                                  title: AppStrings.lane.tr(),
-                                ),
-                              ),
-                            ),
-                            DefaultSizedBox.horizontal(5),
-                            Expanded(
-                              flex: 5,
-                              child: SportScheduleDetailTableTitle(
-                                title: AppStrings.name.tr(),
-                              ),
-                            ),
-                            DefaultSizedBox.horizontal(5),
-                            Expanded(
-                              flex: 2,
-                              child: Center(
-                                child: SportScheduleDetailTableTitle(
-                                  title: "SB",
-                                ),
-                              ),
-                            ),
-                            DefaultSizedBox.horizontal(5),
-                            Expanded(
-                              flex: 2,
-                              child: Center(
-                                child: SportScheduleDetailTableTitle(
-                                  title: "PB",
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        DefaultSizedBox.vertical(10),
-                        for (Map<String, dynamic> player in _players)
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 3.h),
-                            child: Row(
+                        CustomShadowContainer(
+                          roundedCorner: false,
+                          topPadding: 20.h,
+                          bottomPadding: 20.h,
+                          child: DefaultPadding(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  child: Center(
-                                    child: Text(
-                                      player['lane'],
-                                      style: TextStyle(
-                                          fontSize: Styles.smallerRegularSize,
-                                          color: Styles.primaryDarkColor),
-                                    ),
-                                  ),
+                                Text(
+                                  event['name'].toString().toUpperCase(),
+                                  style: TextStyle(
+                                      color: Styles.primaryColor,
+                                      fontSize: Styles.regularFontSize),
                                 ),
-                                DefaultSizedBox.horizontal(5),
-                                Expanded(
-                                  flex: 5,
-                                  child: Row(
-                                    children: [
-                                      CountryFlagContainer(
-                                        countryFlag: player['country_flag'],
-                                        width: 29.w,
-                                        height: 19.w,
-                                        hasShadow: true,
-                                      ),
-                                      DefaultSizedBox.horizontal(5),
-                                      Text(
-                                        player['country_code'],
-                                        style: TextStyle(
-                                          fontSize: Styles.smallerRegularSize,
-                                          color: Styles.primaryDarkColor,
-                                          fontWeight: Styles.boldText,
+                                DefaultSizedBox.vertical(15),
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: Center(
+                                        child: SportScheduleDetailTableTitle(
+                                          title: AppStrings.lane.tr(),
                                         ),
                                       ),
-                                      DefaultSizedBox.horizontal(10),
-                                      Text(
-                                        player['name'],
-                                        style: TextStyle(
-                                          fontSize: Styles.smallerRegularSize,
-                                          color: Styles.primaryDarkColor,
+                                    ),
+                                    DefaultSizedBox.horizontal(5),
+                                    Expanded(
+                                      flex: 5,
+                                      child: SportScheduleDetailTableTitle(
+                                        title: AppStrings.name.tr(),
+                                      ),
+                                    ),
+                                    DefaultSizedBox.horizontal(5),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Center(
+                                        child: SportScheduleDetailTableTitle(
+                                          title: "SB",
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                DefaultSizedBox.horizontal(5),
-                                Expanded(
-                                  flex: 2,
-                                  child: Center(
-                                    child: Text(
-                                      player['sb'],
-                                      style: TextStyle(
-                                        color: Styles.primaryDarkColor,
-                                        fontSize: Styles.smallerRegularSize,
+                                    ),
+                                    DefaultSizedBox.horizontal(5),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Center(
+                                        child: SportScheduleDetailTableTitle(
+                                          title: "PB",
+                                        ),
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ),
-                                DefaultSizedBox.horizontal(5),
-                                Expanded(
-                                  flex: 2,
-                                  child: Center(
-                                    child: Text(
-                                      player['pb'],
-                                      style: TextStyle(
-                                        color: Styles.primaryDarkColor,
-                                        fontSize: Styles.smallerRegularSize,
-                                      ),
+                                DefaultSizedBox.vertical(10),
+                                for (Map<String, dynamic> player
+                                    in event['players'])
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 3.h),
+                                    child: Row(
+                                      children: [
+                                        Expanded(
+                                          child: Center(
+                                            child: Text(
+                                              player['lane'],
+                                              style: TextStyle(
+                                                  fontSize: Styles
+                                                      .smallerRegularSize,
+                                                  color: Styles
+                                                      .primaryDarkColor),
+                                            ),
+                                          ),
+                                        ),
+                                        DefaultSizedBox.horizontal(5),
+                                        Expanded(
+                                          flex: 5,
+                                          child: Row(
+                                            children: [
+                                              CountryFlagContainer(
+                                                countryFlag:
+                                                    player['country_flag'],
+                                                width: 29.w,
+                                                height: 19.w,
+                                                hasShadow: true,
+                                              ),
+                                              DefaultSizedBox.horizontal(5),
+                                              Text(
+                                                player['country_code'],
+                                                style: TextStyle(
+                                                  fontSize: Styles
+                                                      .smallerRegularSize,
+                                                  color:
+                                                      Styles.primaryDarkColor,
+                                                  fontWeight: Styles.boldText,
+                                                ),
+                                              ),
+                                              DefaultSizedBox.horizontal(10),
+                                              Text(
+                                                player['name'],
+                                                style: TextStyle(
+                                                  fontSize: Styles
+                                                      .smallerRegularSize,
+                                                  color:
+                                                      Styles.primaryDarkColor,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        DefaultSizedBox.horizontal(5),
+                                        Expanded(
+                                          flex: 2,
+                                          child: Center(
+                                            child: Text(
+                                              player['sb'],
+                                              style: TextStyle(
+                                                color:
+                                                    Styles.primaryDarkColor,
+                                                fontSize:
+                                                    Styles.smallerRegularSize,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        DefaultSizedBox.horizontal(5),
+                                        Expanded(
+                                          flex: 2,
+                                          child: Center(
+                                            child: Text(
+                                              player['pb'],
+                                              style: TextStyle(
+                                                color:
+                                                    Styles.primaryDarkColor,
+                                                fontSize:
+                                                    Styles.smallerRegularSize,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ),
                               ],
                             ),
                           ),
+                        ),
+                        DefaultSizedBox.vertical(15)
                       ],
-                    ),
-                  ),
+                    );
+                  },
+                  itemCount: _scheduleDetails['events'].length,
                 ),
-                DefaultSizedBox.vertical(15),
               ],
             ),
           ),

@@ -26,22 +26,23 @@ class _SportScheduleListScreenState extends State<SportScheduleListScreen> {
   bool isInit = true;
 
   List<SportSchedule> _sportSchedules = [
-    SportSchedule(
-      startTime: DateTime.parse('2021-12-01 09:00:00'),
-      endTime: DateTime.parse('2021-12-01 12:30:00'),
-      location: 'Mỹ Đình National Stadium',
-      isNight: false,
-      minTemp: 29,
-      maxTemp: 27,
-      events: [
+    SportSchedule.fromJson({
+      "id": 1,
+      "start_time": "2021-12-01 09:00:00",
+      "end_time": "2021-12-01 12:30:00",
+      "location": "Mỹ Đình National Stadium",
+      "is_night": false,
+      "min_temp": 27,
+      "max_temp": 29,
+      "events": [
         'Men’s 3000m Steeplechase Round 1',
         // 'Men’s High Jump Qualifying Round',
         // 'Men’s Discus Throw Qualifying Round',
         // 'Women’s 800m Round 1',
         // 'Men’s 400m Hurdles Round 1',
         // 'Women’s 100m Round 1',
-      ],
-    ),
+      ]
+    }),
   ];
 
   @override
@@ -183,6 +184,7 @@ class _SportScheduleListScreenState extends State<SportScheduleListScreen> {
 }
 
 class SportSchedule {
+  int? id;
   DateTime? startTime;
   DateTime? endTime;
   String? location;
@@ -192,6 +194,7 @@ class SportSchedule {
   List<String>? events;
 
   SportSchedule({
+    this.id,
     this.startTime,
     this.endTime,
     this.location,
@@ -200,4 +203,19 @@ class SportSchedule {
     this.minTemp,
     this.maxTemp,
   });
+
+  factory SportSchedule.fromJson(Map<String, dynamic> json) => SportSchedule(
+        id: json['id'] ?? null,
+        startTime: json['start_time'] == null
+            ? null
+            : DateTime.parse('2021-12-01 09:00:00'),
+        endTime: json['end_time'] == null
+            ? null
+            : DateTime.parse('2021-12-01 12:30:00'),
+        location: json['location'] ?? null,
+        isNight: json['is_night'] ?? null,
+        minTemp: json['min_temp'] ?? null,
+        maxTemp: json['max_temp'] ?? null,
+        events: json['events'] ?? null,
+      );
 }
