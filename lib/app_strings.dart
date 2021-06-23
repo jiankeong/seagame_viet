@@ -181,17 +181,18 @@ class AppStrings {
   static const String closestMedicalHelp = 'closest_medical_help';
 
   static const String upcomingMatchNearYou = 'upcoming_match_near_you';
-  
+
   static const String nextGame = 'next_game';
   static const String lastGame = 'last_game';
   static const String previousMatch = 'previous_match';
 
-  static const String openingAndClosingCeromonies = 'opening_and_closing_ceromonies';
+  static const String openingAndClosingCeromonies =
+      'opening_and_closing_ceromonies';
   static const String ceromoniesTimeInfo = 'ceromonies_time_info';
   static const String openCeromony = 'opening_ceromony';
   static const String closingCeromony = 'closing_ceromony';
   static const String setReminder = 'set_reminder';
-  
+
   static const String lane = 'lane';
 
   static const String notification = 'notification';
@@ -201,4 +202,20 @@ class AppStrings {
   static const String registerSuccessfully = 'register_successfully';
 
   static const String time = 'time';
+
+  static const String admin = 'admin';
+
+  // static const String confirmation = 'confirmation';
+  static const String activateAccrediation = 'activate_accrediation';
+
+  static const String activationConfirmationDescription =
+      'activation_confirmation_description';
+  static const String activate = 'activate';
+  static const String deactivate = 'deactivate';
+  static const String cancel = 'cancel';
+  static const String volunteer = 'volunteer';
+
+  static const String adminTicketHintText = 'admin_ticket_hint_text';
+  static const String accreditation = 'accreditation';
+  static const String withoutPermission = 'without_permission';
 }

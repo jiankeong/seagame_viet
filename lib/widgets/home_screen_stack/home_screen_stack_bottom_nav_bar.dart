@@ -13,6 +13,7 @@ import '../../app_strings.dart';
 import '../../screens/helpdesk_screen.dart';
 import '../../screens/my_tickets_screen.dart';
 import '../../screens/e_shop_screen.dart';
+import '../../utils/general_functions.dart';
 
 class HomeScreenStackBottomNavBar extends StatelessWidget {
   final List<BottomNavBarItem> bottomNavBarItems;
@@ -30,6 +31,15 @@ class HomeScreenStackBottomNavBar extends StatelessWidget {
             final redirected = notLoginRedirection(context);
 
             if (redirected) return;
+
+            if (index == 0) {
+              bool success = canAccessAccrediation(context);
+              
+              if (!success) {
+                buildToast1(AppStrings.withoutPermission);
+                return;
+              }
+            }
 
             routeProvider.updateRoute(index);
 

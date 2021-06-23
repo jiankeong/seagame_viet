@@ -192,5 +192,24 @@
     
     "notification": "通知",
 
-    "register_successfully": "成功注册"
+    "register_successfully": "成功注册",
+
+    
+    "time": "时间",
+
+    "admin": "行政员",
+
+    "confirmation": "确认",
+    "activate_accrediation": "激活确认",
+
+    "public": "公众",
+    "volunteer": "志愿者",
+
+    "activation_confirmation_description": "您确定要激活这名运动员吗",
+    "activate": "激活",
+    "deactivate": "停用",
+    "cancel": "取消",
+    "admin_ticket_hint_text": "行政员无需认证",
+    "accreditation": "认证",
+    "without_permission": "无许可"
 }

@@ -6,7 +6,7 @@ class User {
   String? mobileNumber;
   String? country;
   String? profileImgUrl;
-  //0: guest, 1: participant
+  //0: admin, 1: participant, 2: volunteer, 3: public
   int? userType;
   String? gender;
   DateTime? dateOfBirth;

@@ -18,6 +18,8 @@ import '../screens/login_screen.dart';
 import '../utils/user_type_mapper.dart';
 import './main_notification_button.dart';
 import '../screens/my_tickets_screen.dart';
+import '../utils/general_functions.dart';
+import '../utils/build_toast.dart';
 
 class HeaderProfileContainer extends StatelessWidget {
   const HeaderProfileContainer({
@@ -36,7 +38,10 @@ class HeaderProfileContainer extends StatelessWidget {
         bottomPadding: 8.h,
         child: Column(
           children: [
-            SafeArea(bottom: false, child: _buildLogoNotificationSection(),),
+            SafeArea(
+              bottom: false,
+              child: _buildLogoNotificationSection(),
+            ),
             DefaultSizedBox.vertical(15),
             _buildInfoSection(context, authProvider.hasLogin()),
           ],
@@ -149,7 +154,9 @@ class HeaderProfileContainer extends StatelessWidget {
                 AppStrings.joinUSTodayInfoText.tr(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: context.locale == Locale('zh') ? 7.8.sp : Styles.fontSize10,
+                  fontSize: context.locale == Locale('zh')
+                      ? 7.8.sp
+                      : Styles.fontSize10,
                   color: Styles.whiteColor,
                 ),
               ),
@@ -184,6 +191,13 @@ class HeaderProfileContainer extends StatelessWidget {
         LoginScreen.routeName,
       );
     } else {
+      bool success = canAccessAccrediation(context);
+
+      if (!success) {
+        buildToast1(AppStrings.withoutPermission);
+        return;
+      }
+
       Navigator.pushNamed(context, MyTicketsScreen.routeName);
     }
   }
@@ -195,7 +209,7 @@ class HeaderProfileContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Flexible(
-                      child: Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 CachedNetworkImage(

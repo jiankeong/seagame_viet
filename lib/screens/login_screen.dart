@@ -192,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   "url":
                       "https://bwfbadminton.com/wp-content/uploads/2020/05/Lee-Chong-Wei-12-scaled.jpg"
                 },
-                "user_type": 1,
+                "user_type": 0,
                 "gender": "Male",
                 "date_of_birth": "1982-10-21 00:00:00",
                 "country_flag": {

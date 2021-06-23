@@ -10,11 +10,13 @@ class DefaultAppBar extends StatelessWidget {
   final String title;
   final Widget? trailing;
   final double titleLeftPadding;
+  final bool hasNotificationButton;
 
   DefaultAppBar({
     this.title = '',
     this.trailing,
     this.titleLeftPadding = 0,
+    this.hasNotificationButton = true,
   });
 
   @override
@@ -48,7 +50,7 @@ class DefaultAppBar extends StatelessWidget {
                     height: 54.h,
                     fit: BoxFit.contain,
                   ),
-                  MainNotificationButton(),
+                  if (hasNotificationButton) MainNotificationButton(),
                 ],
               ),
             ),

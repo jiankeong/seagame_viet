@@ -1,5 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/user_provider.dart';
 
 Future<dynamic> blankFunction() async {
   return true;
@@ -48,4 +52,15 @@ launchURL({
     print('Could not launch $encodedURl');
     throw 'Could not launch $encodedURl';
   }
+}
+
+bool canAccessAccrediation(BuildContext context) {
+  final userProvider = Provider.of<UserProvider>(context, listen: false);
+
+  bool canAccessAccrediation = userProvider.user != null &&
+      (userProvider.user!.userType == 0 ||
+          userProvider.user!.userType == 1 ||
+          userProvider.user!.userType == 2);
+
+  return canAccessAccrediation;
 }

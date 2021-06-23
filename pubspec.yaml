@@ -50,6 +50,7 @@ dependencies:
   pull_to_refresh: ^2.0.0
   timelines: ^0.1.0
   expandable_bottom_sheet: ^1.0.0+2
+  qr_code_scanner: ^0.5.1
 
 
 dev_dependencies:

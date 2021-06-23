@@ -39,4 +39,5 @@ final routeList = {
   SportScheduleDetailScreen.routeName: (ctx) => SportScheduleDetailScreen(),
   NotificationScreen.routeName: (ctx) => NotificationScreen(),
   ScheduleScreen.routeName: (ctx) => ScheduleScreen(),
+  QRCodeScannerScreen.routeName: (ctx) => QRCodeScannerScreen(),
 };

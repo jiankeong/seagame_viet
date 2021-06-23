@@ -195,5 +195,21 @@
 
     "register_successfully": "Register Successfully",
 
-    "time": "Time"
+    "time": "Time",
+
+    "admin": "Admin",
+
+    "confirmation": "Confirmation",
+    "activate_accrediation": "Activate Accrediation",
+
+    "public": "Public",
+    "volunteer": "Volunteer",
+
+    "activation_confirmation_description": "Do you want to activate this athelete",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "cancel": "Cancel",
+    "admin_ticket_hint_text": "Admin does not require accrediation",
+    "accreditation": "Accreditation",
+    "without_permission": "Without Permission"
 }

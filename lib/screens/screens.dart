@@ -36,3 +36,4 @@ export 'sport_schedule_list_screen.dart';
 export 'sport_schedule_detail_screen.dart';
 export 'notification_screen.dart';
 export 'schedule_screen.dart';
+export 'qr_code_scanner_screen.dart';

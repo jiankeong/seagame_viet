@@ -15,7 +15,7 @@ class HomeScreenStack extends StatelessWidget {
 
   final List<BottomNavBarItem> bottomNavBarItems = [
     BottomNavBarItem(
-      label: AppStrings.myTickets.tr(),
+      label: AppStrings.accreditation.tr(),
       activeIconPath: AppIcons.myTickets,
       inactiveIconPath: AppIcons.myTickets,
     ),
