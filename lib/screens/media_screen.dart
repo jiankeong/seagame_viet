@@ -61,7 +61,7 @@ class MediaScreen extends StatelessWidget {
                   DefaultSizedBox.vertical(35),
                   DefaultPadding(
                     child: Text(
-                      'SEA GAMES Highlights',
+                      'PARA GAMES Highlights',
                       style: TextStyle(
                         color: Styles.primaryColor,
                         fontSize: 21.sp,

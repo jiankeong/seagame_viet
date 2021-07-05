@@ -27,7 +27,7 @@ class ProductDetailScreen extends StatelessWidget {
 
   final Product product = Product(
     id: 1,
-    price: 213116764,
+    price: 19,
     productName: "Memento Pendant",
     description:
         "15cm ring bronze coated, same design with the prize award to the participant",
@@ -118,8 +118,8 @@ class ProductDetailScreen extends StatelessWidget {
                                       children: [
                                         Text(
                                           '${formatNumToCurrency(
-                                            253116764,
-                                          )} VND',
+                                            20,
+                                          )} BHD',
                                           style: TextStyle(
                                               fontSize: Styles.fontSize10,
                                               decoration:
@@ -137,7 +137,7 @@ class ProductDetailScreen extends StatelessWidget {
                                     Text(
                                       '${formatNumToCurrency(
                                         product.price!,
-                                      )} VND',
+                                      )} BHD',
                                       style: TextStyle(
                                         fontSize: Styles.regularFontSize,
                                       ),

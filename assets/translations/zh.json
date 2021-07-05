@@ -3,7 +3,7 @@
     "change_password": "更换密码",
     "contact_details": "联络资讯",
     "confirm_password": "确认密码",
-    "copyright": "Copyright 2021 by VIESGOC. All Rights Reserved.",
+    "copyright": "Copyright 2021 by NPC Bahrain. All Rights Reserved.",
     "country_code": "地区码",
     "date_of_birth": "生日",
     "do_not_have_an_account": "尚未拥有账号",
@@ -211,5 +211,14 @@
     "cancel": "取消",
     "admin_ticket_hint_text": "行政员无需认证",
     "accreditation": "认证",
-    "without_permission": "无许可"
+    "without_permission": "无许可",
+
+    "boccia": "硬地滚球",
+    "para_powerlifting": "举重",
+    "para_swimming": "游泳",
+    "wheelchair_basketball": "轮椅篮球",
+    "para_athletics_goalball": "田径门球",
+    "taekwondo": "跆拳道",
+    "para_badminton": "羽毛球",
+    "para_table_tennis": "乒乓球"
 }

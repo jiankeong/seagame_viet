@@ -218,4 +218,16 @@ class AppStrings {
   static const String adminTicketHintText = 'admin_ticket_hint_text';
   static const String accreditation = 'accreditation';
   static const String withoutPermission = 'without_permission';
+
+  static const String boccia = 'boccia';
+  static const String paraPowerlifting = 'para_powerlifting';
+  static const String paraSwimming = 'para_swimming';
+  static const String wheelchairBasketball = 'wheelchair_basketball';
+  static const String paraAthleticsGoalball = 'para_athletics_goalball';
+  static const String taekwondo = 'taekwondo';
+  static const String paraBadminton = 'para_badminton';
+  static const String paraTableTennis = 'para_table_tennis';
+  static const String bocciaDetail1 = 'boccia_detail_1';
+  static const String bocciaDetail2 = 'boccia_detail_2';
+  static const String bocciaDetail3 = 'boccia_detail_3';
 }

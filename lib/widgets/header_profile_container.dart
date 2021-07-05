@@ -55,10 +55,10 @@ class HeaderProfileContainer extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Image.asset(
-          AppImages.smallLogo,
+          AppImages.bahrainSmallLogo,
           width: 167.w,
           height: 54.h,
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
         ),
         MainNotificationButton(),
       ],

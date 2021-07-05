@@ -32,7 +32,7 @@ class CompetitionContainer extends StatelessWidget {
     this.countryCode = 'INA',
     this.countryFlag = AppImages.indonesia,
     this.opponentName = 'C. Jonatan',
-    this.location = 'Mỹ Đình National Stadium',
+    this.location = 'ISA SPORTS CITY',
     this.onPressed,
     this.isPrevious = false,
   });

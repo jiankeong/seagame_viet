@@ -36,7 +36,7 @@ class SplashLoginFooter extends StatelessWidget {
         IntrinsicHeight(
           child: Padding(
             padding: EdgeInsets.only(
-              left: 8.w,
+              // left: 10.w,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -45,9 +45,9 @@ class SplashLoginFooter extends StatelessWidget {
                   label: AppStrings.termsOfUse.tr(),
                   onPressed: termsOnPressed,
                 ),
-                DefaultSizedBox.horizontal(10),
+                DefaultSizedBox.horizontal(5),
                 DefaultDivider.vertical(),
-                DefaultSizedBox.horizontal(10),
+                DefaultSizedBox.horizontal(5),
                 TextPressable(
                   label: AppStrings.privacyStatement.tr(),
                   onPressed: privacyPolicyOnPressed,

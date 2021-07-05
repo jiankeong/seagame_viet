@@ -53,12 +53,24 @@ class AppIcons {
   static const String filter = 'assets/icons/filter.png';
   static const String forward = 'assets/icons/forward.png';
   static const String scheduleMedal = 'assets/icons/schedule_medal.png';
+
+  static const String paraBadminton = 'assets/icons/para_badminton.png';
+  static const String paraBasketball = 'assets/icons/para_basketball.png';
+  static const String paraBoccia = 'assets/icons/para_boccia.png';
+  static const String paraGoalBall = 'assets/icons/para_goalball.png';
+  static const String paraPowerLifting = 'assets/icons/para_powerlifting.png';
+  static const String paraTableTennis = 'assets/icons/para_tabletennis.png';
+  static const String paraTaekwondo = 'assets/icons/para_taekwondo.png';
+  static const String paraSwimming = 'assets/icons/para_swimming.png';
 }
 
 class AppImages {
-  static const String logoArt = 'assets/images/logo_art.png';
-  static const String smallLogo = 'assets/images/small_logo.png';
-  static const String logo = 'assets/images/logo.png';
+  static const String bahrainLogoArt = 'assets/images/bahrain_logo_art.png';
+  static const String bahrainLogo = 'assets/images/bahrain_logo.png';
+  static const String bahrainSmallLogo = 'assets/images/bahrain_small_logo.png';
+  // static const String logoArt = 'assets/images/logo_art.png';
+  // static const String smallLogo = 'assets/images/small_logo.png';
+  // static const String logo = 'assets/images/logo.png';
   static const String defaultProfileAvatarRounded =
       'assets/images/default_profile_avatar_rounded.png';
   static const String splashBg = 'assets/images/splash_bg.png';

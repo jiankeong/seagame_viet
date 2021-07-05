@@ -10,7 +10,7 @@ class AthleteSchedule extends StatelessWidget {
         title: 'MEN’S SINGLE SEMIFINAL 1',
         type: 'Badminton',
         description: 'INA VS MAS',
-        location: 'Mỹ Đình National Stadium',
+        location: 'ISA SPORTS CITY',
         startDate: DateTime.parse('2021-12-03 20:00:00'),
         endDate: DateTime.parse('2021-12-03 23:00:00'),
         image:

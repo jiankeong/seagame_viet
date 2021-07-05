@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SplashLoginLogo(
                           logoSize: 136,
                           textFontSize: 23,
-                          leftPadding: 8,
+                          // leftPadding: 8,
                         ),
                         DefaultSizedBox.vertical(8),
                         _buildLoginInfoText(),
@@ -261,33 +261,36 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildLanguageSection() {
     return IntrinsicHeight(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextPressable(
-            label: 'English',
-            fontSize: Styles.smallerTitleFontSize,
-            onPressed: () {
-              changeLanguage('en');
-            },
-          ),
-          DefaultDivider.vertical(),
-          TextPressable(
-            label: '中文',
-            fontSize: Styles.smallerTitleFontSize,
-            onPressed: () {
-              changeLanguage('zh');
-            },
-          ),
-          DefaultDivider.vertical(),
-          TextPressable(
-            label: 'Tiếng Việt',
-            fontSize: Styles.smallerTitleFontSize,
-            onPressed: () {
-              changeLanguage('vi');
-            },
-          ),
-        ],
+      child: Padding(
+        padding: EdgeInsets.only(right: 0.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextPressable(
+              label: 'English',
+              fontSize: Styles.smallerTitleFontSize,
+              onPressed: () {
+                changeLanguage('en');
+              },
+            ),
+            DefaultDivider.vertical(),
+            TextPressable(
+              label: '中文',
+              fontSize: Styles.smallerTitleFontSize,
+              onPressed: () {
+                changeLanguage('zh');
+              },
+            ),
+            // DefaultDivider.vertical(),
+            // TextPressable(
+            //   label: 'Tiếng Việt',
+            //   fontSize: Styles.smallerTitleFontSize,
+            //   onPressed: () {
+            //     changeLanguage('vi');
+            //   },
+            // ),
+          ],
+        ),
       ),
     );
   }

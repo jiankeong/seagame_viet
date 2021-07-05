@@ -24,26 +24,26 @@ class SportScheduleDetailScreen extends StatefulWidget {
 }
 
 class _SportScheduleDetailScreenState extends State<SportScheduleDetailScreen> {
-  String chosenSport = AppStrings.atheletics;
+  String chosenSport = AppStrings.paraSwimming;
 
   bool isInit = true;
 
   Map<String, dynamic> _scheduleDetails = {
     "id": 1,
     "banner":
-        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVhZHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+        "https://swimswam.com/wp-content/uploads/2016/09/BB3_4344.jpg",
     "sponsor_logo":
         "https://lh3.googleusercontent.com/proxy/xjq-hD8lzLATirZLvp9XZTJWFYSyUYN-V-U011BJZQjRSCAGVPnJlBI7s0CcsrKzqFepnkXvvPyI7QF4Kam-1ojHexQekWUWp8hOnLy7_sKblrwOl0HV1okJz8Rx",
-    "sport": "Atheletics",
+    "sport": "Para Swimming",
     "start_time": "2021-12-01 09:00:00",
     "end_time": "2021-12-01 12:30:00",
-    "location": "Mỹ Đình National Stadium",
+    "location": "ISA SPORTS CITY",
     "is_night": false,
     "min_temp": 27,
     "max_temp": 29,
     "events": [
       {
-        "name": "Men’s 3000m Steeplechase Round 1",
+        "name": "Women’s Backstroke 400m Final",
         "players": [
           {
             "lane": "-",

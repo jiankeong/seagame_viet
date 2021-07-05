@@ -55,7 +55,7 @@ class HelpdeskScreen extends StatelessWidget {
             faq: FAQ(
               question: 'How To Contact Us',
               answer:
-                  'Address: 36 Tran Phu str., Ba Dinh dist., Hanoi, Vietnam',
+                  'Address:\nSeera Investment Building Road 2831,Block 428, Building 2431, 5th Floor Manama, Kingdom of Bahrain',
             ),
           ),
         ),

@@ -10,13 +10,13 @@ import '../default_sized_box.dart';
 class FoodScreen extends StatelessWidget {
   final List<Map<String, dynamic>> _hotelList = [
     {
-      "name": "Nhà hàng Hoa An Viên",
+      "name": "BLACK ANGUS BAHRAIN",
       "location":
-          "95 Đường Lê Đức Thọ, đối diện sân, Nam Từ Liêm, Hà Nội 100000",
-      "rating": 4.0,
+          "ROAD 2808, Seef District, Manama, Bahrain",
+      "rating": 4.4,
       "rating_count": 1009,
       "image":
-          "https://images.foody.vn/res/g4/35677/prof/s576x330/foody-mobile-hoa-an-vien-sang-trong-lich-thiep-ha-noi.jpg",
+          "https://i.ytimg.com/vi/wogffCe7Zz8/maxresdefault.jpg",
     },
   ];
 

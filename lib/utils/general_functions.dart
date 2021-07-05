@@ -38,8 +38,8 @@ String formatSingleDigitToDoubleDigit(int value) {
 }
 
 launchURL({
-  String latitude = '21.0205',
-  String longitude = '105.7631',
+  String latitude = '26.1741',
+  String longitude = '50.5484',
 }) async {
   final String googleMapslocationUrl =
       "https://www.google.com/maps/search/?api=1&query=$latitude,$longitude";

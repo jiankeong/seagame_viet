@@ -37,15 +37,15 @@ class DefaultAppBar extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.fromLTRB(
                 kDefaultScreenHorizontalPadding.w,
-                12.h,
+                10.h,
                 (kDefaultScreenHorizontalPadding - 12).w,
-                12.h,
+                10.h,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                    AppImages.smallLogo,
+                    AppImages.bahrainSmallLogo,
                     width: 167.w,
                     height: 54.h,
                     fit: BoxFit.contain,

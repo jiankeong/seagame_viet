@@ -18,7 +18,7 @@ class EShopScreen extends StatelessWidget {
       id: 1,
       image:
           "https://media2.bulgari.com/f_auto,q_auto/production/dwee8488f3/images/images/457496.png",
-      price: 213116764,
+      price: 19,
       productName: "Memento Pendant",
       description:
           "15cm ring bronze coated, same design with the prize award to the participant",
@@ -27,7 +27,7 @@ class EShopScreen extends StatelessWidget {
         id: 2,
         image:
             "https://thermosmalaysia.com/wp-content/uploads/2018/10/JNL-503PPL.png",
-        price: 213116764,
+        price: 20,
         productName: "Sea Games 2021 Thermos Limited Edition",
         description:
             "350ml thermos, limited edition for SEA Games 2021, available for different colors"),
@@ -35,7 +35,7 @@ class EShopScreen extends StatelessWidget {
         id: 3,
         image:
             "https://a1.bbkz.net/forum/attachment.php?attachmentid=3051915&thumb=1&d=1580378846",
-        price: 213116764,
+        price: 5,
         productName: "Postcard",
         description:
             "SEA Games 2021 Limited Edition postcard, have 10 different types of design"),
@@ -96,8 +96,8 @@ class EShopScreen extends StatelessWidget {
                           ),
                           Text(
                             '${formatNumToCurrency(
-                              product.price!,
-                            )} VND',
+                              product.price!, decimalPlaces: 2
+                            )} BHD',
                             style: TextStyle(
                                 fontSize: Styles.smallerRegularSize,
                                 fontWeight: Styles.boldText,

@@ -3,7 +3,7 @@
     "change_password": "Change Password",
     "contact_details": "Contact Details",
     "confirm_password": "Confirm Password",
-    "copyright": "Copyright 2021 by VIESGOC. All Rights Reserved.",
+    "copyright": "Copyright 2021 by NPC Bahrain. All Rights Reserved.",
     "country_code": "Country Code",
     "date_of_birth": "Date Of Birth",
     "do_not_have_an_account": "Do Not Have An Account",
@@ -211,5 +211,17 @@
     "cancel": "Cancel",
     "admin_ticket_hint_text": "Admin does not require accrediation",
     "accreditation": "Accreditation",
-    "without_permission": "Without Permission"
+    "without_permission": "Without Permission",
+
+    "boccia": "Boccia",
+    "para_powerlifting": "Para Powerlifting",
+    "para_swimming": "Para Swimming",
+    "wheelchair_basketball": "Wheelchair Basketball",
+    "para_athletics_goalball": "Para Athletics Goalball",
+    "taekwondo": "Taekwondo",
+    "para_badminton": "Para Badminton",
+    "para_table_tennis": "Para Table Tennis",
+    "boccia_detail_1": "Boccia is a co-ed sport of control and accuracy, similar to curling or lawn bowling. Games last four or six ends. Players propel balls towards the target or “jack” ball. Each side has six balls (red or blue) per end to try and score points. The closest side to the target ball when all the balls have been played, scores. If the game is tied after all ends have been played, a tie-break end is played. Boccia can be played head to head, in teams of three, or in pairs.",
+    "boccia_detail_2": "Boccia is a Paralympic sport that can be played by anyone, with or without a disability. Originally designed for people with severe cerebral palsy, it is now enjoyed by players with a wide variety of disabilities. It’s easy for a beginner to pick up quickly, but builds in intensity and complexity as players hone their skills. Boccia is a sport of precision, focus and accuracy. It is a complex and technical game where players must employ a great degree of both physical coordination and mental foresight. Boccia was introduced onto the Paralympic program in 1984. Today, it is played in over fifty countries. In Canada, it is governed by the Canadian Cerebral Palsy Sports Association and internationally, by the Boccia International Sport Federation.",
+    "boccia_detail_3": "Boccia is a game of strategy and accuracy that was originally designed to be played by people with cerebral palsy. Now, the sport includes athletes with impairments that affect motor skills. The sport is played on a flat, smooth surface, where players must throw or roll coloured balls as close as possible to a white target ball, known as the “jack.” The player, pair or team with the most balls near the jack is the winner. The individual and pair matches consist of four ends, while team matches have six ends. After each end, the athlete, pair or team with the ball closest to the jack receive one point, and an additional point for every ball that is closer to the jack than their opponent’s. Each athlete, pair or team “throws” six balls per end."
 }

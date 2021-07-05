@@ -24,7 +24,7 @@ class CeromonyContainer extends StatefulWidget {
     this.isClosing = false,
     this.startTime,
     this.endTime,
-    this.location = 'Mỹ Đình National Stadium',
+    this.location = 'ISA SPORTS CITY',
     this.isNight = true,
     this.hasPassed = false,
     this.weatherValue = '25º / 23º',

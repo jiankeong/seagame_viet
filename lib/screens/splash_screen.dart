@@ -78,7 +78,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 DefaultSizedBox.vertical(65),
                 Flexible(
                   child: SplashLoginLogo(
-                    leftPadding: 10,
+                    // leftPadding: 10,
                   ),
                 ),
                 if (isLoading)

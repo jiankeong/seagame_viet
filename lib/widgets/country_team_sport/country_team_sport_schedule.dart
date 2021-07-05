@@ -18,7 +18,7 @@ class CountryTeamSportSchedule extends StatelessWidget {
       "start_time": "20:00",
       "end_time": "23:00",
       "type": "Basketball",
-      "location": "Mỹ Đình National Stadium",
+      "location": "ISA SPORTS CITY",
     },
   ];
 

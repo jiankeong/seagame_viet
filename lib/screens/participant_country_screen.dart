@@ -45,9 +45,9 @@ class ParticipantCountryScreen extends StatelessWidget {
               children: [
                 DefaultSizedBox.vertical(70),
                 Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 0),
                   child: Image.asset(
-                    AppImages.logo,
+                    AppImages.bahrainLogo,
                     width: 214.h,
                     height: 214.h,
                   ),

@@ -16,7 +16,7 @@ class ResultService {
           "type": "Badminton",
           "title": "MEN’S SINGLES QUARTERFINALS",
           "description": "INA VS MAS",
-          "location": "Mỹ Đình National Stadium",
+          "location": "ISA SPORTS CITY",
           "start_date": "2021-12-03 20:00:00",
           "end_date": "2021-12-03 23:00:00",
         }
@@ -34,9 +34,9 @@ class ResultService {
     Map<String, dynamic> _data = {
       "start_time": "2021-12-02 18:00:00",
       "end_time": "2021-12-02 23:00:00",
-      "location": "Mỹ Đình National Stadium",
+      "location": "ISA SPORTS CITY",
       "sport": "Badminton",
-      "event": "50M BACKSTROKE MEN’S FINAL",
+      "event": "Men's Singles Quarterfinals",
       "galleries": [
         'https://www.globaltimes.cn/Portals/0/attachment/2020/2020-05-20/b35faab5-d681-428b-8868-8532cdbacc3b.jpeg',
         'https://i.ytimg.com/vi/5_YmSE1Vs4w/maxresdefault.jpg',

@@ -19,26 +19,26 @@ class ExploreScreen extends StatelessWidget {
   final List<Map<String, dynamic>> _sights = [
     {
       "image":
-          "https://dimg06.c-ctrip.com/images/35070v000000k483k3C14_C_500_280_Q80.jpg",
-      "name": "Central Post Office",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpyEaK-NyAPIf12bTIH46AEEU7W65Dc_ddgSkIleRKxQisY6-KyLO3w-ZFpsWhQJJsy7JaGjBoSsYau740ycIP0g",
+      "name": "Bahrain Fort",
       "description":
-          "The Central Post Office in Ho Chi Minh is a beautifully preserved remnant of French colonial times and perhaps the grandest post office in all of Southeast Asia.",
+          "The Qal'at al-Bahrain, also known as the Bahrain Fort or Portuguese Fort, is an archaeological site located in Bahrain. Archaeological excavations carried out since 1954 have unearthed antiquities from an artificial mound of 12 m height containing seven stratified layers, created by various occupants from 2300 BC up to the 18th century, including Kassites, Greeks, Portuguese and Persians. It was once the capital of the Dilmun civilization and was inscribed as a UNESCO World Heritage Site in 2005",
       "rating": Random().nextDouble() * (5 - 3.5) + 3.5,
       "rating_count": Random().nextInt(9999),
     },
     {
-      "image": "https://m.justgola.com/media/a/00/15/88030_og_1.jpeg",
-      "name": " Linh Ung Pagoda",
-      "description": "To sense to Buddhist culture in Vietnam",
+      "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT9km7zqkdNTXxk_ESD61R5rocVTxph8YOGkX1G9RBmuVPOJ-zvSFLykyxFi3LiyliuomWIlLHLvzAo3KaXpM-DvQ",
+      "name": " Bahrain National Museum",
+      "description": "The Bahrain National Museum is the largest and oldest public museum in Bahrain. It is situated in Manama, adjacent to the National Theatre of Bahrain.",
       "rating": Random().nextDouble() * (5 - 3.5) + 3.5,
       "rating_count": Random().nextInt(9999),
     },
     {
       "image":
-          "https://cdn.vnexplorer.net/img/2021/3/26/e88e55de2f33c8a7bc5057b2d6236ecb.jpg?v=1.0",
-      "name": "Golden Bridge",
+          "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQRoZsJtbFpgnSwC9nemURVZ4l0wX75sCDv84IEdWMzu6b023NixVg1npEkqsdz-qJJJ3q9TnhDn_fLkhgpQR9_cQ",
+      "name": "Al Fateh Grand Mosque",
       "description":
-          "he Golden Bridge is among the most favoured destinations by visitors in Danang",
+          "The Al-Fateh Mosque is one of the largest mosques in the world, encompassing 6,500 square meters and having the capacity to accommodate over 7,000 worshippers at a time.",
       "rating": Random().nextDouble() * (5 - 3.5) + 3.5,
       "rating_count": Random().nextInt(9999),
     }
@@ -54,14 +54,14 @@ class ExploreScreen extends StatelessWidget {
             children: [
               DefaultCacheNetworkImage(
                 imageUrl:
-                    'https://howdoigo.asia/wp-content/uploads/2017/12/hanoi-to-ho-chi-minh.jpg',
+                    'https://cdn.expatwoman.com/s3fs-public/bahrain-main.jpg',
                 width: double.infinity,
                 height: Globals().getScreenHeight() * 0.38,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 20.w),
                 child: SearchContainer(
-                  hintText: "Hanoi",
+                  hintText: "Manama",
                 ),
               ),
               Positioned(
@@ -73,7 +73,7 @@ class ExploreScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Hanoi',
+                        'Manama',
                         style: TextStyle(
                           color: Styles.whiteColor,
                           fontSize: 45.sp,
@@ -82,7 +82,7 @@ class ExploreScreen extends StatelessWidget {
                       ),
                       DefaultSizedBox.vertical(15),
                       Text(
-                        'Vietnam’s capital, home to Bach Ma Temple, Đồng Xuân Market & neoclassical Hanoi Opera House.',
+                        'Arabic Al-Manāmah, capital and largest city of Bahrain. It lies at the northeast tip of Bahrain island, in the Persian Gulf.',
                         style: TextStyle(
                           fontSize: Styles.regularFontSize,
                           color: Styles.whiteColor,

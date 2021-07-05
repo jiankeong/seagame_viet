@@ -95,7 +95,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         Padding(
           padding: EdgeInsets.only(left: 15.w),
           child: Image.asset(
-            AppImages.smallLogo,
+            AppImages.bahrainLogo,
             width: 167.w,
             height: 54.h,
             fit: BoxFit.contain,

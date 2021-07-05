@@ -81,7 +81,7 @@ class SportSponsorBanner extends StatelessWidget {
                               launchURL();
                             },
                             child: Text(
-                              'Mỹ Đình National Stadium',
+                              'ISA SPORTS CITY',
                               style: TextStyle(
                                 fontSize: Styles.smallerRegularSize,
                                 color: Styles.whiteColor,

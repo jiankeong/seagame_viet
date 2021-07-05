@@ -41,7 +41,7 @@ class _DefaultSportGridState extends State<DefaultSportGrid> {
       shrinkWrap: true,
       padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.h),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4, childAspectRatio: 0.93),
+          crossAxisCount: 4, childAspectRatio: 0.88),
       itemBuilder: (context, index) {
         Map<String, dynamic> sport = _sportList[index];
 
@@ -60,9 +60,13 @@ class _DefaultSportGridState extends State<DefaultSportGrid> {
               ),
               DefaultSizedBox.vertical(5),
               Flexible(
-                child: FittedBox(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 3.h),
                   child: Text(
                     sport['name'].toString().tr(),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: Styles.smallerRegularSize,
                     ),

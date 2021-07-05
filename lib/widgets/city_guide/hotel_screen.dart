@@ -10,20 +10,20 @@ import '../default_sized_box.dart';
 class HotelScreen extends StatelessWidget {
   final List<Map<String, dynamic>> _hotelList = [
     {
-      "name": "Hanoi Emotion Hotel",
-      "location": "26-28 Ngõ Hàng Bột, Cát Linh, Đống Đa, Hà Nội",
-      "rating": 3.9,
+      "name": "Four Seasons Hotel Bahrain Bay",
+      "location": "Bahrain Bay, Manama, Bahrain",
+      "rating": 5.0,
       "rating_count": 3802,
       "image":
-          "https://media.expedia.com/hotels/5000000/4170000/4167700/4167651/7754801f_z.jpg",
+          "https://cf.bstatic.com/images/hotel/max1024x768/430/43064438.jpg",
     },
     {
-      "name": "Grand Mercure Hanoi",
-      "location": "9 Cát Linh, Quốc Tử Giám, Đống Đa, Hà Nội 100000",
-      "rating": 4.7,
+      "name": "Diva Hotel",
+      "location": "Building 879, Road 2414, Block 324 Juffair, 340, Bahrain",
+      "rating": 3.8,
       "rating_count": 9,
       "image":
-          "https://cf.bstatic.com/images/hotel/max1024x768/252/252017308.jpg"
+          "https://cf.bstatic.com/xdata/images/hotel/max1280x900/299977573.jpg?k=cf458daf487a1c7f18977e1bb5d612109d0853c64a39d75a417edc3c05ef6793&o=&hp=1"
     },
   ];
 
