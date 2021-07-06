@@ -27,7 +27,7 @@ class _MedicalScreenState extends State<MedicalScreen> {
       body: Stack(
         children: [
           Image.asset(
-            AppImages.medicalBg,
+            AppImages.bahrainMedicalBg,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.fill,
@@ -93,8 +93,8 @@ class _MedicalScreenState extends State<MedicalScreen> {
                       ),
                       DefaultSizedBox.vertical(20),
                       MedicalCenter(
-                        centerName: 'Behn Vien The Thao',
-                        distance: '4.5 KM',
+                        centerName: 'Yousef Abdulrahman Engineer Health Center',
+                        distance: '700 M',
                         status: key.currentState == null
                             ? null
                             : key.currentState!.expansionStatus,
@@ -132,52 +132,56 @@ class MedicalCenter extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(
-          children: [
-            Container(
-              padding: EdgeInsets.all(15.h),
-              decoration: BoxDecoration(
-                  color: Styles.primaryColor,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 5,
-                      spreadRadius: 0.2,
-                      offset: Offset(0, 1),
-                      color: Styles.blackColor.withOpacity(0.3),
-                    ),
-                  ]),
-              child: Text(
-                'H',
-                style: TextStyle(
-                  color: Styles.whiteColor,
-                  fontSize: 23.sp,
-                  fontWeight: Styles.boldText,
+        Expanded(
+          child: Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(15.h),
+                decoration: BoxDecoration(
+                    color: Styles.primaryColor,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 5,
+                        spreadRadius: 0.2,
+                        offset: Offset(0, 1),
+                        color: Styles.blackColor.withOpacity(0.3),
+                      ),
+                    ]),
+                child: Text(
+                  'H',
+                  style: TextStyle(
+                    color: Styles.whiteColor,
+                    fontSize: 23.sp,
+                    fontWeight: Styles.boldText,
+                  ),
                 ),
               ),
-            ),
-            DefaultSizedBox.horizontal(15),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  centerName,
-                  style: TextStyle(
-                      color: Styles.primaryColor,
-                      fontSize: Styles.titleFontSize,
-                      fontWeight: Styles.boldText),
+              DefaultSizedBox.horizontal(15),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      centerName,
+                      style: TextStyle(
+                          color: Styles.primaryColor,
+                          fontSize: Styles.titleFontSize,
+                          fontWeight: Styles.boldText),
+                    ),
+                    DefaultSizedBox.vertical(10),
+                    Text(
+                      distance,
+                      style: TextStyle(
+                          color: Styles.primaryDarkColor,
+                          fontSize: Styles.regularFontSize,
+                          fontWeight: Styles.boldText),
+                    ),
+                  ],
                 ),
-                DefaultSizedBox.vertical(10),
-                Text(
-                  distance,
-                  style: TextStyle(
-                      color: Styles.primaryDarkColor,
-                      fontSize: Styles.regularFontSize,
-                      fontWeight: Styles.boldText),
-                ),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
         if (status != null && status == ExpansionStatus.contracted)
           Image.asset(

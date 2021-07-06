@@ -29,7 +29,7 @@ class _LocationScreenState extends State<LocationScreen> {
       body: Stack(
         children: [
           Image.asset(
-            AppImages.locationBg,
+            AppImages.bahrainLocationBg,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.fill,
@@ -96,9 +96,9 @@ class _LocationScreenState extends State<LocationScreen> {
                         ),
                         DefaultSizedBox.vertical(20),
                         NearestGames(
-                          icon: AppIcons.atheletics,
-                          sport: 'Athletics',
-                          events: ['Men’s 400m Hurdles Round 1'],
+                          icon: AppIcons.paraBoccia,
+                          sport: 'Boccia',
+                          events: ['Boccia Round 1'],
                           startTime: '02:30 PM',
                           endTime: '05:30 PM',
                         ),
@@ -119,7 +119,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     DefaultDivider(),
                     DefaultSizedBox.vertical(35),
                     NearestGames(
-                      icon: AppIcons.aquatics,
+                      icon: AppIcons.paraSwimming,
                       sport: 'Aquatics',
                       events: [
                         'Women’s 50m breaststroke',
@@ -186,7 +186,7 @@ class NearestGames extends StatelessWidget {
               ),
             DefaultSizedBox.vertical(25),
             Text(
-              'My Dinh National Stadium',
+              'ISA Sport City',
               style: TextStyle(
                   color: Styles.primaryDarkColor,
                   fontWeight: Styles.boldText,

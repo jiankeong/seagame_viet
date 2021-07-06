@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../styles.dart';
 import '../../icon_image_path.dart';
+import '../../globals.dart';
 
 class HomeScreenWelcomeBanner extends StatelessWidget {
   const HomeScreenWelcomeBanner({
@@ -11,6 +12,10 @@ class HomeScreenWelcomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return buildBahrainParaBanner();
+  }
+
+  Widget buildVietnamSeaGameBaner() {
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -49,6 +54,15 @@ class HomeScreenWelcomeBanner extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+
+  Widget buildBahrainParaBanner() {
+    return Image.asset(
+      AppImages.bahrainPara2021Banner,
+      width: Globals().getScreenWidth() * 0.82,
+      height: 118.h,
+      fit: BoxFit.fill,
     );
   }
 }

@@ -114,4 +114,8 @@ class AppImages {
   static const String competitionContainerBg = 'assets/images/competition_container_bg.png';
   static const String competitionContainerInactiveBg = 'assets/images/competition_container_inactive_bg.png';
   static const String openingAndClosingCeromonies = 'assets/images/opening_and_closing_ceromonies.png';
+
+  static const String bahrainLocationBg = 'assets/images/bahrain_location_bg.png';
+  static const String bahrainMedicalBg = 'assets/images/bahrain_medical_bg.png';
+  static const String bahrainPara2021Banner = 'assets/images/bahrain_para_2021_banner.png';
 }
