@@ -16,7 +16,7 @@ class LiveMenuScreen extends StatelessWidget {
   final List<GameMatch> matches = [
     GameMatch(
         title: 'WOMEN’S SINGLE SEMIFINAL 1',
-        type: 'Badminton',
+        type: 'Para Badminton',
         description: 'INA VS MAS',
         location: 'ISA SPORTS CITY',
         startDate: DateTime.parse('2021-12-03 20:00:00'),
@@ -25,7 +25,7 @@ class LiveMenuScreen extends StatelessWidget {
             'https://cdn.shopify.com/s/files/1/1238/5608/collections/Aya-OHORI.jpg?v=1579605374'),
     GameMatch(
         title: 'MEN’S SINGLE SEMIFINAL 1',
-        type: 'Badminton',
+        type: 'Para Badminton',
         description: 'INA VS MAS',
         location: 'ISA SPORTS CITY',
         startDate: DateTime.parse('2021-12-03 20:00:00'),

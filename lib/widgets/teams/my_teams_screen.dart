@@ -8,8 +8,8 @@ import '../../screens/country_team_sport_screen.dart';
 class MyTeamsScreen extends StatelessWidget {
   final List<Map<String, dynamic>> sportList = [
     {
-      "name": AppStrings.basketball,
-      "icon": AppIcons.basketball,
+      "name": AppStrings.wheelchairBasketball,
+      "icon": AppIcons.paraBasketball,
     },
   ];
 

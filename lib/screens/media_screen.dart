@@ -76,12 +76,12 @@ class MediaScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         SportIconContainer(
-                          icon: AppIcons.basketball,
+                          icon: AppIcons.paraBasketball,
                           size: 24.h,
                         ),
                         DefaultSizedBox.horizontal(15),
                         Text(
-                          AppStrings.basketball.tr(),
+                          AppStrings.wheelchairBasketball.tr(),
                           style: TextStyle(
                             fontSize: Styles.smallerTitleFontSize,
                             fontWeight: Styles.boldText,

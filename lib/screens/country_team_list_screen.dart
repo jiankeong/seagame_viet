@@ -8,6 +8,7 @@ import '../widgets/default_sport_grid.dart';
 import '../icon_image_path.dart';
 import './country_team_sport_screen.dart';
 import '../widgets/country_name_flag_container.dart';
+import '../constants/app_constants.dart';
 
 class CountryTeamListScreen extends StatefulWidget {
   static const routeName = '/CountryTeamList';
@@ -21,24 +22,7 @@ class _CountryTeamListScreenState extends State<CountryTeamListScreen> {
 
   Map<String, dynamic>? country;
 
-  List<Map<String, dynamic>> sportList = [
-    {
-      "name": AppStrings.archery,
-      "icon": AppIcons.archery,
-    },
-    {
-      "name": AppStrings.aquatics,
-      "icon": AppIcons.aquatics,
-    },
-    {
-      "name": AppStrings.basketball,
-      "icon": AppIcons.basketball,
-    },
-    {
-      "name": AppStrings.football,
-      "icon": AppIcons.football,
-    },
-  ];
+  List<Map<String, dynamic>> sportList = kSportList;
 
   @override
   void didChangeDependencies() {

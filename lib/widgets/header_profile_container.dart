@@ -59,6 +59,7 @@ class HeaderProfileContainer extends StatelessWidget {
           width: 167.w,
           height: 54.h,
           fit: BoxFit.contain,
+          alignment: Alignment.centerLeft,
         ),
         MainNotificationButton(),
       ],

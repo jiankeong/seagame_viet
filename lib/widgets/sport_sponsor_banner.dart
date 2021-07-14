@@ -19,7 +19,7 @@ class SportSponsorBanner extends StatelessWidget {
   SportSponsorBanner({
     this.sponsorImgUrl =
         'https://lh3.googleusercontent.com/proxy/xjq-hD8lzLATirZLvp9XZTJWFYSyUYN-V-U011BJZQjRSCAGVPnJlBI7s0CcsrKzqFepnkXvvPyI7QF4Kam-1ojHexQekWUWp8hOnLy7_sKblrwOl0HV1okJz8Rx',
-    this.sport = 'Badminton',
+    this.sport = 'Para Badminton',
     this.startTime,
     this.endTime,
   });

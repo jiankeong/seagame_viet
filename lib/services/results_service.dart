@@ -13,7 +13,7 @@ class ResultService {
             "url":
                 "https://s.yimg.com/ny/api/res/1.2/yt7LaNWBSKOzBvn6sl3DSw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MA--/https://s.yimg.com/uu/api/res/1.2/vd2HQDq0isE_Uq9LeASIKA--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com.au/48761454a4e2160b25520f3664a827da",
           },
-          "type": "Badminton",
+          "type": "Para Badminton",
           "title": "MEN’S SINGLES QUARTERFINALS",
           "description": "INA VS MAS",
           "location": "ISA SPORTS CITY",

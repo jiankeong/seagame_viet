@@ -17,7 +17,7 @@ class CountryTeamSportSchedule extends StatelessWidget {
       "date": "2021-12-03 00:00:00",
       "start_time": "20:00",
       "end_time": "23:00",
-      "type": "Basketball",
+      "type": "WheelChair Basketball",
       "location": "ISA SPORTS CITY",
     },
   ];

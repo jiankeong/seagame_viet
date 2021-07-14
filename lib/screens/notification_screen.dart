@@ -20,9 +20,9 @@ class NotificationScreen extends StatelessWidget {
   final List<Map<String, dynamic>> _notifications = [
     {
       "type": 1,
-      "title": "Basketball",
+      "title": "WheelChair Basketball",
       "content": "Malaysian Ends the Prelims with a Dunk.",
-      "image": AppIcons.basketball,
+      "image": AppIcons.paraBasketball,
       "isAsset": false,
       "date": DateTime.parse('2021-05-12 08:00:00'),
     },

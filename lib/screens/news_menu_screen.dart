@@ -45,21 +45,21 @@ class _NewsMenuScreenState extends State<NewsMenuScreen> {
   final List<Map<String, dynamic>> _updates = [
     {
       "image":
-          "https://img.jakpost.net/c/2020/02/24/2020_02_24_87252_1582536589._large.jpg",
+          "https://www.paralympic.org/sites/default/files/styles/image_crop_16_9_800_450/public/2021-04/Rosalie-Lalonde-Canada-Alabama-basketball.jpg?h=de451051&itok=AgRRVUyK",
       "title": "Malaysian Ends the Prelims with a Dunk.",
       "date": "2021-05-21 00:00:00",
       "author": "Colin Ward-Henninger",
-      "type": "Basketball",
-      "icon": AppIcons.basketball,
+      "type": "WheelChair Basketball",
+      "icon": AppIcons.paraBasketball,
     },
     {
       "image":
-          "https://images.theconversation.com/files/400718/original/file-20210514-17-1huj66d.jpg?ixlib=rb-1.1.0&rect=6%2C125%2C4625%2C2312&q=45&auto=format&w=668&h=324&fit=crop",
+          "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/170124083101018_luis-armando-mexico.jpg?itok=fDBQ2z7v",
       "title": "A Team Effort to break past obstacles",
       "date": "2021-05-21 00:00:00",
       "author": "Colin Ward-Henninger",
-      "type": "Football",
-      "icon": AppIcons.football,
+      "type": "Para Swimming",
+      "icon": AppIcons.paraSwimming,
     },
   ];
 
@@ -108,7 +108,7 @@ class _NewsMenuScreenState extends State<NewsMenuScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Badminton'.toUpperCase(),
+                                    'Para Badminton'.toUpperCase(),
                                     style: TextStyle(
                                         fontWeight: Styles.boldText,
                                         fontSize: 15.sp,
