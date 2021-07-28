@@ -32,7 +32,7 @@ class _NewsMenuScreenState extends State<NewsMenuScreen> {
     },
     {
       "image":
-          "https://img.jakpost.net/c/2020/02/24/2020_02_24_87252_1582536589._large.jpg",
+          "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/120611110658244_114759528_0.jpg?itok=OZoUE3Gv",
       "title": "Malaysian Ends the Prelims with a Dunk.",
     },
     {
@@ -45,7 +45,7 @@ class _NewsMenuScreenState extends State<NewsMenuScreen> {
   final List<Map<String, dynamic>> _updates = [
     {
       "image":
-          "https://www.paralympic.org/sites/default/files/styles/image_crop_16_9_800_450/public/2021-04/Rosalie-Lalonde-Canada-Alabama-basketball.jpg?h=de451051&itok=AgRRVUyK",
+          "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/120611110658244_114759528_0.jpg?itok=OZoUE3Gv",
       "title": "Malaysian Ends the Prelims with a Dunk.",
       "date": "2021-05-21 00:00:00",
       "author": "Colin Ward-Henninger",

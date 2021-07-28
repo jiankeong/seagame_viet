@@ -28,7 +28,7 @@ class MediaScreen extends StatelessWidget {
     {
       "title": "Malaysian Ends the Prelims with a Dunk.",
       "image":
-          "http://www.fiba.basketball/images.fiba.com/Graphic/5/4/5/D/NYgiZHhBRkWOIk7dR_wGtQ.jpg?v=20210129151120596",
+          "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/120611110658244_114759528_0.jpg?itok=OZoUE3Gv",
       "duration": "10:01",
       "url": "Hkc0ji-b4xA",
     },
@@ -38,7 +38,7 @@ class MediaScreen extends StatelessWidget {
     {
       "title": "Malaysian Ends the Prelims with a Dunk.",
       "image":
-          "http://www.fiba.basketball/images.fiba.com/Graphic/5/4/5/D/NYgiZHhBRkWOIk7dR_wGtQ.jpg?v=20210129151120596",
+          "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/120611110658244_114759528_0.jpg?itok=OZoUE3Gv",
       "duration": "10:01",
       "url": "Hkc0ji-b4xA",
     },

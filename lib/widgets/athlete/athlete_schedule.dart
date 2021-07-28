@@ -8,7 +8,7 @@ class AthleteSchedule extends StatelessWidget {
   final List<GameMatch> matches = [
     GameMatch(
         title: 'MEN’S SINGLE SEMIFINAL 1',
-        type: 'Badminton',
+        type: 'Para Badminton',
         description: 'INA VS MAS',
         location: 'ISA SPORTS CITY',
         startDate: DateTime.parse('2021-12-03 20:00:00'),

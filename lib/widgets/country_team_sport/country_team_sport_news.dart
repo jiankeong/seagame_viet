@@ -17,7 +17,7 @@ class _CountryTeamSportNewsState extends State<CountryTeamSportNews> {
   final List<Map<String, dynamic>> _newsList = [
     {
       "image":
-          "https://img.jakpost.net/c/2020/02/24/2020_02_24_87252_1582536589._large.jpg",
+          "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/120611110658244_114759528_0.jpg?itok=OZoUE3Gv",
       "title": "Malaysian Ends the Prelims with a Dunk.",
       "date": "2021-05-21 00:00:00",
       "author": "Colin Ward-Henninger",

@@ -21,29 +21,29 @@ class _GalleryDetailScreenState extends State<GalleryDetailScreen> {
     [
       {
         "title": "The Moment Before The Miracle",
-        "author": "SEA GAMES 2021",
+        "author": "NPC Bahrain",
         "image":
-            'https://lh3.googleusercontent.com/_M7-Eh6jo7METexkXPjavFm5958IcgPQMxM1hCtplTsZhm9nrfQYFhcWR00ugxJqYhq0bzNjZGjIR38lVrMo4wlrglCSB1NK_w=w780-nu-rj-l80-e365',
+            'https://bocciacanada.ca/wp-content/uploads/2016/02/boccia.jpg',
       },
       {
         "title": "Shooting Range",
-        "author": "SEA GAMES 2021",
+        "author": "NPC Bahrain",
         "image":
-            'https://data.ibtimes.sg/en/full/11893/picture-for-representation.jpg?w=660',
+            'https://img.kyodonews.net/english/public/images/posts/febd94eb28786258ae11abdda1c14732/photo_l.jpg',
       },
       {
         "title": "The Perfect Shoot",
-        "author": "SEA GAMES 2021",
+        "author": "NPC Bahrain",
         "image":
-            'https://www.usarchery.org/images/tinymce/160619154511-DSC03590.jpg',
+            'https://gravityboccia.com/wp-content/uploads/2017/08/IMG_0941.jpg',
       },
     ],
     [
       {
         "title": "Intense Moment",
-        "author": "SEA GAMES 2021",
+        "author": "NPC Bahrain",
         "image":
-            'https://eastonarchery.com/wp-content/uploads/2018/10/WORLD-CUP-STAGE-4-AND-ASIAN-GRAND-PRIX-HIGHLIGHT-THE-WEEK-AHEAD.jpg',
+            'https://gtimg.tokyo2020.org/image/private/t_article-image-desktop/production/bfuf8tk1ks2j2fg4zdks',
       },
     ]
   ];

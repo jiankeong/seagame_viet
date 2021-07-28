@@ -13,7 +13,12 @@ import '../info_vertical_layout.dart';
 import '../../app_strings.dart';
 import '../default_sized_box.dart';
 
-class Biography extends StatelessWidget {
+class Biography extends StatefulWidget {
+  @override
+  _BiographyState createState() => _BiographyState();
+}
+
+class _BiographyState extends State<Biography> {
   final Map<String, dynamic> achievement = {
     "start_year": "2003",
     "end_year": "2004",
@@ -36,6 +41,8 @@ class Biography extends StatelessWidget {
       },
     ]
   };
+
+  bool isFavourite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -66,13 +73,35 @@ class Biography extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'LEE CHONG WEI',
-                              style: TextStyle(
-                                fontSize: 21.sp,
-                                fontWeight: Styles.boldText,
-                                color: Styles.whiteColor,
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Flexible(
+                                  child: Text(
+                                    'LEE CHONG WEI',
+                                    style: TextStyle(
+                                      fontSize: 21.sp,
+                                      fontWeight: Styles.boldText,
+                                      color: Styles.whiteColor,
+                                    ),
+                                  ),
+                                ),
+                                DefaultSizedBox.horizontal(10),
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      isFavourite = !isFavourite;
+                                    });
+                                  },
+                                  child: Icon(
+                                    Icons.grade,
+                                    size: 26.h,
+                                    color: isFavourite
+                                        ? Styles.whiteColor
+                                        : Styles.whiteColor.withOpacity(0.5),
+                                  ),
+                                )
+                              ],
                             ),
                             DefaultSizedBox.vertical(8),
                             Row(
@@ -96,7 +125,7 @@ class Biography extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Badminton',
+                                  'Para Badminton',
                                   style: TextStyle(
                                     fontSize: Styles.regularFontSize,
                                     color: Styles.whiteColor,
@@ -179,9 +208,8 @@ class Biography extends StatelessWidget {
                               child: Text(
                                 achievement['start_year'],
                                 style: TextStyle(
-                                  fontSize: Styles.smallerTitleFontSize,
-                                  color: Styles.suvaGrey
-                                ),
+                                    fontSize: Styles.smallerTitleFontSize,
+                                    color: Styles.suvaGrey),
                               ),
                             );
                           }
@@ -191,9 +219,8 @@ class Biography extends StatelessWidget {
                               child: Text(
                                 achievement['end_year'],
                                 style: TextStyle(
-                                  fontSize: Styles.smallerTitleFontSize,
-                                  color: Styles.suvaGrey
-                                ),
+                                    fontSize: Styles.smallerTitleFontSize,
+                                    color: Styles.suvaGrey),
                               ),
                             );
                           }

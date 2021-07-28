@@ -10,7 +10,7 @@ class MyAthleteListScreen extends StatelessWidget {
       "athletes": [
         {
           "name": "Lee Chong Wei",
-          "sport": "Badminton",
+          "sport": "Para Badminton",
           "event": ['Singles'],
           "medals": [AppImages.goldMedal],
         },

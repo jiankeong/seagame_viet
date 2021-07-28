@@ -47,7 +47,9 @@ class CompetitionScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     DefaultSizedBox.vertical(25),
-                    CompetitionContainer(),
+                    CompetitionContainer(
+                      sport: 'Para Badminton',
+                    ),
                     DefaultSizedBox.vertical(45),
                     TextBetweenLines(
                       labelText: AppStrings.previousMatch.tr().toUpperCase(),
@@ -58,7 +60,7 @@ class CompetitionScreen extends StatelessWidget {
                       isPrevious: true,
                       startTime: DateTime.parse('2021-12-02 18:00:00'),
                       endTime: DateTime.parse('2021-12-02 23:00:00'),
-                      sport: 'Badminton',
+                      sport: 'Para Badminton',
                       event: 'MEN’S SINGLES QUARTERFINALS',
                       opponentName: 'M.C. Gideon',
                       countryCode: 'INA',

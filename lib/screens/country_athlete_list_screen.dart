@@ -29,14 +29,14 @@ class _CountryAthleteListScreenState extends State<CountryAthleteListScreen> {
       "athletes": [
         {
           "name": "Lee Chong Wei",
-          "sport": "Badminton",
+          "sport": "Para Badminton",
           "event": ['Singles'],
           "medals": [AppImages.goldMedal],
         },
         {
           "name": "Loh Choon How",
-          "sport": "Wushu",
-          "event": ['Men’s taijijian'],
+          "sport": "Taekwondo",
+          "event": ['Class K43'],
           "medals": [AppImages.goldMedal],
         },
       ]
@@ -46,7 +46,7 @@ class _CountryAthleteListScreenState extends State<CountryAthleteListScreen> {
       "athletes": [
         {
           "name": "Phee Jinq En",
-          "sport": "Swimming",
+          "sport": "Para Swimming",
           "event": [
             'Women’s 50m breaststroke',
             'Women’s 100m breaststroke',
