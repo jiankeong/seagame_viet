@@ -39,7 +39,7 @@ class NotificationScreen extends StatelessWidget {
       "type": 3,
       "title": "Player Update",
       "content": "C.W. Lee nets another gold for the Malaysian Contingent",
-      "image": AppImages.bahrainLogoArt,
+      "image": AppImages.logoArt3,
       "isAsset": true,
       "date": DateTime.parse('2021-05-12 08:00:00'),
     },

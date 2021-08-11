@@ -36,7 +36,7 @@ class HomeScreenStackFAB extends StatelessWidget {
               ],
             ),
             child: Image.asset(
-              AppImages.bahrainLogoArt,
+              AppImages.logoArt3,
               width: 65.h,
               height: 65.h,
               fit: BoxFit.contain,

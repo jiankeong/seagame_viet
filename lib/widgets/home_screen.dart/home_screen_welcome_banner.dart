@@ -59,7 +59,7 @@ class HomeScreenWelcomeBanner extends StatelessWidget {
 
   Widget buildBahrainParaBanner() {
     return Image.asset(
-      AppImages.bahrainPara2021Banner,
+      AppImages.homeBottomBanner,
       width: Globals().getScreenWidth() * 0.82,
       height: 118.h,
       fit: BoxFit.fill,

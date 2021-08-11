@@ -65,9 +65,12 @@ class AppIcons {
 }
 
 class AppImages {
-  static const String bahrainLogoArt = 'assets/images/bahrain_logo_art.png';
-  static const String bahrainLogo = 'assets/images/bahrain_logo.png';
-  static const String bahrainSmallLogo = 'assets/images/bahrain_small_logo.png';
+  static const String logoArt3 = 'assets/images/logo_art_3.png';
+  static const String smallLogo3 = 'assets/images/small_logo_3.png';
+  static const String logo3 = 'assets/images/logo_3.png';
+  // static const String bahrainLogoArt = 'assets/images/bahrain_logo_art.png';
+  // static const String bahrainLogo = 'assets/images/bahrain_logo.png';
+  // static const String bahrainSmallLogo = 'assets/images/bahrain_small_logo.png';
   // static const String logoArt = 'assets/images/logo_art.png';
   // static const String smallLogo = 'assets/images/small_logo.png';
   // static const String logo = 'assets/images/logo.png';
@@ -117,5 +120,6 @@ class AppImages {
 
   static const String bahrainLocationBg = 'assets/images/bahrain_location_bg.png';
   static const String bahrainMedicalBg = 'assets/images/bahrain_medical_bg.png';
-  static const String bahrainPara2021Banner = 'assets/images/bahrain_para_2021_banner.png';
+  // static const String bahrainPara2021Banner = 'assets/images/bahrain_para_2021_banner.png';
+  static const String homeBottomBanner = 'assets/images/home_bottom_banner.png';
 }

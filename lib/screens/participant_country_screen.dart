@@ -47,7 +47,7 @@ class ParticipantCountryScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 0),
                   child: Image.asset(
-                    AppImages.bahrainLogo,
+                    AppImages.logo3,
                     width: 214.h,
                     height: 214.h,
                   ),

@@ -32,7 +32,7 @@ class SplashLoginLogo extends StatelessWidget {
               left: leftPadding.w,
             ),
             child: Image.asset(
-              AppImages.bahrainLogo,
+              AppImages.logo3,
               width: logoSize.h,
               height: logoSize.h,
               fit: BoxFit.cover,
